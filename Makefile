@@ -71,3 +71,5 @@ zip: ${ALLFILES}
 tar: ${ALLFILES}
 	$(TAR) cvhf - $(ALLFILES) | $(GZIP) > $(TGZFILE) 
 
+git-push: ${ALLFILES}
+	git push -u origin master

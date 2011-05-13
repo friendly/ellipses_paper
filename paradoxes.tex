@@ -55,8 +55,28 @@ which is also evident in the right panel, where the within group slope is negati
 This follows from the fact that the data ellipse for the pooled total sample
 has a shape which is a convex combination (weighted average) of the average within group
 covariance of $(x, y)$, shown by the green ellipse in  \figref{fig:between-within}   
-and the  covariance of the means $(\bar{x}_i, \bar{y}_i)$, shown by the red between-group ellipse.                                                                        
+and the  covariance of the means $(\bar{x}_i, \bar{y}_i)$, shown by the red between-group ellipse.
+In fact, the between and within data ellipses in  \figref{fig:between-within} 
+are just (a scaling of) the $\mat{H}$ and $\mat{E}$ ellipses in an hypothesis-error (HE) plot for the 
+MANOVA model, $(x, y) \sim \textrm{group}$, as will be developed in \secref{sec:mlm}.   
+See \figref{fig:between-HE} for a visual demonstration, using the same data  as in   \figref{fig:between-within}.                                                              
 %\TODO{Can we show this analytically in some insightful way?}
+
+\begin{figure}[htb]
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/between-HE1}
+ \end{minipage}%
+ \hfill
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/between-HE2}
+ \end{minipage}
+  \caption{Visual demonstration that $\vec{\beta}_{\textrm{pooled}}$ lies between $\vec{\beta}_{\textrm{within}}$ and $\vec{\beta}_{\textrm{between}}$.
+  Each panel shows an HE plot for the MANOVA model $(x, y) \sim \textrm{group}$, in which the within and between ellipses are identical to
+  those in \figref{fig:between-within}, except for scale.}
+  \label{fig:between-HE}
+\end{figure}
 
 The right panel of \figref{fig:between-within} provides a prototypical illustration of Simpson's paradox,
 where $\beta_{\textrm{within}}$ and $\beta_{\textrm{pooled}}$ can have opposite signs. Underlying this is a
