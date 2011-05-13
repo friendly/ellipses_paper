@@ -1,0 +1,199 @@
+\providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
+  \providecommand{\Loc}[1]{\textsf{#1}}
+\begin{thebibliography}{33}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Anderson(1935)}]{Anderson:35}
+Anderson, E. (1935).
+\newblock The irises of the {Gasp\'{e}} peninsula.
+\newblock \emph{Bulletin of the American Iris Society}, 35, 2--5.
+
+\bibitem[{Beaton(1964)}]{Beaton:64}
+Beaton, A.~E. (1964).
+\newblock \emph{The use of special matrix operators in statistical calculus}.
+\newblock Ed.d. thesis, Harvard University.
+\newblock Reprinted as Educational Testing Service Research Bulletin 64-51,
+  Princeton, NJ.
+
+\bibitem[{Boyer(1991)}]{Boyer:91}
+Boyer, C.~B. (1991).
+\newblock Apollonius of {Perga}.
+\newblock In \emph{A History of Mathematics, 2nd ed.}, (pp. 156--157). New
+  York: John Wiley \& Sons, Inc.
+
+\bibitem[{Bravais(1846)}]{Bravais:1846}
+Bravais, A. (1846).
+\newblock Analyse math\'ematique sur les probabilit\'es des erreurs de
+  situation d'un point.
+\newblock \emph{M\'emoires pr\'esent\'es par divers savants \`a l'Acad\'emie
+  royale des sciences de l'Institut de France}, 9, 255--332.
+
+\bibitem[{Bryk and Raudenbush(1992)}]{BrykRaudenbush:1992}
+Bryk, A.~S. and Raudenbush, S.~W. (1992).
+\newblock \emph{Hierarchical linear models: Applications and data analysis
+  methods}.
+\newblock Thousand Oaks, CA: Sage.
+
+\bibitem[{Cram{\'e}r(1946)}]{Cramer:1946}
+Cram{\'e}r, H. (1946).
+\newblock \emph{Mathematical Models of Statistics}.
+\newblock Princeton, NJ: {P}rinceton {U}niversity {P}ress.
+
+\bibitem[{Dempster(1969)}]{Dempster:69}
+Dempster, A.~P. (1969).
+\newblock \emph{Elements of Continuous Multivariate Analysis}.
+\newblock Reading, MA: Addison-Wesley.
+
+\bibitem[{Denis(2001)}]{Denis:2001}
+Denis, D. (2001).
+\newblock The origins of correlation and regression: {Francis Galton} or
+  {Auguste Bravais} and the error theorists.
+\newblock \emph{History and Philosophy of Psychology Bulletin}, 13, 36--44.
+
+\bibitem[{Fisher(1936)}]{Fisher:36}
+Fisher, R.~A. (1936).
+\newblock The use of multiple measurements in taxonomic problems.
+\newblock \emph{Annals of Eugenics}, 8, 379--388.
+
+\bibitem[{Fox(2008)}]{Fox:2008}
+Fox, J. (2008).
+\newblock \emph{Applied Regression, Generalized Linear Models, and Related
+  Methods}.
+\newblock Thousand Oaks, CA: Sage.
+
+\bibitem[{Freedman(2001)}]{Freedman:01}
+Freedman, D.~A. (2001).
+\newblock Ecological inference and the ecologocal falacy.
+\newblock In N.~J. Smelser and P.~B. Baltes, eds., \emph{Internaitonal
+  Encyclopedia of the Social and Behavioral Sciences}, (pp. 4027--4030).
+  Pergamon Press.
+
+\bibitem[{Friendly(1991)}]{Friendly:91}
+Friendly, M. (1991).
+\newblock \emph{{SAS System} for Statistical Graphics}.
+\newblock Cary, NC: SAS Institute, 1st edn.
+
+\bibitem[{Friendly(2007)}]{Friendly:07:guerry}
+Friendly, M. (2007).
+\newblock {A.-M. Guerry's} \emph{Moral Statistics of France}: Challenges for
+  multivariable spatial analysis.
+\newblock \emph{Statistical Science}, 22(3), 368--399.
+
+\bibitem[{Galton(1886)}]{Galton:1886}
+Galton, F. (1886).
+\newblock Regression towards mediocrity in hereditary stature.
+\newblock \emph{Journal of the Anthropological Institute}, 15, 246--263.
+
+\bibitem[{Gnanadesikan and Kettenring(1972)}]{GnanadesikanKettenring:72}
+Gnanadesikan, R. and Kettenring, J.~R. (1972).
+\newblock Robust estimates, residuals, and outlier detection with multiresponse
+  data.
+\newblock \emph{Biometrics}, 28, 81--124.
+
+\bibitem[{Guerry(1833)}]{Guerry:1833}
+Guerry, A.-M. (1833).
+\newblock \emph{Essai sur la statistique morale de la {France}}.
+\newblock Paris: Crochard.
+\newblock English translation: Hugh P. Whitt and Victor W. Reinking, Lewiston,
+  N.Y. : Edwin Mellen Press, 2002.
+
+\bibitem[{Hoerl and Kennard(1970{\natexlab{a}})}]{HoerlKennard:1970b}
+Hoerl, A.~E. and Kennard, R.~W. (1970{\natexlab{a}}).
+\newblock Ridge regression: {A}pplications to nonorthogonal problems ({C}orr:
+  {V}12 p723).
+\newblock \emph{Technometrics}, 12, 69--82.
+
+\bibitem[{Hoerl and Kennard(1970{\natexlab{b}})}]{HoerlKennard:1970a}
+Hoerl, A.~E. and Kennard, R.~W. (1970{\natexlab{b}}).
+\newblock Ridge regression: {B}iased estimation for nonorthogonal problems.
+\newblock \emph{Technometrics}, 12, 55--67.
+
+\bibitem[{Hotelling(1933)}]{Hotelling:1933}
+Hotelling, H. (1933).
+\newblock Analysis of a complex of statistical variables into principal
+  components.
+\newblock \emph{Journal of Educational Psychology}, 24, 417--441.
+
+\bibitem[{Longley(1967)}]{Longley:1967}
+Longley, J.~W. (1967).
+\newblock An appraisal of least squares programs for the electronic computer
+  from the point of view of the user.
+\newblock \emph{Journal of the American Statistical Association}, 62, 819--841.
+
+\bibitem[{Marquardt(1970)}]{Marquardt:1970}
+Marquardt, D.~W. (1970).
+\newblock Generalized inverses, ridge regression, biased linear estimation, and
+  nonlinear estimation.
+\newblock \emph{Technometrics}, 12, 591--612.
+
+\bibitem[{Monette(1990)}]{Monette:90}
+Monette, G. (1990).
+\newblock Geometry of multiple regression and interactive 3-{D} graphics.
+\newblock In J.~Fox and S.~Long, eds., \emph{Modern Methods of Data Analysis},
+  chap.~5, (pp. 209--256). Beverly Hills, CA: Sage Publications.
+
+\bibitem[{Pearson(1896)}]{Pearson:1896}
+Pearson, K. (1896).
+\newblock Contributions to the mathematical theory of evolution---{III},
+  regression, heredity and panmixia.
+\newblock \emph{Philosophical Transactions of the Royal Society of London},
+  187, 253--318.
+
+\bibitem[{Pearson(1901)}]{Pearson:1901}
+Pearson, K. (1901).
+\newblock On lines and planes of closest fit to systems of points in space.
+\newblock \emph{Philosophical Magazine}, 6(2), 559--572.
+
+\bibitem[{Pearson(1920)}]{Pearson:1920}
+Pearson, K. (1920).
+\newblock Notes on the history of correlation.
+\newblock \emph{Biometrika}, 13(1), 25--45.
+
+\bibitem[{Raudenbush and Bryk(2002)}]{RaudenbushBryk:2002}
+Raudenbush, S.~W. and Bryk, A.~S. (2002).
+\newblock \emph{Hierarchical linear models: Applications and data analysis
+  methods}.
+\newblock Newbury Park, CA: Sage, 2nd edn.
+
+\bibitem[{Robinson(1950)}]{Robinson:1950}
+Robinson, W.~S. (1950).
+\newblock Ecological correlations and the behavior of individuals.
+\newblock \emph{American Sociological Review}, 15, 351--357.
+
+\bibitem[{Rousseeuw and Leroy(1987)}]{RousseeuwLeroy:87}
+Rousseeuw, P. and Leroy, A. (1987).
+\newblock \emph{Robust Regression and Outlier Detection}.
+\newblock New York: John Wiley and Sons.
+
+\bibitem[{Rousseeuw and Van~Driessen(1999)}]{RousseeuwVanDriessen:99}
+Rousseeuw, P. and Van~Driessen, K. (1999).
+\newblock A fast algorithm for the minimum covariance determinant estimator.
+\newblock \emph{Technometrics}, 41, 212--223.
+
+\bibitem[{Simpson(1951)}]{Simpson:51}
+Simpson, E.~H. (1951).
+\newblock The interpretation of interaction in contingency tables.
+\newblock \emph{Journal of the Royal Statistical Society, Series B}, 30,
+  238--241.
+
+\bibitem[{Stigler(1986)}]{Stigler:1986}
+Stigler, S.~M. (1986).
+\newblock \emph{The History of Statistics: The Measurement of Uncertainty
+  before 1900}.
+\newblock Cambridge, MA: Harvard University Press.
+
+\bibitem[{Timm(1975)}]{Timm:75}
+Timm, N.~H. (1975).
+\newblock \emph{Multivariate Analysis with Applications in Education and
+  Psychology}.
+\newblock Belmont, CA: Wadsworth (Brooks/Cole).
+
+\bibitem[{von Humboldt(1811)}]{Humboldt:1811a}
+von Humboldt, A. (1811).
+\newblock \emph{Essai Politique sur le Royaume de la Nouvelle-Espagne.
+  (Political Essay on the Kingdom of New Spain: Founded on Astronomical
+  Observations, and Trigonometrical and Barometrical Measurements)}, vol.~1.
+\newblock New York: I. Riley.
+\newblock Eng. trans. by John Black.
+
+\end{thebibliography}

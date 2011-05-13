@@ -1,0 +1,65 @@
+\subsection{Simpson's paradox, marginal and conditional relations}\label{sec:simpson-iris}
+Because it provides a visual summary of means, variances and correlations,
+the data ellipse is ideally suited as a tool for illustrating and
+explicating various
+phenomena that occur in the analysis of linear models.
+One class of simple, but important examples concerns the difference between the marginal
+relations among variables, ignoring some important factor or covariate,
+and the conditional relations, adjusting (controlling) for that
+factor or covariate.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=\textwidth,clip]{fig/contiris3}
+  \caption{Marginal (a), conditional (b), and pooled within-sample (c) relations
+  of Sepal length and Sepal width in the iris data. Total sample data ellipses are
+  shown as black, solid curves; individual group data and ellipses are shown with
+  colors and dashed lines}%
+  \label{fig:contiris3}
+\end{figure}
+
+Simpson's paradox \citep{Simpson:51} occurs when the marginal and
+conditional relations differ in direction. This may be seen in the plots
+of Sepal length and Sepal width shown in \figref{fig:contiris3}. Ignoring
+iris species, the marginal, total-sample correlation is slightly negative
+as seen in panel (a). The individual sample ellipses in panel (b) show
+that the conditional, within-species correlations are all positive, with
+approximately equal regression slopes.  The group means have a negative
+relation, accounting for the negative marginal correlation.
+
+A correct analysis of the (conditional) relation between these variables, controlling, or adjusting for mean
+differences among species would be based on the pooled within-sample covariance matrix,
+  \begin{equation} \label{eq:Sp}
+  \mat{S}_{\textrm{within}}  = (N - g)^{-1}
+  \sum_{i=1}^g
+  \sum_{j=1}^{n_i}
+  ( \vec{y}_{ij}  -  \bar{\vec{y}}_{i.} )
+  ( \vec{y}_{ij}  -  \bar{\vec{y}}_{i.} ) \trans
+  =(N - g)^{-1}
+  \sum_{i=1}^g
+  (n_i - 1) \mat{S}_i
+  \comma
+  \end{equation}
+where $N = \sum n_i$, and the result
+is shown in
+panel (c) of \figref{fig:contiris3}.
+In this figure, the data for \emph{each} species were first
+transformed to deviations from the means on both variables
+and then translated back to the grand means.
+
+In a more general context, $ \mat{S}_{\textrm{within}}$
+appears as the $\mat{E}$ matrix in a multivariate
+GLM, fitting, adjusting, or controlling for all fitted effects (factors and covariates).
+For essentially correlational analyses (principal components,
+factor analysis, etc.),
+similar displays can be used to show how multi-sample analyses
+can be compromised by substantial group mean differences, and corrected
+by analysis of the pooled within-sample covariance, or by 
+including important group variables in the model.
+Moreover, display of the the individual within-group data ellipses can
+show visually how well the assumption of
+equal covariance matrices,
+$\Sigma_1 = \Sigma_2 = \dots = \Sigma_g$
+is satisfied in the data, for the two variables
+displayed.
+

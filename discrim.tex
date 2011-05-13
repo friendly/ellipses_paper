@@ -1,0 +1,28 @@
+\subsection{Discriminant analysis}
+The right panel of \figref{fig:kiss-demo2}, considered in data space, provides a 
+visual interpretation of the classical, normal theory two-group discriminant analysis problem.
+Here, we imagine that the plot shows the contours of data ellipsoids for two groups,
+with mean vectors $\vec{m}_1$ and $\vec{m}_2$, and common covariance matrix
+$\mat{A} = \mat{S}_{\textrm{pooled}} = [ (n_1 -1)\mat{S}_1 + (n_2 -1)\mat{S}_2 ] / (n_1 +n_2 -2) $.
+
+The discriminant axis is the locus osculation between the two ellipsoids. However, 
+the goal in discriminant analysis is to determine a classification rule based on
+a linear function, $\mathcal{D}(\vec{x}) = \vec{b}\trans \vec{x}$, such that
+an observation $\vec{x}$ will be classified as belonging to Group 1 if
+$\mathcal{D}(\vec{x}) \le d$, and to Group 2 otherwise.  In linear discriminant
+analysis, the discriminant function coefficients are
+given by
+\begin{equation*}
+\vec{b} = \mat{S}_{\textrm{pooled}}^{-1} ( \vec{m}_1 - \vec{m}_2 ) \period
+\end{equation*}
+
+All boundaries
+of the classification regions determined by $d$
+will then be the tangent lines (planes) to the ellipsoids at points of osculation.
+The location of the classification region along the line from $\vec{m}_1$ to $\vec{m}_2$
+typically takes into account both the
+prior probabilities of membership in Groups 1 and 2, and the costs of miss-classification.
+
+
+
+

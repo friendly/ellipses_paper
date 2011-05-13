@@ -1,0 +1,20 @@
+\subsection{Mixed models: BLUEs and BLUPs}
+\TODO{This section, and the incomplete example that follows is just an initial attempt,
+awaiting a more insightful description.}
+
+In this section we make use of the duality between data space and $\beta$
+space, where lines in one map into points in the other and ellipsoids to
+visualize the precision of estimates in the context of the general linear mixed
+model for hierarchical data.  We also show visually how the best linear unbiased
+predictors (BLUPs) from the mixed model can be seen as a weighted average
+of OLS regression, best linear unbiased estimates (BLUEs) \emph{within} strata
+and the variation of random effect estimates \emph{between} strata.
+
+The mixed model for hierarchical data provides a general framework for 
+dealing with lack of independence among observations in linear models,
+such as occurs when students are sampled within schools, schools within
+counties and so forth. In these situations, the assumption of OLS that
+the residuals are conditionally independent is likely to be violated,
+because, for example, students nested within the same school are 
+likely to have more similar outcomes than those from separate schools.
+

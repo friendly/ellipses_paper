@@ -1,0 +1,130 @@
+
+=Kissing ellipsoids=
+In this section, we consider some circumstances in which there are two 
+principles and procedures for deriving estimates of a parameter vector <math>\mathbf{\beta}</math>
+of a linear model,
+each with its associated estimated variance-covariance matrix, e.g.,
+<math>\widehat{\mathbf{\beta}}^A</math> with covariance matrix <math>\widehat{\Var}(\mathbf{\beta}^A)</math>
+and 
+<math>\widehat{\mathbf{\beta}}^B</math> with covariance matrix <math>\widehat{\Var}(\mathbf{\beta}^B)</math>.
+We will take method A to be OLS estimation and consider several alternatives
+for method B.  In <math>\beta</math> space, the parameter estimates appear as points and their
+corresponding confidence ellipsoids have the property that they will just "kiss"
+(or ''osculate'' ) along a path between the two estimates.
+In the examples we consider, the alternative methods B represent a convex combination
+of information from two sources and the path of osculation is interpretible in 
+terms of what method B aims to achieve.
+The same geometric ideas can also be applied in data space, where we can consider
+the data ellipsoids for two (or more) groups and find statistical interpretations of
+their (pairwise) path of osculation.
+
+== Physical interpretation ==
+These problems all have a similar and simple physical interpretation.  Imagine two stones dropped
+into a pond at locations with coordinates <math>\mathbf{m}_1</math> and <math>\mathbf{m}_2</math>.  The waves emanating from the centers
+form concentric circles which osculate along the line from <math>\mathbf{m}_1</math> to <math>\mathbf{m}_2</math>.
+Now imagine a world with ellipse-generating stones, where instead of circles, the waves form concentric ellipses determined by
+the shape matrices <math>\mathbf{A}_1</math> and <math>\mathbf{A}_2</math>.
+The ''locus of osculation''  of these ellipses will be the set of points where the tangents
+to the two ellipses are parallel (or equivalently, that their normals are parallel).  
+
+An
+example is shown in \figref{fig:kiss-demo}, using <math>\mathbf{m}_1 = (-2, 2)</math>, <math>\mathbf{m}_2 = (2, 6)</math>, and
+<center><math> (1)
+\mathbf{A}_1 = \left(
+\begin{matrix}
+ 1.0 & 0.5 \\ 0.5 & 1.5
+\end{matrix}
+\right)
+,\quad\quad
+\mathbf{A}_2 =\left(
+\begin{matrix}
+ 1.5 & -0.3 \\ -0.3 & 1.0
+\end{matrix}
+\right) ,
+</math></center>
+where we have found points of osculation by trial and error.
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=.6\textwidth,clip]{fig/kiss-demo}
+  \caption{Locus of osculation for two ellipsoidal level curves, with centers at <math>\mathbf{m}_1 = (-2, 2)</math> and  <math>\mathbf{m}_2 = (2, 6)</math>
+  and shape matrices <math>\mathbf{A}_1</math> and <math>\mathbf{A}_2</math> given in \eqref{eq:kiss-demoA}.
+  The left ellipsoids (red) have radii=1, 2, 3. The right ellipsoids
+  have radii=1, 1.74, 3.1, where the last two values were chosen to make them kiss at the points marked with squares. The black curve is an
+  approximation to the path of osculation, using a
+  spline function connecting <math>\mathbf{m}_1</math> to <math>\mathbf{m}_2</math> via the marked points of osculation.}
+  (2)
+\end{figure}
+
+== General solution ==
+
+A general solution can be described as follows.  Let the ellipses be given by 
+<center><math>\begin{matrix}
+f_1(\mathbf{x}) & = & \mathbf{m}_1 \oplus \sqrt{\mathbf{A}_1} = (\mathbf{x}-\mathbf{m}_1)^\mathsf{T} \mathbf{A} (\mathbf{x}-\mathbf{m}_1) \\
+f_2(\mathbf{x}) & = & \mathbf{m}_2 \oplus \sqrt{\mathbf{A}_2} = (\mathbf{x}-\mathbf{m}_2)^\mathsf{T} \mathbf{A} (\mathbf{x}-\mathbf{m}_2) , \\
+\end{matrix}</math></center>
+and denote their gradient vector functions as <math>\nabla f(x_1, x_2) = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2} \right) </math>, so that 
+<center><math>\begin{matrix}
+\nabla f_1(\mathbf{x}) & = & 2 \mathbf{A}_1 (\mathbf{x}-\mathbf{m}_1) \\
+\nabla f_2(\mathbf{x}) & = & 2 \mathbf{A}_2 (\mathbf{x}-\mathbf{m}_2) . \\
+\end{matrix}</math></center>
+
+Then, the points where <math>\nabla f_1</math> and <math>\nabla f_2</math> are parallel can be expressed in terms of the
+condition that their vector cross product, 
+<math>\mathbf{u} \otimes \mathbf{v} = u_1 v_2 - u_2 v_1 = \mathbf{v}^\mathsf{T} \mathbf{C} \mathbf{u} = 0</math>, where \mathbf{C} is the skew-symmetric matrix 
+<math> \mathbf{C} = \left(
+\begin{matrix}
+ 0 & 1 \\ -1 & 0
+\end{matrix}
+\right)
+<math> satisfying </math>\mathbf{C} = -\mathbf{C}^\mathsf{T}</math>.
+Thus, the locus of osculation is the set <math>\mathcal{O}</math>,
+<center><math>\begin{matrix}
+\mathcal{O} & = &\{\mathbf{x} \in \Real{3} \given \nabla f_1(\mathbf{x}) \otimes \nabla f_2(\mathbf{x}) = 0 \}  \\
+            & \implies &   (\mathbf{x}-\mathbf{m}_2)^\mathsf{T} \, \mathbf{A}_2 ^\mathsf{T} \: \mathbf{C} \: \mathbf{A}_1 \, (\mathbf{x}-\mathbf{m}_1) = 0   (3)   
+\end{matrix}</math></center>
+The expression in \eqref{eq:locus} is a biquadratic form in \mathbf{x}, with central matrix <math>\mathbf{A}_2 ^\mathsf{T} \: \mathbf{C} \: \mathbf{A}_1</math>,
+implying that <math>\mathcal{O}</math> is a conic section in the general case. Note that when <math>\mathbf{x}=\mathbf{m}_1</math> or <math>\mathbf{x}=\mathbf{m}_2</math>,
+\eqref{eq:locus} is necessarily zero, so the locus of osculation always passes through  <math>\mathbf{m}_1</math> and <math>\mathbf{m}_2</math>.
+
+A visual demonstration of theory above is
+shown in \figref{fig:kiss-demo2} (left), which overlays the ellipses in \figref{fig:kiss-demo} with contour lines 
+(hyperbolae, here)
+of 
+the vector cross product function contained in \eqref{eq:locus}.
+When the contours of <math>f_1</math> and <math>f_2</math> have the same shape (<math>\mathbf{A}_1 = c \mathbf{A}_2 </math>), as in the right panel of \figref{fig:kiss-demo2},
+\eqref{eq:locus}
+reduces to a line, in accord with the stones-in-pond interpretation. 
+The above can be readily extended to ellipsoids in higher dimension, where the development is more easily understood
+in terms of normals to the surfaces.
+
+\begin{comment}
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=.6\textwidth,clip]{fig/kiss-demo2}
+  \caption{Locus of osculation for two ellipsoidal level curves, with parameters as in \figref{fig:kiss-demo} and \eqref{eq:kiss-demoA},
+  showing contour lines of the vector cross product function \eqref{eq:locus}.
+  The thick black curve shows the complete locus of osculation for these two ellipses.}
+  (4)
+\end{figure}
+\end{comment}
+
+\begin{figure}[htb]
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/kiss-demo2a}
+
+
+ \end{minipage}
+ \hfill
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/kiss-demo2b}
+ \end{minipage}
+  \caption{Locus of osculation for two ellipsoidal level curves, showing contour lines of the vector cross product function \eqref{eq:locus}.
+  The thick black curve shows the complete locus of osculation for these two ellipses, where the cross product function equals 0.
+Left: with parameters as in \figref{fig:kiss-demo} and \eqref{eq:kiss-demoA}. Right: with the same shape matrix, <math>\mathbf{A}_1</math> for both
+ellipsoids.}
+  (6)
+\end{figure}
+

@@ -1,0 +1,59 @@
+\subsection{Bayesian linear models}
+In a Bayesian alternative to standard least squares estimation, consider the case where our prior
+information about \vec{\beta} can be encapsulated in a distribution with a prior mean,
+$\vec{\beta}^{prior}$ and covariance matrix \mat{A}.  We show that under reasonable conditions
+the Bayesian posterior 
+estimate, $\widehat{\vec{\beta}}^{posterior}$, turns out
+to be a weighted average of the prior coefficients $\vec{\beta}^{prior}$ and the OLS solution $\widehat{\vec{\beta}}^{OLS}$,
+with weights proportional to the conditional prior precision, $\mat{A}^{-1}$, and the data precision given by
+$\mat{X}\trans\mat{X}$.   Once again, this can be understood geometrically as the locus of osculation of 
+ellipses that characterize the prior and the data.
+
+Under Gaussian assumptions, 
+the conditional likelihood can be written as
+\begin{equation*}
+\mathcal{L} (\vec{y} \given \mat{X}, \vec{\beta}, \sigma^2) \propto
+   (\sigma^2)^{-n/2} \; \exp \left( -\frac{1}{2 \sigma^2} (\vec{y}-\mat{X} \vec{\beta}) \trans  (\vec{y}-\mat{X} \vec{\beta})   \right)
+\end{equation*}
+To focus on alternative estimators, we can complete the square around $\widehat{\vec{\beta}} = \widehat{\vec{\beta}}^{OLS}$ to give
+
+\begin{equation} \label{eq:bayes-qform}
+(\vec{y}- \mat{X} \vec{\beta})\trans(\vec{y}- \mat{X} \vec{\beta}) = 
+(\vec{y}- \mat{X} \widehat{\vec{\beta}})\trans(\vec{y}- \mat{X} \widehat{\vec{\beta}}) + 
+(\vec{\beta} - \widehat{\vec{\beta}})\trans(\mat{X}\trans\mat{X})(\vec{\beta} - \widehat{\vec{\beta}})
+\end{equation}
+With a little manipulation, a conjugate prior, of the form $\Pr (\vec{\beta}, \sigma^2) = \Pr (\vec{\beta} \given \sigma^2) \times \Pr (\sigma^2)$
+can be expressed with $\Pr (\sigma^2)$ an inverse gamma distribution depending on the first term on the right hand side of \eqref{eq:bayes-qform}
+and $\Pr (\vec{\beta} \given \sigma^2)$ a normal distribution,
+\begin{equation}
+\Pr (\vec{\beta} \given \sigma^2) \propto (\sigma^2)^{-p}  \times \exp \left( -\frac{1}{2 \sigma^2}  (\vec{\beta} - \vec{\beta}^{prior}) \trans  \: \mat{A} (\vec{\beta} - \vec{\beta}^{prior})  \right)
+\end{equation}
+
+The posterior distribution is then 
+$\Pr (\vec{\beta}, \sigma^2 \given \vec{y}, \mat{X}) \propto \Pr (\vec{y} \given \mat{X}, \vec{\beta}, \sigma^2) \times
+\Pr (\vec{\beta} \given \sigma^2) \times \Pr (\sigma^2)$
+whence, after some simplification,  
+the posterior mean can be expressed 
+
+\begin{equation}
+\widehat{\vec{\beta}}^{posterior} = 
+(\mat{X}\trans \mat{X}\widehat{\vec{\beta}}^{OLS} + \mat{A} \vec{\beta}^{prior})
+(\mat{X}\trans \mat{X}+\mat{A})^{-1} 
+\end{equation}
+with covariance matrix $(\mat{X}\trans \mat{X}+\mat{A})^{-1}$. The posterior coefficients are thus a weighted average of 
+the prior coefficients and the OLS estimates, with weights given by the conditional prior precision, $\mat{A}^{-1}$
+and the data precision, $\mat{X}\trans\mat{X}$.  Thus, as we increase the strength of our prior precision (decreasing
+prior variance), we place greater weight on our prior beliefs relative to the data.
+
+In this context, ridge regression can be seen as the special case where $\widehat{\vec{\beta}}^{prior} = \vec{0}$ and $\mat{A} = k \mat{I}$
+and where \figref{fig:ridge-demo} provides an elliptical visualization. In \eqref{eq:ridge-sup2}, the number of observations,
+$n(k)$ corresponding to $\mat{X}_k^0$ can be seen as another way of expressing the weight of the prior in relation to the data.
+
+\TODO{Complete this section.  What have I omitted in the development, necessary for this paper?
+Are there other geometric insights?  Does it need another, Bayesian specific graph?
+Is there a simple expression for $\Var({\widehat{\vec{\beta}}^{posterior}})$
+that could be exploited?
+}
+
+
+

@@ -1,0 +1,93 @@
+\section{Discussion and Conclusions}
+
+\epigraph{I know of scarcely anything so apt to impress the imagination as the
+wonderful form of cosmic order expressed by the ``(Elliptical) Law of Frequency of
+Error.'' 
+The law would have been personified by the Greeks and deified, if they had known of it. 
+... % It reigns with serenity and in complete self-effacement, amidst the wildest confusion. 
+    % The huger the mob, and the greater the apparent anarchy, the more perfect is its sway. 
+    % It is the supreme law of Unreason. 
+	%Whenever a large sample of chaotic elements are taken in hand 
+	%and marshaled in the order of their magnitude, 
+	%an unsuspected and most beautiful form of regularity proves to have been
+	%latent all along.
+}
+{Sir Francis Galton, \emph{Natural Inheritance}, London: Macmillan, 1889.
+(``(Elliptical)'' added).
+%Quoted in J. R. Newman (ed.) The World of Mathematics, New York: Simon and Schuster, 1956. p. 1482.
+}
+
+In statistical data, theory and graphical methods, one main organizing
+distinction can be made in \emph{all} 
+of these depending
+on the dimensionality of the problem.  A coarse but useful scale considers the essential defining
+distinctions to be among:
+\begin{itemize*}
+ \item ONE (univariate), 
+ \item TWO (bivariate), 
+ \item MANY (multivariate).  
+\end{itemize*}
+This scale% 
+\footnote{
+This idea, as a unifying classification principle for data analysis and graphics
+was first suggested to the first author in
+seminars by John Hartigan at Princeton, c. 1968.
+}
+at least implicitly organizes much of current statistical teaching, practice, and software.
+But within this, the data, theory and graphical methods are often treated separately (1D, 2D, $n$D),
+without regard to geometric ideas and visualizations that help tie them together.
+
+This paper starts from the idea that one geometric form--- the ellipsoid---
+provides a unifying framework for many statistical phenomena, with simple representations in
+1D (a line), 2D (ellipse) that extend naturally to $n$ dimensions.  The intellectual leap 
+in statistical thinking from ONE to TWO in \citet{Galton:1886} was enormous.
+Galton's visual insights from the ellipse quickly led to an understanding of the
+ellipse as a contour of a bivariate normal surface.  From here, the step from TWO to MANY
+would take another 20--30 years, but it is hard to escape the conclusion that 
+geometric insight from the ellipse to the general ellipsoid in $n$D
+played an important role in the development of multivariate statistical methods.
+
+In this paper, we have tried to show how ellipsoids can be useful tools for
+visual thinking, data analysis and pedagogy in a variety of contexts often
+treated separately and from a univariate perspective.  Even in bivariate 
+and multivariate problems, first-moment summaries (a 1D regression line
+or 2+D regression surface) show only part of the story--- that of the
+expectation of a response $\vec{y}$ given predictors $\mat{X}$.
+In many cases, the more interesting part of the story concerns the 
+\emph{precision} of various methods of estimation, which we've shown
+to be easily revealed through data ellipsoids and
+elliptical confidence regions for parameters.
+
+The general relations among statistical methods, matrix algebra and geometry are
+not new here.  To our knowledge, \citet{Dempster:69} was the first to exploit this
+in a systematic fashion, establishing the connections among abstract vector spaces,
+algebraic coordinate systems, matrix operations and properties, the dualities
+between observation space and variable space,
+ and the geometry
+of ellipses and projections, leading to important visual insights.%
+%\footnote{
+%The role of statistical computation should not be underestimated
+%in appreciation of Dempster's contribution.
+%...
+%}
+The roots of these connections go back much further---
+to 
+\citet{Cramer:1946} (idea of the concentration ellipsoid),
+\citet{Hotelling:1933} (principal components)
+and, we maintain, ultimately to \citet{Galton:1886}.
+
+The separate and joint roles of statistical computation and computational graphics should not be underestimated
+in appreciation of these developments.  Dempster's analysis of the connections among geometry, algebra and
+statistical methods was fueled by the development and software implementation of algorithms 
+(Gram-Schmidt orthogonalization, Cholesky decomposition, sweep and multistandardize operators from
+\citet{Beaton:64})
+that allowed him to show precisely the ...
+
+Several features of the current discussion may help to present these in a
+new light.  
+
+... [ to be completed ] ...
+
+
+
+
