@@ -83,71 +83,75 @@
 \newlabel{fig:vis-reg-coffee11}{{14}{19}}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Data space and $\ensuremath  {\bm  {\beta }}$ space representations of Coffee and Stress. Left: Standard (40\%) data ellipse Right: Joint 95\% confidence ellipse (green) for ($\beta _{\mathrm  {Coffee}}, \beta _{\mathrm  {Stress}}$), CI ellipse (red) with 95\% univariate shadows. }}{20}}
 \newlabel{fig:vis-reg-coffee12}{{15}{20}}
-\citation{Timm:75}
 \@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Joint 95\% confidence ellipse for ($\beta _{\mathrm  {Coffee}}, \beta _{\mathrm  {Stress}}$), together with the 1D marginal confidence interval for $\beta _{\mathrm  {Coffee}}$ ignoring Stress (thick blue line), and a visual confidence interval for $\beta _{\mathrm  {Stress}} - \beta _{\mathrm  {Coffee}}=0$ (dark cyan). }}{22}}
 \newlabel{fig:vis-reg-coffee13}{{16}{22}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Ellipsoids in added variable plots}{22}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Multivariate linear models: HE plots}{23}}
-\newlabel{sec:mlm}{{5}{23}}
-\newlabel{eq:mglt}{{11}{23}}
-\newlabel{eq:hmat}{{12}{23}}
-\newlabel{eq:emat}{{13}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Hypothesis-Error (HE) plots}{23}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Multivariate test statistics as functions of the eigenvalues $\lambda _i$ solving $\ensuremath  {\mathrm  {det} (\ensuremath  {\bm  {H}} - \lambda \ensuremath  {\bm  {E}})}=0$ or eigenvalues $\rho _i$ solving $\ensuremath  {\mathrm  {det} (\ensuremath  {\bm  {H}} - \rho (\ensuremath  {\bm  {H}}+\ensuremath  {\bm  {E}}))}=0$ }}{24}}
-\newlabel{tab:criteria}{{1}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces (a) Data ellipses and (b) corresponding HE plot for sepal length and petal length in the Iris dataset. The \ensuremath  {\bm  {H}} ellipse is the data ellipse of the fitted values defined by the group means, $\mathaccentV {bar}016{\ensuremath  {\bm  {y}}}_{i \cdot }$ The \ensuremath  {\bm  {E}} ellipse is the data ellipse of the residuals, $(\ensuremath  {\bm  {y}}_{ij} - \mathaccentV {bar}016{\ensuremath  {\bm  {y}}}_{i \cdot })$. Using evidence (``significance'') scaling of the \ensuremath  {\bm  {H}} ellipse, the plot has the property that the multivariate test for a given hypothesis is significant by Roy's largest root test \emph  {iff} the \ensuremath  {\bm  {H}} ellipse protrudes anywhere outside the \ensuremath  {\bm  {E}} ellipse.}}{25}}
-\newlabel{fig:heplot3a}{{17}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Linear hypotheses: Geometries of contrasts and sums of effects}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces $\ensuremath  {\bm  {H}}$ and $\ensuremath  {\bm  {E}}$ matrices for sepal width and sepal length in the iris data, together with $\ensuremath  {\bm  {H}}$ matrices for testing two orthogonal contrasts in the species effect.}}{26}}
-\newlabel{fig:HE-contrasts-iris}{{18}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Canonical projections: ellipses in data space and canonical space}{26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Canonical HE plot for the Iris data. In this plot, the \ensuremath  {\bm  {H}} ellipse is shown using effect-size scaling to preserve resolution, and the variable vectors have been multiplied by a constant to approximately fill the plot space. The projections of the variable vectors on the coordinate axes show the correlations of the variables with the canonical dimensions.}}{27}}
-\newlabel{fig:HE-can-iris}{{19}{27}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Kissing ellipsoids}{28}}
-\newlabel{eq:kiss-demoA}{{15}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Locus of osculation for two ellipsoidal level curves, with centers at $\ensuremath  {\bm  {m}}_1 = (-2, 2)$ and $\ensuremath  {\bm  {m}}_2 = (2, 6)$ and shape matrices $\ensuremath  {\bm  {A}}_1$ and $\ensuremath  {\bm  {A}}_2$ given in Eqn.\nobreakspace  {}(15\hbox {}). The left ellipsoids (red) have radii=1, 2, 3. The right ellipsoids have radii=1, 1.74, 3.1, where the last two values were chosen to make them kiss at the points marked with squares. The black curve is an approximation to the path of osculation, using a spline function connecting $\ensuremath  {\bm  {m}}_1$ to $\ensuremath  {\bm  {m}}_2$ via the marked points of osculation.}}{29}}
-\newlabel{fig:kiss-demo}{{20}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Measurement error}{22}}
+\citation{Timm:75}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Effects of measurement error in Stress on the marginal relation between Heart disease and Stress. Each panel starts with the observed data ($\delta =0$), then adds random normal error, $\mathcal  {N}(0, \delta \times SD_{Stress})$, with $\delta = \{0.75, 1.0, 1.5\}$ to the value of Stress. Increasing measurement error biases the slope for Stress toward 0. Left: 50\% data ellipses; right: 50\% confidence ellipses for $(\beta _0, \beta _{Stress})$. }}{23}}
+\newlabel{fig:coffee-stress}{{17}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Ellipsoids in added variable plots}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Added variable plots for Stress and Coffee in the multiple regression predicting Heart disease. Each panel shows the 50\% conditional data ellipse for partial residuals (shaded, red) as well as the marginal 50\% data ellipse for the $(x, y)$ variables, shifted to the origin. Arrows connect the mean-centered marginal points (open circles) to the partial residual points (filled circles).}}{24}}
+\newlabel{fig:coffee-avplot}{{18}{24}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Multivariate linear models: HE plots}{24}}
+\newlabel{sec:mlm}{{5}{24}}
+\newlabel{eq:mglt}{{11}{24}}
+\newlabel{eq:hmat}{{12}{24}}
+\newlabel{eq:emat}{{13}{24}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Multivariate test statistics as functions of the eigenvalues $\lambda _i$ solving $\ensuremath  {\mathrm  {det} (\ensuremath  {\bm  {H}} - \lambda \ensuremath  {\bm  {E}})}=0$ or eigenvalues $\rho _i$ solving $\ensuremath  {\mathrm  {det} (\ensuremath  {\bm  {H}} - \rho (\ensuremath  {\bm  {H}}+\ensuremath  {\bm  {E}}))}=0$ }}{25}}
+\newlabel{tab:criteria}{{1}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Hypothesis-Error (HE) plots}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces (a) Data ellipses and (b) corresponding HE plot for sepal length and petal length in the Iris dataset. The \ensuremath  {\bm  {H}} ellipse is the data ellipse of the fitted values defined by the group means, $\mathaccentV {bar}016{\ensuremath  {\bm  {y}}}_{i \cdot }$ The \ensuremath  {\bm  {E}} ellipse is the data ellipse of the residuals, $(\ensuremath  {\bm  {y}}_{ij} - \mathaccentV {bar}016{\ensuremath  {\bm  {y}}}_{i \cdot })$. Using evidence (``significance'') scaling of the \ensuremath  {\bm  {H}} ellipse, the plot has the property that the multivariate test for a given hypothesis is significant by Roy's largest root test \emph  {iff} the \ensuremath  {\bm  {H}} ellipse protrudes anywhere outside the \ensuremath  {\bm  {E}} ellipse.}}{26}}
+\newlabel{fig:heplot3a}{{19}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Linear hypotheses: Geometries of contrasts and sums of effects}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces $\ensuremath  {\bm  {H}}$ and $\ensuremath  {\bm  {E}}$ matrices for sepal width and sepal length in the iris data, together with $\ensuremath  {\bm  {H}}$ matrices for testing two orthogonal contrasts in the species effect.}}{27}}
+\newlabel{fig:HE-contrasts-iris}{{20}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Canonical projections: ellipses in data space and canonical space}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Canonical HE plot for the Iris data. In this plot, the \ensuremath  {\bm  {H}} ellipse is shown using effect-size scaling to preserve resolution, and the variable vectors have been multiplied by a constant to approximately fill the plot space. The projections of the variable vectors on the coordinate axes show the correlations of the variables with the canonical dimensions.}}{29}}
+\newlabel{fig:HE-can-iris}{{21}{29}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Kissing ellipsoids}{30}}
+\newlabel{eq:kiss-demoA}{{15}{30}}
 \newlabel{eq:locus}{{16}{30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Locus of osculation for two ellipsoidal level curves, showing contour lines of the vector cross product function Eqn.\nobreakspace  {}(16\hbox {}). The thick black curve shows the complete locus of osculation for these two ellipses, where the cross product function equals 0. Left: with parameters as in Figure\nobreakspace  {}20\hbox {} and Eqn.\nobreakspace  {}(15\hbox {}). Right: with the same shape matrix, $\ensuremath  {\bm  {A}}_1$ for both ellipsoids.}}{30}}
-\newlabel{fig:kiss-demo2}{{21}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Discriminant analysis}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Locus of osculation for two ellipsoidal level curves, with centers at $\ensuremath  {\bm  {m}}_1 = (-2, 2)$ and $\ensuremath  {\bm  {m}}_2 = (2, 6)$ and shape matrices $\ensuremath  {\bm  {A}}_1$ and $\ensuremath  {\bm  {A}}_2$ given in Eqn.\nobreakspace  {}(15\hbox {}). The left ellipsoids (red) have radii=1, 2, 3. The right ellipsoids have radii=1, 1.74, 3.1, where the last two values were chosen to make them kiss at the points marked with squares. The black curve is an approximation to the path of osculation, using a spline function connecting $\ensuremath  {\bm  {m}}_1$ to $\ensuremath  {\bm  {m}}_2$ via the marked points of osculation.}}{31}}
+\newlabel{fig:kiss-demo}{{22}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Discriminant analysis}{31}}
 \citation{Fox:2008}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Locus of osculation for two ellipsoidal level curves, showing contour lines of the vector cross product function Eqn.\nobreakspace  {}(16\hbox {}). The thick black curve shows the complete locus of osculation for these two ellipses, where the cross product function equals 0. Left: with parameters as in Figure\nobreakspace  {}22\hbox {} and Eqn.\nobreakspace  {}(15\hbox {}). Right: with the same shape matrix, $\ensuremath  {\bm  {A}}_1$ for both ellipsoids.}}{32}}
+\newlabel{fig:kiss-demo2}{{23}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Ridge regression}{32}}
+\newlabel{eq:ridgeRSS}{{18}{32}}
 \citation{HoerlKennard:1970a,HoerlKennard:1970b}
 \citation{Marquardt:1970}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Ridge regression}{31}}
-\newlabel{eq:ridgeRSS}{{18}{31}}
-\newlabel{eq:ridge-beta}{{19}{31}}
-\newlabel{eq:ridge}{{20}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Elliptical contours of the OLS residual sum of squares for two parameters in a regression, together with circular contours for the constraint function, $\beta _1^2 + \beta _2^2 \le t$. Ridge regression finds the point $\ensuremath  {\bm  {\beta }}^{RR}$ where the OLS contours just kiss the contstraint region.}}{32}}
-\newlabel{fig:ridge-demo}{{22}{32}}
-\newlabel{eq:ridge-sup1}{{21}{32}}
-\newlabel{eq:ridge-sup2}{{22}{32}}
+\newlabel{eq:ridge-beta}{{19}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Elliptical contours of the OLS residual sum of squares for two parameters in a regression, together with circular contours for the constraint function, $\beta _1^2 + \beta _2^2 \le t$. Ridge regression finds the point $\ensuremath  {\bm  {\beta }}^{RR}$ where the OLS contours just kiss the contstraint region.}}{33}}
+\newlabel{fig:ridge-demo}{{24}{33}}
+\newlabel{eq:ridge}{{20}{33}}
 \citation{HoerlKennard:1970b}
 \citation{Marquardt:1970}
 \citation{Longley:1967}
 \citation{Longley:1967}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Bivariate ridge trace plots}{33}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Bayesian linear models}{33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Bivariate ridge trace plots for the coefficients of four predictors against the coefficient for GNP in Longley's data, with $k = 0, 0.005, 0.01, 0.02, 0.04, 0.08$. In most cases the coefficients are driven toward zero, but the bivariate plot also makes clear the reduction in variance. To reduce overlap, all confidence ellipses are shown with 1/2 the standard radius.}}{34}}
-\newlabel{fig:ridge2}{{23}{34}}
-\newlabel{eq:bayes-qform}{{24}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Mixed models: BLUEs and BLUPs}{35}}
+\newlabel{eq:ridge-sup1}{{21}{34}}
+\newlabel{eq:ridge-sup2}{{22}{34}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Bivariate ridge trace plots}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Bivariate ridge trace plots for the coefficients of four predictors against the coefficient for GNP in Longley's data, with $k = 0, 0.005, 0.01, 0.02, 0.04, 0.08$. In most cases the coefficients are driven toward zero, but the bivariate plot also makes clear the reduction in variance. To reduce overlap, all confidence ellipses are shown with 1/2 the standard radius.}}{35}}
+\newlabel{fig:ridge2}{{25}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Bayesian linear models}{36}}
+\newlabel{eq:bayes-qform}{{24}{36}}
 \citation{BrykRaudenbush:1992,RaudenbushBryk:2002}
 \citation{RaudenbushBryk:2002}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Example: Math achievement and SES}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Comparing BLUEs and BLUPs. Each panel plots the OLS estimates from separate regressions for each school (BLUEs) versus the mixed model estimates from the random intercepts and slopes model (BLUPs). Left: intercepts; Right: slopes for CSES. The shrinkage of the BLUPs toward the OLS estimate is much greater for slopes than intercepts. }}{36}}
-\newlabel{fig:hsbmix4}{{24}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Comparing BLUEs and BLUPs. The plot shows ellipses of 50\% coverage for the estimates of intercepts and slopes from OLS regressions (BLUEs) and the mixed model (BLUPs), separately for each sector. The centers of the ellipses illustrate how the BLUPS can be considered a weighted average of the BLUEs and the pooled OLS estimate, ignoring sector. The relative sizes of the ellipses reflect the smaller variance for the BLUPs compared to the BLUEs, particularly for slope estimates. }}{37}}
-\newlabel{fig:hsbmix43}{{25}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Mixed models: BLUEs and BLUPs}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Example: Math achievement and SES}{37}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Discussion and Conclusions}{37}}
 \citation{Galton:1886}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Comparing BLUEs and BLUPs. Each panel plots the OLS estimates from separate regressions for each school (BLUEs) versus the mixed model estimates from the random intercepts and slopes model (BLUPs). Left: intercepts; Right: slopes for CSES. The shrinkage of the BLUPs toward the OLS estimate is much greater for slopes than intercepts. }}{38}}
+\newlabel{fig:hsbmix4}{{26}{38}}
 \citation{Dempster:69}
 \citation{Cramer:1946}
 \citation{Hotelling:1933}
 \citation{Galton:1886}
 \citation{Beaton:64}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Comparing BLUEs and BLUPs. The plot shows ellipses of 50\% coverage for the estimates of intercepts and slopes from OLS regressions (BLUEs) and the mixed model (BLUPs), separately for each sector. The centers of the ellipses illustrate how the BLUPS can be considered a weighted average of the BLUEs and the pooled OLS estimate, ignoring sector. The relative sizes of the ellipses reflect the smaller variance for the BLUPs compared to the BLUEs, particularly for slope estimates. }}{39}}
+\newlabel{fig:hsbmix43}{{27}{39}}
 \bibdata{references}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Supplementary materials}{38}}
 \bibcite{Anderson:35}{{1}{1935}{{Anderson}}{{}}}
 \bibcite{Beaton:64}{{2}{1964}{{Beaton}}{{}}}
 \bibcite{Boyer:91}{{3}{1991}{{Boyer}}{{}}}
@@ -159,13 +163,14 @@
 \bibcite{Fisher:36}{{9}{1936}{{Fisher}}{{}}}
 \bibcite{Fox:2008}{{10}{2008}{{Fox}}{{}}}
 \bibcite{Freedman:01}{{11}{2001}{{Freedman}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Supplementary materials}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Acknowledgments}{40}}
 \bibcite{Friendly:91}{{12}{1991}{{Friendly}}{{}}}
 \bibcite{Friendly:07:guerry}{{13}{2007}{{Friendly}}{{}}}
 \bibcite{Galton:1886}{{14}{1886}{{Galton}}{{}}}
 \bibcite{GnanadesikanKettenring:72}{{15}{1972}{{Gnanadesikan and Kettenring}}{{}}}
 \bibcite{Guerry:1833}{{16}{1833}{{Guerry}}{{}}}
 \bibcite{HoerlKennard:1970b}{{17}{1970{a}}{{Hoerl and Kennard}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Acknowledgments}{39}}
 \bibcite{HoerlKennard:1970a}{{18}{1970{b}}{{Hoerl and Kennard}}{{}}}
 \bibcite{Hotelling:1933}{{19}{1933}{{Hotelling}}{{}}}
 \bibcite{Longley:1967}{{20}{1967}{{Longley}}{{}}}
