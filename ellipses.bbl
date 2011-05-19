@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}
-\begin{thebibliography}{33}
+\begin{thebibliography}{34}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Anderson(1935)}]{Anderson:35}
@@ -187,6 +187,11 @@ Timm, N.~H. (1975).
 \newblock \emph{Multivariate Analysis with Applications in Education and
   Psychology}.
 \newblock Belmont, CA: Wadsworth (Brooks/Cole).
+
+\bibitem[{Velleman and Welsh(1981)}]{VellemanWelsh:81}
+Velleman, P.~F. and Welsh, R.~E. (1981).
+\newblock Efficient computing of regression diagnostics.
+\newblock \emph{The American Statistician}, 35(4), 234--242.
 
 \bibitem[{von Humboldt(1811)}]{Humboldt:1811a}
 von Humboldt, A. (1811).
