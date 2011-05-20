@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}
-\begin{thebibliography}{34}
+\begin{thebibliography}{36}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Anderson(1935)}]{Anderson:35}
@@ -60,6 +60,16 @@ Fox, J. (2008).
 \newblock \emph{Applied Regression, Generalized Linear Models, and Related
   Methods}.
 \newblock Thousand Oaks, CA: Sage.
+
+\bibitem[{Fox(2009)}]{car}
+Fox, J. (2009).
+\newblock \emph{car: Companion to Applied Regression}.
+\newblock R package version 1.2-16.
+
+\bibitem[{Fox \emph{et~al.}(2009)Fox, Friendly, and Monette}]{heplots1}
+Fox, J., Friendly, M., and Monette, G. (2009).
+\newblock \emph{{heplots}: Visualizing Tests in Multivariate Linear Models}.
+\newblock R package version 0.8-11.
 
 \bibitem[{Freedman(2001)}]{Freedman:01}
 Freedman, D.~A. (2001).
