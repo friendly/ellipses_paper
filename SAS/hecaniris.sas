@@ -1,0 +1,1 @@
+/home/friendly/sasuser/datavis/manova/hecaniris.sas
