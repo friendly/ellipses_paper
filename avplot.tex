@@ -116,13 +116,19 @@ regression example of Simpson's paradox that we considered earlier.
 Less obvious is the fact that 
 the marginal and AVP ellipses are easily visualized as a shadow versus a slice of the full data ellipsoid. 
 Thus, the AVP ellipse must be contained in the marginal ellipse, as we can see in \figref{fig:coffee-avplot-B}.
+If there are only two $x$s, then the AVP ellipse must touch the marginal ellipse at some points. 
+% This implies interesting contraints among the three quantities: improvement in fit, VIF and change from marginal to conditional slope.
 The shrinkage of the intersection of the AVP ellipse with the $y$ axis represents improvement in fit due to other $x$s.
+
 More importantly, the shrinkage of the width (projected onto a horizontal axis) represents the 
 square root of the variance inflation factor (VIF), which can be shown to be the ratio of the horizontal
 width of the marginal ellipse of $(x_k, y)$, with standard deviation $s(x_k)$ to the width of the conditional
 ellipse of $(x_k^\star, y^\star)$, with standard deviation $s(x_k \given \textrm{others})$.
+This geometry implies interesting contraints among the three quantities: improvement in fit, VIF and change from the marginal to conditional slope.
 
 Finally, \figref{fig:coffee-avplot-B} also shows how conditioning on other predictors works for individual
 observations, where each point for  $(\vec{x}_k^\star, \vec{y}^\star)$ is the image of $(\vec{x}_k, \vec{y})$ 
-along the path of the marginal regression.
+along the path of the marginal regression. This reminds us that the AVP is a 2D projection of the full space,
+where the regression plane of $y$ on $\mat{X}[-k]$ becomes the vertical axis and 
+the regression plane of $x_k$ on $\mat{X}[-k]$ becomes the horizontal axis.
 
