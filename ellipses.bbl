@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Anderson(1935)}]{Anderson:35}
@@ -83,11 +83,17 @@ Friendly, M. (1991).
 \newblock \emph{{SAS System} for Statistical Graphics}.
 \newblock Cary, NC: SAS Institute, 1st edn.
 
-\bibitem[{Friendly(2007)}]{Friendly:07:guerry}
-Friendly, M. (2007).
+\bibitem[{Friendly(2007{\natexlab{a}})}]{Friendly:07:guerry}
+Friendly, M. (2007{\natexlab{a}}).
 \newblock {A.-M. Guerry's} \emph{Moral Statistics of France}: Challenges for
   multivariable spatial analysis.
 \newblock \emph{Statistical Science}, 22(3), 368--399.
+
+\bibitem[{Friendly(2007{\natexlab{b}})}]{Friendly:07:manova}
+Friendly, M. (2007{\natexlab{b}}).
+\newblock {HE} plots for multivariate general linear models.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 16(2),
+  421--444.
 
 \bibitem[{Galton(1886)}]{Galton:1886}
 Galton, F. (1886).
