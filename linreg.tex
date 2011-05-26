@@ -34,10 +34,10 @@ A visual approximation to a 95\% confidence interval for the slope, and thus a v
 may be seen in \figref{vis-reg-prestige}.  From the formula for a 95\% confidence interval,
 $CI_{.95} (\beta) = b \pm t_{n-2}^{0.975} \times SE(b)$, we can take $t_{n-2}^{0.975} \approx 2$
 and 
- $SE(b) \approx \left(\frac{1}{\sqrt{n}}\right) \frac{s_e}{s_x}$, 
+ $SE(b) \approx \frac{1}{\sqrt{n}}\left( \frac{s_e}{s_x} \right)$, 
 leading to
 \begin{equation}\label{eq:ci-approx}
-CI_{.95} (\beta) \approx b \pm \frac{2}{\sqrt{n}} \times \frac{s_e}{s_x}
+CI_{.95} (\beta) \approx b \pm \frac{2}{\sqrt{n}} \times \left( \frac{s_e}{s_x} \right) \period
 \end{equation}
 %\todo{fix the notation in these figures}
 \begin{figure}[htb]
@@ -70,4 +70,4 @@ in the right panel of \figref{vis-reg-prestige}.
 In the data used for this
 example, $n=102$, so the factor  is approximately 0.2 here.
 Now consider the horizontal line through the center of the data ellipse.  If this line is outside the 
-envelope of the confidence lines, we can reject $H_0 : \beta = 0$.
+envelope of the confidence lines, we can reject $H_0 : \beta = 0$ via this simple visual approximation.

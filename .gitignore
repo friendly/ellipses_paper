@@ -16,7 +16,11 @@ _*.sas
 # special files
 tags
 Distfile
+.texlipse
+.project
 # exclude directories
+.svn/
+.notes/
 notes/
 fig/*.pdf
 fig/*.png
