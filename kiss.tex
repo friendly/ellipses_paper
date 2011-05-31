@@ -66,14 +66,14 @@ and denote their gradient vector functions as $\nabla f(x_1, x_2) = \left(\frac{
 
 Then, the points where $\nabla f_1$ and $\nabla f_2$ are parallel can be expressed in terms of the
 condition that their vector cross product, 
-$\vec{u} \otimes \vec{v} = u_1 v_2 - u_2 v_1 = \vec{v}\trans \mat{C} \vec{u} = 0$, where \mat{C} is the skew-symmetric matrix 
+$\vec{u} \circledast \vec{v} = u_1 v_2 - u_2 v_1 = \vec{v}\trans \mat{C} \vec{u} = 0$, where \mat{C} is the skew-symmetric matrix 
 $ \mat{C} = \left(
 \begin{array}{cc}
  0 & 1 \\ -1 & 0
 \end{array}
 \right)
 $ satisfying $\mat{C} = -\mat{C}\trans$.
-Thus, the locus of osculation is the set $\mathcal{O}$, given by $\mathcal{O}  = \{\vec{x} \in \Real{2} \given \nabla f_1(\vec{x}) \otimes \nabla f_2(\vec{x}) = 0 \}$,
+Thus, the locus of osculation is the set $\mathcal{O}$, given by $\mathcal{O}  = \{\vec{x} \in \Real{2} \given \nabla f_1(\vec{x}) \circledast \nabla f_2(\vec{x}) = 0 \}$,
 which implies
 \begin{equation}
 (\vec{x}-\vec{m}_2)\trans \, \mat{A}_2 \trans \: \mat{C} \: \mat{A}_1 \, (\vec{x}-\vec{m}_1) = 0  \period  \label{eq:locus}   

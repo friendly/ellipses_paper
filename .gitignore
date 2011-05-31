@@ -24,3 +24,6 @@ Distfile
 notes/
 fig/*.pdf
 fig/*.png
+SAS/*.ps
+SAS/*.eps
+
