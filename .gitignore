@@ -10,7 +10,6 @@
 *.blg
 *.brf
 *.out
-_*.sas
 *.eml
 *0.sas
 # special files
@@ -19,6 +18,8 @@ Distfile
 .texlipse
 .project
 # exclude directories
+Test/
+Old/
 .svn/
 .notes/
 notes/

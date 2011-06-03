@@ -1,19 +1,19 @@
 \section{Discussion and Conclusions}
 
 \epigraph{I know of scarcely anything so apt to impress the imagination as the
-wonderful form of cosmic order expressed by the ``(Elliptical) Law of Frequency of
-Error.'' 
-The law would have been personified by the Greeks and deified, if they had known of it. 
-... % It reigns with serenity and in complete self-effacement, amidst the wildest confusion. 
-    % The huger the mob, and the greater the apparent anarchy, the more perfect is its sway. 
-    It is the supreme law of Unreason. 
-	Whenever a large sample of chaotic elements are taken in hand 
-	and marshaled in the order of their magnitude, 
+wonderful form of cosmic order expressed by the ``[Elliptical] Law of Frequency of
+Error.''
+The law would have been personified by the Greeks and deified, if they had known of it.
+... % It reigns with serenity and in complete self-effacement, amidst the wildest confusion.
+    % The huger the mob, and the greater the apparent anarchy, the more perfect is its sway.
+    It is the supreme law of Unreason.
+	Whenever a large sample of chaotic elements are taken in hand
+	and marshaled in the order of their magnitude,
 	an unsuspected and most beautiful form of regularity proves to have been
 	latent all along.
 }
-{Sir Francis Galton, \emph{Natural Inheritance}, London: Macmillan, 1889.
-(``(Elliptical)'' added).
+{Sir Francis Galton, \emph{Natural Inheritance}, London: Macmillan, 1889
+(``[Elliptical]'' added).
 %Quoted in J. R. Newman (ed.) The World of Mathematics, New York: Simon and Schuster, 1956. p. 1482.
 }
 
@@ -21,52 +21,50 @@ We have taken the liberty to add the word ``Elliptical'' to this famous quotatio
 His ``supreme law of Unreason'' referred to univariate distributions of observations tending to the
 Normal distribution in large samples.  We believe he would not take us remiss, and might perhaps
 welcome us for extending this view to
-two and more dimensions, where ellipsoids often provide 
+two and more dimensions, where ellipsoids often provide
 an ``unsuspected and most beautiful form of regularity.''
 
-In statistical data, theory and graphical methods, one main organizing
-distinction can be made in \emph{all} 
-of these depending
+In statistical data, theory, and graphical methods, one main organizing
+distinction can be made depending
 on the dimensionality of the problem.  A coarse but useful scale considers the essential defining
-distinctions to be among:
+distinctions to be among
 \begin{itemize*}
- \item ONE (univariate), 
- \item TWO (bivariate), 
- \item MANY (multivariate).  
+ \item ONE (univariate),
+ \item TWO (bivariate),
+ \item MANY (multivariate).
 \end{itemize*}
-This scale% 
+This scale%
 \footnote{
-This idea, as a unifying classification principle for data analysis and graphics
+This idea, as a unifying classification principle for data analysis and graphics,
 was first suggested to the first author in
-seminars by John Hartigan at Princeton, c. 1968.
+seminars by John Hartigan at Princeton, c.~1968.
 }
 at least implicitly organizes much of current statistical teaching, practice, and software.
-But within this, the data, theory and graphical methods are often treated separately (1D, 2D, $n$D),
-without regard to geometric ideas and visualizations that help tie them together.
+But within this classification, the data, theory, and graphical methods are often treated separately (1D, 2D, $n$D),
+without regard to geometric ideas and visualizations that help to unify them.
 
-This paper starts from the idea that one geometric form--- the ellipsoid---
-provides a unifying framework for many statistical phenomena, with simple representations in
-1D (a line), 2D (ellipse) that extend naturally to $n$ dimensions.  The intellectual leap 
+This paper starts from the premise that one geometric form---the ellipsoid---provides a unifying framework for many statistical phenomena, with simple representations in
+1D (a line) and 2D (an ellipse) that extend naturally to higher dimensions (an ellipsoid).  The intellectual leap
 in statistical thinking from ONE to TWO in \citet{Galton:1886} was enormous.
-Galton's visual insights from the ellipse quickly led to an understanding of the
+Galton's visual insights derived from the ellipse quickly led to an understanding of the
 ellipse as a contour of a bivariate normal surface.  From here, the step from TWO to MANY
-would take another 20--30 years, but it is hard to escape the conclusion that 
+would take another 20--30 years, but it is hard to escape the conclusion that
 geometric insight from the ellipse to the general ellipsoid in $n$D
 played an important role in the development of multivariate statistical methods.
 
 In this paper, we have tried to show how ellipsoids can be useful tools for
-visual thinking, data analysis and pedagogy in a variety of contexts often
-treated separately and from a univariate perspective.  Even in bivariate 
+visual statistical thinking, data analysis, and pedagogy in a variety of contexts often
+treated separately and from a univariate perspective.  Even in bivariate
 and multivariate problems, first-moment summaries (a 1D regression line
-or 2+D regression surface) show only part of the story--- that of the
+or 2+D regression surface) show only part of the story---that of the
 expectation of a response $\vec{y}$ given predictors $\mat{X}$.
-In many cases, the more interesting part of the story concerns the 
+In many cases, the more interesting part of the story concerns the
 \emph{precision} of various methods of estimation, which we've shown
 to be easily revealed through data ellipsoids and
 elliptical confidence regions for parameters.
 
-The general relations among statistical methods, matrix algebra and geometry are
-not new here.  To our knowledge, \citet{Dempster:69} was the first to exploit this
+The general relationships among statistical methods, matrix algebra, and geometry are
+not new here.  To our knowledge, \citet{Dempster:69} was the first to exploit these relationships
 in a systematic fashion, establishing the connections among abstract vector spaces,
 algebraic coordinate systems, matrix operations and properties, the dualities
 between observation space and variable space,
@@ -77,32 +75,31 @@ of ellipses and projections.%
 %in appreciation of Dempster's contribution.
 %...
 %}
-The roots of these connections go back much further---
-to 
-\citet{Cramer:1946} (idea of the concentration ellipsoid), to
-\citet{Pearson:1901,Hotelling:1933} (principal components)
+The roots of these connections go back much further---to
+\citet{Cramer:1946} (the idea of the concentration ellipsoid), to
+\citet{Pearson:1901} and \citet{Hotelling:1933} (principal components),
 and, we maintain, ultimately to \citet{Galton:1886}.
-Throughout this development, elliptic geometry has played 
+Throughout this development, elliptical geometry has played
 a fundamental role, leading to important visual insights.
 
 The separate and joint roles of statistical computation and computational graphics should not be underestimated
-in appreciation of these developments.  Dempster's analysis of the connections among geometry, algebra and
-statistical methods was fueled by the development and software implementation of algorithms 
+in appreciation of these developments.  Dempster's analysis of the connections among geometry, algebra, and
+statistical methods was fueled by the development and software implementation of algorithms
 (Gram-Schmidt orthogonalization, Cholesky decomposition, sweep and multistandardize operators from
-\citet{Beaton:64})
+\citealp{Beaton:64})
 that allowed him to show precisely the translation of theoretical relations
-from abstract algebra to numbers and thence to graphs and diagrams.  
+from abstract algebra to numbers and thence to graphs and diagrams.
 
 \citet{Monette:90}
-took these ideas several steps further, developing interactive, 3D graphics focused on linear
-models, geometry and ellipsoids, and demonstrating how many statistical properties
+took these ideas several steps further, developing interactive 3D graphics focused on linear
+models, geometry, and ellipsoids, and demonstrating how many statistical properties
 and results could be understood through the geometry of ellipsoids.  Yet, even at this
 later date, the graphical facilities of readily available statistical software were still
 rather primitive, and 3D graphics was available only on high-end workstations.
- 
+
 
 Several features of the current discussion may help to present these ideas in a
-new light.  First, the examples we have presented rely heavily on software for 
+new light.  First, the examples we have presented rely heavily on software for
 statistical graphics developed separately and jointly by all three authors.
 These have allowed us to create what we hope are compelling illustrations,
 all statistically and geometrically exact, of the principles and ideas that
@@ -114,31 +111,31 @@ so we hope this paper will contribute to turning the theory we describe
 into practice.
 
 Second, we have illustrated, in a wide variety of contexts,
-comprising all classical (Gaussian) linear models, multivariate linear models
+comprising all classical (Gaussian) linear models, multivariate linear models,
 and several extensions,
 how ellipsoids can contribute substantially to the understanding of statistical
-relations, both in data analysis and in pedagogy.  One graphical theme underlying
+relationships, both in data analysis and in pedagogy.  One graphical theme underlying
 a number of our examples is how the simple addition of ellipses to standard 2D graphical
 displays provides an efficient \emph{visual} summary of important bivariate
 statistical quantities (means, variances, correlation, regression slopes, etc.)
 While first-moment visual summaries are now common adjuncts to graphical displays
 in standard software, often by default, we believe that the second-moment visual summaries
-of ellipses (and in 3D)
-now deserve a similar place in statistical practice. 
+of ellipses (and ellipsoids in 3D)
+now deserve a similar place in statistical practice.
 
-Finally, we have illustrated several recent or entirely new visualizations of 
-statistical methods and results, all based on elliptic geometry.
+Finally, we have illustrated several recent or entirely new visualizations of
+statistical methods and results, all based on elliptical geometry.
 HE plots for MANOVA designs \citep{Friendly:07:manova}
 and their projections into canonical space (\secref{sec:mlm})
 provide one class of examples where ellipsoids provide simple visual summaries of
 otherwise complex statistical results.
-Our analysis of the geometry of added variable plots led to the idea of superposing
+Our analysis of the geometry of added variable-plots suggested the idea of superposing
 marginal and conditional plots, as in \figref{fig:coffee-avplot-B}, leading to
-direct visualization of the difference between marginal and conditional relations
+direct visualization of the difference between marginal and conditional relationships
 in linear models.
 The bivariate ridge trace plots described in \secref{sec:ridge2} are a direct outgrowth
 of the geometric approach taken here, emphasizing the duality between views in data
-space and in parameter ($\beta$) space.
+space and in parameter ($\vec{\beta}$) space.
 We believe these all embody von Humboldt's (1811) dictum, quoted in the introduction.
 
 

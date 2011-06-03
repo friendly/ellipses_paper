@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}
-\begin{thebibliography}{37}
+\begin{thebibliography}{42}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Anderson(1935)}]{Anderson:35}
@@ -28,11 +28,21 @@ Bravais, A. (1846).
 \newblock \emph{M\'emoires pr\'esent\'es par divers savants \`a l'Acad\'emie
   royale des sciences de l'Institut de France}, 9, 255--332.
 
+\bibitem[{Bryant(1984)}]{Bryant:1984}
+Bryant, P. (1984).
+\newblock Geometry, statistics, probability: Variations on a common theme.
+\newblock \emph{The American Statistician}, 38(1), pp. 38--48.
+
 \bibitem[{Bryk and Raudenbush(1992)}]{BrykRaudenbush:1992}
 Bryk, A.~S. and Raudenbush, S.~W. (1992).
 \newblock \emph{Hierarchical linear models: Applications and data analysis
   methods}.
 \newblock Thousand Oaks, CA: Sage.
+
+\bibitem[{Campbell and Atchley(1981)}]{CampbellAtchley:81}
+Campbell, N.~A. and Atchley, W.~R. (1981).
+\newblock The geometry of canonical variate analysis.
+\newblock \emph{Systematic Zoology}, 30(3), 268--280.
 
 \bibitem[{Cram{\'e}r(1946)}]{Cramer:1946}
 Cram{\'e}r, H. (1946).
@@ -57,19 +67,23 @@ Fisher, R.~A. (1936).
 
 \bibitem[{Fox(2008)}]{Fox:2008}
 Fox, J. (2008).
-\newblock \emph{Applied Regression, Generalized Linear Models, and Related
-  Methods}.
-\newblock Thousand Oaks, CA: Sage.
+\newblock \emph{Applied Regression Analysis and Generalized Linear Models}.
+\newblock Thousand Oaks, CA: Sage, 2nd edn.
 
-\bibitem[{Fox(2009)}]{car}
-Fox, J. (2009).
-\newblock \emph{car: Companion to Applied Regression}.
-\newblock R package version 1.2-16.
-
-\bibitem[{Fox \emph{et~al.}(2009)Fox, Friendly, and Monette}]{heplots1}
-Fox, J., Friendly, M., and Monette, G. (2009).
+\bibitem[{Fox \emph{et~al.}(2010)Fox, Friendly, and Monette}]{heplots1}
+Fox, J., Friendly, M., and Monette, G. (2010).
 \newblock \emph{{heplots}: Visualizing Tests in Multivariate Linear Models}.
-\newblock R package version 0.8-11.
+\newblock R package version 0.9-8.
+
+\bibitem[{Fox and Suschnigg(1989)}]{FoxSuschnigg:89}
+Fox, J. and Suschnigg, C. (1989).
+\newblock A note on gender and the prestige of occupations.
+\newblock \emph{Canadian Journal of Sociology}, 14, 353--360.
+
+\bibitem[{Fox and Weisberg(2011)}]{car}
+Fox, J. and Weisberg, S. (2011).
+\newblock \emph{car: Companion to Applied Regression}.
+\newblock R package version 2.0-11.
 
 \bibitem[{Freedman(2001)}]{Freedman:01}
 Freedman, D.~A. (2001).
@@ -186,6 +200,11 @@ Rousseeuw, P. and Van~Driessen, K. (1999).
 \newblock A fast algorithm for the minimum covariance determinant estimator.
 \newblock \emph{Technometrics}, 41, 212--223.
 
+\bibitem[{Saville and Wood(1986)}]{SavilleWood:1986}
+Saville, D.~J. and Wood, G.~R. (1986).
+\newblock A method for teaching statistics using {N}-dimensional geometry.
+\newblock \emph{The American Statistician}, 40(3), 205--214.
+
 \bibitem[{Simpson(1951)}]{Simpson:51}
 Simpson, E.~H. (1951).
 \newblock The interpretation of interaction in contingency tables.
@@ -216,5 +235,10 @@ von Humboldt, A. (1811).
   Observations, and Trigonometrical and Barometrical Measurements)}, vol.~1.
 \newblock New York: I. Riley.
 \newblock Eng. trans. by John Black.
+
+\bibitem[{Wickens(1995)}]{Wickens:1995}
+Wickens, T.~D. (1995).
+\newblock \emph{The Geometry of Multivariate Statistics}.
+\newblock Hillsdale, NJ: Lawrence Erlbaum Associates.
 
 \end{thebibliography}

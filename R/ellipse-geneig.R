@@ -1,10 +1,11 @@
 # demonstrate ellipses for the generalized eigenvalue problem
+# from:  http://wiki.math.yorku.ca/index.php/Statistics:_Ellipses
 
-library(spida)
-library(p3d)
-library(MASS)
+if (!require("spida")) install.packages("spida", repos="http://R-Forge.R-project.org", type = "source"); library("spida")
+if (!require("p3d")) install.packages("p3d", repos="http://R-Forge.R-project.org", type = "source"); library("p3d")
+#library(p3d)
+library(MASS)   # for eqsplot
 
-# http://wiki.math.yorku.ca/index.php/Statistics:_Ellipses
 
 EH.fac <- function( 
            E,           #  non-neg. def. matrix to factor -- should be pos. def. if H is not missing
@@ -48,18 +49,19 @@ pca.fac <- function(x) {
         ret <- t(xx$v) * sqrt(pmax( xx$d,0))
         ret 
     }
-label.ellipse <- function(ellipse, label, col, ...){
+
+label.ellipse <- function(ellipse, label, col, adj, ...){
 		if (cor(ellipse)[1,2] > 0){
 			index <- which.max(ellipse[,2])
 			x <- ellipse[index, 1] + 0.5 * strwidth(label)  # was: "A"
 			y <- ellipse[index, 2] + 0.5 *strheight("A")
-			adj <- c(1, 0) 
+			if (missing(adj)) adj <- c(1, 0) 
 		}
 		else {
 			index <- which.min(ellipse[,2])
 			x <- ellipse[index, 1] - 0.5 * strwidth(label)  # was: "A"
 			y <- ellipse[index, 2] - 0.5 * strheight("A")
-			adj <- c(0, 1) 
+			if (missing(adj)) adj <- c(0, 1) 
 		}
 		text(x, y, label, adj=adj, xpd=TRUE, col=col, ...)
 	}
@@ -77,13 +79,13 @@ conjugate.axes <- function (B, col="black", lwd=2, pch=16, cex=2, lty=1) {
         NA, b1, -b1, NA, b2, -b2), col = col, lwd = 1.4, lty=lty)
 }
 
-### Example
+### Example (Fig 4)
 
 setwd("c:/sasuser/datavis/manova/ellipses/fig")
 H <- matrix(
 	c(9, 3, 3, 4), 2, 2)
 
-E <- matrix(c(2, -0.5, -0.5, 4), 2, 2)
+#E <- matrix(c(2, -0.5, -0.5, 4), 2, 2)
 
 E <- matrix(c(1, 0.5, 0.5, 2), 2, 2)
 
@@ -117,7 +119,8 @@ conjugate.axes(t(EH.fac(E,H,which=2)), col="blue", lty=2, cex=0)
 dev.copy2eps(file="ellipse-geneig1.eps")
 
 
-# transform to canonical space, 
+### transform to canonical space, 
+
 Hstar <- H.star(H,E)
 
 eqscplot( x=0,y=0, xlim = c(-3,3), ylim = c(-3,3),
@@ -137,11 +140,10 @@ text(vec[1,1]/2, vec[1,2]/2, label=~lambda[1], adj=c(0,.5), cex=1.2)
 text(vec[2,1]/2, vec[2,2]/2, label=~lambda[2], adj=c(.5,0), cex=1.2)
 
 text(-2.2, 2.6, "Canonical space", cex=1.5)
-label.ellipse(ellH, expression(paste("=", E^{-1/2} * H * E^{-1/2} )), "blue", cex=1.5)
 label.ellipse(ellE, "E* =I", "red", cex=1.5)
-# bit of a kludge, since I cant get H* to work in an expression
-#text(0.5, 2.55, expression(paste("=", E^{-1/2} * H * E^{-1/2} )), col="blue", cex=1.5, , adj=c(0,.5))
-#text(1.25, 3.0, expression(paste("=", E^{-1/2} * H * E^{-1/2} )), col="blue", cex=1.5, , adj=c(0,.5))
+#label.ellipse(ellH, expression(paste("H*=", E^{-1/2} * H * E^{-1/2} )), "blue", cex=1.5)
+label.ellipse(ellH, expression(paste("H*=", E^{-1/2} * H * E^{-1/2} )), "blue", cex=1.5, adj=c(0.5,0))
+
 
 # show original coordinate axes in canonical space ???
 #Can <- solve(pca.fac(E)) %*% eigen(Hstar)$vectors
@@ -149,6 +151,5 @@ label.ellipse(ellE, "E* =I", "red", cex=1.5)
 
 dev.copy2eps(file="ellipse-geneig2.eps")
 
-#text(-1, -3, expression(H^{star} == E^{-1/2} * H * E^{-1/2} ))
 
 par(opar)

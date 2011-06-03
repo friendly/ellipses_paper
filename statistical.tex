@@ -1,15 +1,15 @@
 \subsection{Statistical ellipsoids}
- 
+
 In statistical applications, $\mat{C}$ will often be the inverse of a covariance
 matrix (or a sum of squares and cross-products matrix), and the ellipsoid will
 be centered at the means of variables, or at estimates of parameters under some model.
-Hence, we will also use the following notations:
+Hence, we will also use the following notation:
 
-For a positive definite matrix 
-$\mat{\Sigma}$ we use $E(\vec{\mu},\mat{\Sigma})$ to denote the ellipsoid 
+For a positive definite matrix
+$\mat{\Sigma}$ we use $\mathcal{E}(\vec{\mu},\mat{\Sigma})$ to denote the ellipsoid
 \begin{equation}\label{eq:ellipsoid3}
 \mathcal{E} = \{ \vec{x} : (\vec{x}-\vec{\mu})\trans \inv{\Sigma} (x-\vec{\mu}) = 1 \} \period
- \end{equation} 
+ \end{equation}
 
 When $\mat{\Sigma}$ is the covariance matrix of a multivariate vector $\vec{x}$ with eigenvalues
 $\lambda_1 > \lambda_2 > \dots$,
@@ -19,42 +19,41 @@ properties represent the ``size'' of the ellipsoid in $\Real{p}$:
 \begin{tabular}{llll}
     Size                   &  Conceptual formula                    & Geometry       & Function \\
 \hline
-(a) Generalized variance:  & $\det{\mat{\Sigma}} = \prod^p \lambda_i$ & area, volume & geometric mean\\
+(a) Generalized variance:  & $\det{\mat{\Sigma}} = \prod^p \lambda_i$ & area, (hyper)volume & geometric mean\\
 (b) Average variance:        & $\trace{\mat{\Sigma}} = \sum^p \lambda_i $ & linear sum & arithmetic mean\\
 (c) Average variance:        & $1/ \trace{\mat{\Sigma}^{-1}} = 1/\sum^p (1/\lambda_i) $ &  & harmonic mean\\
 (d) Maximal variance:      & $\lambda_1$ & maximum dimension & supremum
  \end{tabular}
 \medskip
 
-In multivariate tests, these correspond (with suitable transformations) to (a) Wilks' $\Lambda$,
-(b) Pillai trace criteria, (c) Hotelling-Lawley   and (d) Roy's maximum root test, as we describe
+\noindent In multivariate tests, these correspond (with suitable transformations) to (a) Wilks's $\Lambda$,
+(b) the Pillai trace, (c) the Hotelling-Lawley  trace,  and (d) Roy's maximum root tests, as we describe
 below.
 
 Note that every non-negative definite matrix $\mat{W}$ can be factored as $\mat{W}=\mat{A}\mat{A}\trans$,
-and the matrix $\mat{A}$ can always be selected so that it is square. 
-$\mat{A}$ will be non-singular if and only if $\mat{W}$ is non-singular.  
+and the matrix $\mat{A}$ can always be selected so that it is square.
+$\mat{A}$ will be non-singular if and only if $\mat{W}$ is non-singular.
 A computational
 definition of an ellipsoid that can be used for all non-negative definite matrices and that corresponds to the previous definition in the case of positive-definite matrices is
 \begin{equation}
-E(\vec{\mu},\mat{W}) = \vec{\mu} + \mat{A} \mathcal{S} \comma
+\mathcal{E}(\vec{\mu},\mat{W}) = \vec{\mu} + \mat{A} \mathcal{S} \comma
 \end{equation}
 where $\mathcal{S}$ is a unit sphere of conformable dimension and $\vec{\mu}$ is the centroid of the ellipsoid.
-One convenient choice of \mat{A} is the Choleski square root, $\mat{W}^{1/2}$ as we describe in \secref{sec:conjugate}.
-Thus, for some results described below, a convenient notation in terms of $\mat{W}$ is
+One convenient choice of \mat{A} is the Choleski square root, $\mat{W}^{1/2}$, as we describe in \secref{sec:conjugate}.
+Thus, for some results below, a convenient notation in terms of $\mat{W}$ is
 \begin{equation}\label{eq:ellipsoidW}
-E(\vec{\mu}, \mat{W}) = \vec{\mu} \oplus \sqrt{\mat{W}} = \vec{\mu} \oplus \mat{W}^{1/2} \comma
-\end{equation} 
+\mathcal{E}(\vec{\mu}, \mat{W}) = \vec{\mu} \oplus \sqrt{\mat{W}} = \vec{\mu} \oplus \mat{W}^{1/2} \comma
+\end{equation}
 where $\oplus$
 emphasizes that the ellipsoid is a scaling and rotation of the unit sphere followed by translation to
-a center at \vec{\mu} and $\sqrt{\mat{W}}=\mat{W}^{1/2}=\mat{A}$. This representation is not unique;
-however,  $\vec{\mu} \oplus \mat{B} = \vec{\nu} \oplus \mat{C}$ (they generate the same ellipsoid)
+a center at \vec{\mu} and $\sqrt{\mat{W}}=\mat{W}^{1/2}=\mat{A}$. This representation is not unique,
+however:  $\vec{\mu} \oplus \mat{B} = \vec{\nu} \oplus \mat{C}$ (i.e., they generate the same ellipsoid)
 \emph{iff} $\vec{\mu} = \vec{\nu}$ and $\mat{B}\mat{B}\trans = \mat{C}\mat{C}\trans$.
-
-From this, it is readily seen that under a linear transformation given by a matrix
+From this result, it is readily seen that under a linear transformation given by a matrix
 $\mat{L}$
-the image of the ellipse is:
+the image of the ellipse is
 
 \begin{equation*}
-\mat{L}(E(\vec{\mu} ,\mat{W}))=E(\mat{L}\vec{\mu} ,\mat{L}\mat{W}{\mat{L}}\trans)=\mat{L}\vec{\mu} \oplus \sqrt{\mat{L}\mat{W}{\mat{L}}\trans}=\mat{L}\vec{\mu} \oplus \mat{L}\sqrt{\mat{W}}
+\mat{L}(E(\vec{\mu} ,\mat{W}))=E(\mat{L}\vec{\mu} ,\mat{L}\mat{W}{\mat{L}}\trans)=\mat{L}\vec{\mu} \oplus \sqrt{\mat{L}\mat{W}{\mat{L}}\trans}=\mat{L}\vec{\mu} \oplus \mat{L}\sqrt{\mat{W}} \period
 \end{equation*}
 

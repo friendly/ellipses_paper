@@ -1,12 +1,13 @@
 \subsection{Measurement error}
+
 In classical linear models, the predictors are often considered to be fixed
-variables, or, if random, to be measured without error, either of which guarrantee
-unbiasedness and consistency of the standard OLS estimators.
-In practice, of course, exogenous predictor variables are often also observed
-indicators, subject to error, a fact which is recognized in errors-in-variables
+variables, or, if random, to be measured without error, either of which, along with the assumption of linearity, guarantees
+unbiasedness of the standard OLS estimators.
+In practice, of course, predictor variables are often also observed
+indicators, subject to error, a fact that is recognized in errors-in-variables
 regression models and in more general structural equation models
 but often ignored otherwise.  Ellipsoids in data space and $\beta$ space
-are again well-suited to showing these effects.
+are well suited to showing the effect of measurement error in predictors on OLS estimates.
 
 \begin{figure}[htb]
  \begin{minipage}[b]{.49\linewidth}
@@ -21,18 +22,21 @@ are again well-suited to showing these effects.
   \includegraphics[width=1\linewidth]{fig/coffee-stress2}
  \end{minipage}
   \caption{Effects of measurement error in Stress on the marginal relation between Heart disease and Stress.
-  Each panel starts with the observed data ($\delta=0$), then adds random normal error, 
+  Each panel starts with the observed data ($\delta=0$), then adds random normal error,
   $\mathcal{N}(0, \delta \times SD_{Stress})$, with $\delta = \{0.75, 1.0, 1.5\}$ to the value of Stress.
   Increasing measurement error biases the slope for Stress toward 0.
   Left: 50\% data ellipses; right: 50\% confidence ellipses for $(\beta_0, \beta_{Stress})$. }
   \label{fig:coffee-stress}
 \end{figure}
 
-The statistical facts are well-known, though perhaps counter-intuitive:
+The statistical facts are well known, though perhaps counter-intuitive:
 measurement error in a predictor biases regression coefficients, while
-increased error in the measurement of endogenous outcome $y$
-variables increases the standard errors of the regression coefficients, but does not introduce
-bias. 
+error in the measurement in  $y$
+increases the standard errors of the regression coefficients but does not introduce
+bias.
+
+\TODO{The rest of this section is scheduled for a rewrite (noted by John)}
+
 In the top row of
 \figref{fig:vis-reg-coffee11}, adding measurement error to the Heart disease variable
 would expand the data ellipses vertically, but leave the slopes of the regression lines unchanged.
@@ -42,7 +46,7 @@ zero (sometimes called \emph{regression attenuation}) as well as increasing stan
 \figref{fig:coffee-stress} demonstrates this effect for the marginal
 relation between Heart disease and stress,
 with data ellipses in data space and the corresponding confidence ellipses in $\beta$ space.
-Each panel starts with the observed data (the darkest ellipse, marked $0$), then adds random normal error, 
+Each panel starts with the observed data (the darkest ellipse, marked $0$), then adds random normal error,
 $\mathcal{N}(0, \delta \times SD_{Stress})$, with $\delta = \{0.75, 1.0, 1.5\}$ to the value of Stess,
 while keeping the mean of Stress the same.
 All of the data ellipses have the same vertical shadows ($s_{Heart}$), while the horizontal shadows
@@ -54,4 +58,28 @@ ellipses for $(\beta_0, \beta_{Stress})$ along the $\beta_{Stress}$ axis
 also demonstrate the effects of measurement error
 on the standard error of $\beta_{Stress}$.
 
+Perhaps less well-known, but both more surprising and interesting is the effect that measurement error in one variable,
+$x_1$, 
+has on the estimate of the coefficient for an \emph{other} variable, $x_2$, in a multiple regression model.
+\figref{fig:coffee-measerr}
+shows the confidence ellipses for $(\beta_{Coffee}, \beta{Stress})$ in the multiple regression 
+predicting Heart disease, adding random normal error
+$\mathcal{N}(0, \delta \times SD_{Stress})$, with $\delta = \{0, 0.2, 0.4, 0.8\}$ to the value of Stress
+alone.  
+As can be plainly seen, while this measurement error in Stress attenuates its coefficient,
+it also has the effect of biasing the coefficient for Coffee toward that in the \emph{marginal}
+regression of Heart disease on Coffee alone.
+
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.5\textwidth,clip]{fig/coffee-measerr}
+  \caption{Biasing effect of measurement error in one variable (Stress) on on the coefficient of another variable
+  (Coffee) in a multiple regression.  
+  }%
+  \label{fig:coffee-measerr}
+\end{figure}
+
+%This effect is entirely understandible from a geometric perspective: increasing measurement error in $x_1$
+%makes it less informative for the partial coefficient of $x_2$ 
 

@@ -1,26 +1,26 @@
 \subsubsection{Bivariate ridge trace plots}\label{sec:ridge2}
 
-Ridge regression is touted as a method to counter the effects
+Ridge regression is touted (optimistically we think) as a method to counter the effects
 of collinearity by trading off a small amount of bias for an
-advantageous decrease in variance.  The results are often 
+advantageous decrease in variance.  The results are often
 visualized in a a \emph{ridge trace plot}
 \citep{HoerlKennard:1970b},
 showing the changes
 in individual coefficient estimates as a function of $k$.
 A bivariate version of this plot, with confidence ellipses for
 the parameters is introduced here.  This plot provides greater
-insight on the effects on \emph{both} bias and variance.
+insight into the effects of $k$ on coefficient variance.\footnote{Bias and mean-squared error are a different matter: Although \citet{HoerlKennard:1970a} demonstrate that there is a range of values for the ridge constant $k$ for which the MSE of the ridge estimator is smaller than that of the OLS estimator, to know where this range is located requires knowledge of $\vec{\beta}$. As we explain in the following subsection, the constraint on $\vec{\hat{\beta}}$ incorporated in the ridge estimator can be construed as a Bayesian prior; the fly in the ointment of ridge regression, however, is that there is no reason to suppose that the ridge-regression prior is in general reasonable.}
 
-In the standard linear model, confidence ellipsoids are generated
-from the estimated covariance matrix of the of the parameters,
+Confidence ellipsoids for the OLS estimator are generated
+from the estimated covariance matrix of the coefficients,
 \begin{equation*}
-\widehat{\Var} (\vec{\beta}^{OLS}) = \hat{\sigma}^2_e (\mat{X}\trans \mat{X})^{-1} \period
+\widehat{\Var} (\vec{\beta}^{\mathrm{OLS}}) = \hat{\sigma}^2_e (\mat{X}\trans \mat{X})^{-1} \period
 \end{equation*}
-In the ridge regression model, this becomes 
+For the ridge estimator, this becomes
 %(Marquandt, 1970)
 \citep{Marquardt:1970}
 \begin{equation}
-\widehat{\Var} (\vec{\beta}^{RR}) = \hat{\sigma}^2_e 
+\widehat{\Var} (\vec{\beta}^{\mathrm{RR}}) = \hat{\sigma}^2_e
     [\mat{X}\trans \mat{X} + k \mat{I}]^{-1}
     (\mat{X}\trans \mat{X})
     [\mat{X}\trans \mat{X} + k \mat{I}]^{-1} \comma
@@ -45,30 +45,30 @@ data to illustrate
 bivariate ridge trace plots.  The data consist of an economic time series ($n=16$)
 observed yearly from 1947 to 1962, with the number of people Employed as the
 response and the following predictors:
-GNP, Unemployed,  Armed.Forces,  Population,  Year,  GNP.deflator (using
-1954 as 100).% 
+GNP, Unemployed,  Armed.Forces,  Population,  Year, and GNP.deflator (using
+1954 as 100).%
 \footnote{
-\citet{Longley:1967} used these data to demonstrate the effects of 
+\citet{Longley:1967} used these data to demonstrate the effects of
 numerical instability and round-off error in least squares computations
 based on direct computation of the crossproducts matrix, $\mat{X}\trans\mat{X}$.
-This sparked the development of a wide variety of
+Longley's paper sparked the development of a wide variety of
 numerically stable least squares algorithms (QR, modified Gram-Schmidt, etc.)
 now used is almost all statistical software.
-Even ignoring numerical problems 
+Even ignoring numerical problems
 (not to mention problems due to lack of independence), these
-data would be expected to exhibit high collinearity because  
+data would be anticipated to exhibit high collinearity because
 a number of the predictors would be expected to have strong associations
 with year and/or population, yet both of these are also included among the
 predictors.
 }
-The standard linear model for these data, in R notation
-is \verb|lm(Employed ~ ., data=longley)|.  For each value of $k$, the plot 
+The standard linear model for these data, in R notation,
+is \verb|lm(Employed ~ ., data=longley)|.  For each value of $k$, the plot
 shows the estimate $\widehat{\vec{\beta}}$, together with the confidence
 ellipse.  For the sake of this example, we assume that GNP is a primary
 predictor of Employment, and we wish to know how other predictors modify the
 regression estimates and their variance when ridge regression is used.
 
-For this data, it can be seen that even small values of $k$ have substantial
+For these data, it can be seen that even small values of $k$ have substantial
 impact on the estimates $\widehat{\vec{\beta}}$. What is perhaps more dramatic
 (and unseen in univariate trace plots) is the impact on the size of the confidence
 ellipse.  Moreover, shrinkage in variance is generally in a similar direction to the

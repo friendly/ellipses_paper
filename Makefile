@@ -34,7 +34,7 @@ STYLES = /usr/share/texmf-texlive/tex/latex/psnfss/times.sty /usr/share/texmf-te
 ALTFIGS =
 #
 
-SHIPSTYLES = 
+SHIPSTYLES = styles/*
 
 EXTRAS = $(MAIN:%=%.aux) $(MAIN:%=%.bbl)  \
  $(SHIPSTYLES) Makefile 
