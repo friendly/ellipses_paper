@@ -1,0 +1,109 @@
+\section{Introduction}
+
+\epigraph{Whatever relates to extent and quantity may be represented by
+geometrical figures. Statistical projections which speak to the senses without
+fatiguing the mind, possess the advantage of fixing the attention on a great
+number of important facts.}{Alexander von Humboldt \citeyearpar[p.~ciii]{Humboldt:1811a}}
+
+In the beginning (of modern  statistical methods), there was the  ellipse. As statistical
+methods progressed from bivariate to multivariate, the ellipse escaped the plane to a 3D
+ellipsoid, and then onwards to higher dimensions.
+This  paper extols and illustrates the
+virtues of the ellipse and her higher-dimensional cousins for both didactic and
+data analytic purposes.
+
+When
+Francis Galton  \citeyearpar{Galton:1886} first  studied the  relationship between  heritable traits of
+parents and their offspring, he  had a remarkable visual insight--- contours of
+equal bivariate frequencies in the joint distribution seemed to form  concentric
+shapes whose outlines  were, to Galton,  tolerably close to  concentric ellipses
+differing only in scale.
+
+Galton's goal was to  to predict (or explain)  how a characteristic, $Y$,   (e.g.,
+height) of children was  related to that of  their parents, $X$.  To  this end, he
+calculated summaries,  $\mathrm{Ave}(Y\given X)$,  and, for  symmetry, $\mathrm{Ave}(X\given Y)$, and plotted
+these as lines of means on his  diagram.  Lo and behold, he had a  second visual
+insight:  the lines  of means of  ($Y\given X$) and ($X\given Y$)  corresponded approximately to
+the locus of  horizontal and vertical  tangents to the  concentric ellipses.  To
+complete the picture,  he added lines  showing the major  and minor axes  of the
+family of ellipses, with the result shown in Figure 1.
+
+It is  not stretching  the point  too far  to say  that a  large part  of modern
+statistical  methods  descend  from  these  visual  insights:%
+\footnote{\citet[p. 37]{Pearson:1920} later stated, ``that Galton
+should have evolved all this from his observations is to my mind one
+of the most noteworthy scientific discoveries arising from pure
+analysis of observations.'' }
+correlation   and
+regression \citep{Pearson:1896}, the  bivariate normal  distribution,
+and principal components  \citep{Pearson:1901,Hotelling:1933}  all trace their ancestry to Galton's  geometrical
+diagram.%
+\footnote{
+Well, not entirely. Auguste Bravais [1811--1863] \citeyearpar{Bravais:1846}, an astronomer
+and physicist first introduced the mathematical theory of the bivariate normal distribution
+as a model for the joint frequency of errors in the geometric position of a point.
+Bravais derived the formula for level slices as concentric ellipses and had a rudimentary
+notion of correlation but did not appreciate this as a representation of data.
+Nonetheless, \cite{Pearson:1920} acknowledged Bravais's contribution, and the correlation
+coefficient is often called the Bravais-Pearson coefficient in France
+\citep{Denis:2001}. }
+%\todo{Ref: Denis}
+
+
+Basic geometry goes back at least to Euclid, but the properties of the ellipse and  other
+conic sections may be traced to Apollonius  of Perga (ca.~262 BC--ca.~190 BC),  a
+Greek geometer and astronomer who gave the ellipse, parabola, and hyperbola their
+modern names. In a work popularly called the Conics \citep{Boyer:91}, he  described
+the  fundamental  properties  of  ellipses  (eccentricity,  axes,  principles of
+tangency,  normals as  minimum and  maximum straight  lines to  the curve)  with
+remarkable clarity nearly 2000 years before the development of analytic geometry
+by Descartes.
+
+% one figure
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.75\textwidth]{fig/galton-corr}
+  \caption{Galton's 1886 diagram, showing the relationship of height of children
+to the average of their parents' height. The diagram is essentially an overlay
+of a geometrical interpretation on a bivariate grouped frequency distribution, shown
+as numbers.}%
+  \label{fig:galton-corr}
+\end{figure}
+
+Over time, the ellipse would be called to duty to provide simple explanations of
+phenomena  once thought  complex.  Most  notable is  Kepler's insight  that the
+Copernican theory of the orbits of planets as concentric circles (which required
+notions  of  epicycles  to  account  for  observations)  could  be  brought into
+alignment with the detailed observations by  Tycho Brahe and others by a  simple
+law: ``The orbit  of every planet  is an ellipse  with the sun  at a focus.''  One
+century later, Isaac  Newton was able  to derive all  three of Kepler's  laws as
+simpler consequences of general laws of motion and universal gravitation.
+
+This paper  takes up  the cause  of the  ellipse as  a geometric  form that  can
+provide similar service to statistical understanding and data analysis.  Indeed,
+it has been doing that since the time of Galton, but these graphic and geometric
+contributions have often  been incidental and  scattered in the  literature
+(e.g., \citet{Bryant:1984,CampbellAtchley:81,SavilleWood:1986,Wickens:1995}). 
+We
+focus here on visual  insights through ellipses in  the areas of linear  models,
+multivariate linear models, and mixed-effect models.
+
+
+\begin{comment}
+%% two figures side-by-side
+\begin{figure}[htb]
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/}
+  \caption{}%
+  \label{fig:}
+ \end{minipage}%
+ \hfill
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/}
+  \caption{}
+  \label{fig:}
+ \end{minipage}
+\end{figure}
+\end{comment}

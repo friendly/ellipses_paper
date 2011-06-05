@@ -32,8 +32,8 @@
 %  Page dimensions
 \addtolength{\hoffset}{-2cm}
 \addtolength{\textwidth}{4cm}
-%\addtolength{\voffset}{-2cm}
-\addtolength{\textheight}{2cm}
+\addtolength{\voffset}{-2cm}
+\addtolength{\textheight}{4cm}
 
 % Math stuff
 % math stuff
@@ -96,7 +96,7 @@ Georges Monette \\ York University
 \and
 John Fox \\ McMaster University
 }
-\date{\today}
+\date{Draft v. 0.9-0, \today}
 \end{titlepage}
 \maketitle
 %\thispagestyle{fancy}\lhead{In press: \emph{Journal of Computational and Statistical Graphics}, 2001}\rhead{}\afterpage{\lhead{}\rhead{}}
@@ -131,115 +131,7 @@ statistical geometry
 }
 \end{abstract}
 
-\section{Introduction}
-
-\epigraph{Whatever relates to extent and quantity may be represented by
-geometrical figures. Statistical projections which speak to the senses without
-fatiguing the mind, possess the advantage of fixing the attention on a great
-number of important facts.}{Alexander von Humboldt \citeyearpar[p.~ciii]{Humboldt:1811a}}
-
-In the beginning (of modern  statistical methods), there was the  ellipse. As statistical
-methods progressed from bivariate to multivariate, the ellipse escaped the plane to a 3D
-ellipsoid, and then onwards to higher dimensions.
-This  paper extols and illustrates the
-virtues of the ellipse and her higher-dimensional cousins for both didactic and
-data analytic purposes.
-
-When
-Francis Galton  \citeyearpar{Galton:1886} first  studied the  relationship between  heritable traits of
-parents and their offspring, he  had a remarkable visual insight--- contours of
-equal bivariate frequencies in the joint distribution seemed to form  concentric
-shapes whose outlines  were, to Galton,  tolerably close to  concentric ellipses
-differing only in scale.
-
-Galton's goal was to  to predict (or explain)  how a characteristic, $Y$,   (e.g.,
-height) of children was  related to that of  their parents, $X$.  To  this end, he
-calculated summaries,  $\mathrm{Ave}(Y\given X)$,  and, for  symmetry, $\mathrm{Ave}(X\given Y)$, and plotted
-these as lines of means on his  diagram.  Lo and behold, he had a  second visual
-insight:  the lines  of means of  ($Y\given X$) and ($X\given Y$)  corresponded approximately to
-the locus of  horizontal and vertical  tangents to the  concentric ellipses.  To
-complete the picture,  he added lines  showing the major  and minor axes  of the
-family of ellipses, with the result shown in Figure 1.
-
-It is  not stretching  the point  too far  to say  that a  large part  of modern
-statistical  methods  descend  from  these  visual  insights:%
-\footnote{\citet[p. 37]{Pearson:1920} later stated, ``that Galton
-should have evolved all this from his observations is to my mind one
-of the most noteworthy scientific discoveries arising from pure
-analysis of observations.'' }
-correlation   and
-regression \citep{Pearson:1896}, the  bivariate normal  distribution,
-and principal components  \citep{Pearson:1901,Hotelling:1933}  all trace their ancestry to Galton's  geometrical
-diagram.%
-\footnote{
-Well, not entirely. Auguste Bravais [1811--1863] \citeyearpar{Bravais:1846}, an astronomer
-and physicist first introduced the mathematical theory of the bivariate normal distribution
-as a model for the joint frequency of errors in the geometric position of a point.
-Bravais derived the formula for level slices as concentric ellipses and had a rudimentary
-notion of correlation but did not appreciate this as a representation of data.
-Nonetheless, \cite{Pearson:1920} acknowledged Bravais's contribution, and the correlation
-coefficient is often called the Bravais-Pearson coefficient in France
-\citep{Denis:2001}. }
-%\todo{Ref: Denis}
-
-
-Basic geometry goes back at least to Euclid, but the properties of the ellipse and  other
-conic sections may be traced to Apollonius  of Perga (ca.~262 BC--ca.~190 BC),  a
-Greek geometer and astronomer who gave the ellipse, parabola, and hyperbola their
-modern names. In a work popularly called the Conics \citep{Boyer:91}, he  described
-the  fundamental  properties  of  ellipses  (eccentricity,  axes,  principles of
-tangency,  normals as  minimum and  maximum straight  lines to  the curve)  with
-remarkable clarity nearly 2000 years before the development of analytic geometry
-by Descartes.
-
-% one figure
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=.75\textwidth]{fig/galton-corr}
-  \caption{Galton's 1886 diagram, showing the relationship of height of children
-to the average of their parents' height. The diagram is essentially an overlay
-of a geometrical interpretation on a bivariate grouped frequency distribution, shown
-as numbers.}%
-  \label{fig:galton-corr}
-\end{figure}
-
-Over time, the ellipse would be called to duty to provide simple explanations of
-phenomena  once thought  complex.  Most  notable is  Kepler's insight  that the
-Copernican theory of the orbits of planets as concentric circles (which required
-notions  of  epicycles  to  account  for  observations)  could  be  brought into
-alignment with the detailed observations by  Tycho Brahe and others by a  simple
-law: ``The orbit  of every planet  is an ellipse  with the sun  at a focus.''  One
-century later, Isaac  Newton was able  to derive all  three of Kepler's  laws as
-simpler consequences of general laws of motion and universal gravitation.
-
-This paper  takes up  the cause  of the  ellipse as  a geometric  form that  can
-provide similar service to statistical understanding and data analysis.  Indeed,
-it has been doing that since the time of Galton, but these graphic and geometric
-contributions have often  been incidental and  scattered in the  literature
-(e.g., \citet{Bryant:1984,CampbellAtchley:81,SavilleWood:1986,Wickens:1995}). 
-We
-focus here on visual  insights through ellipses in  the areas of linear  models,
-multivariate linear models, and mixed-effect models.
-
-
-\begin{comment}
-%% two figures side-by-side
-\begin{figure}[htb]
- \begin{minipage}[b]{.49\linewidth}
-  \centering
-  \includegraphics[width=1\linewidth]{fig/}
-  \caption{}%
-  \label{fig:}
- \end{minipage}%
- \hfill
- \begin{minipage}[b]{.49\linewidth}
-  \centering
-  \includegraphics[width=1\linewidth]{fig/}
-  \caption{}
-  \label{fig:}
- \end{minipage}
-\end{figure}
-\end{comment}
+\input{introduction}
 
 \section{Notation and basic results}
 
@@ -252,256 +144,8 @@ statistical properties.
 \input{geometric}
 \input{statistical}
 \input{conjugate}
-
-\subsection{Ellipsoids in a generalized metric space}
-
-%\todo{Georges?}
-\TODO{
-Smooth out and simplify this description.
-Add to the plot: unit vectors in data space, and their transformations in canonical space.
-%Here it would be useful to describe the geometric relations that pertain to \mat{H}
-%(positive semi-definite)
-%in the metric of \mat{E} (positive definite).
-%I see two sub-figures:
-%(a) ellipses for \mat{H} and \mat{E}, showing the conjugate axes and
-%bounding parallelogram for \mat{E}, perhaps using the principal component factorization.
-%(b) the transformation of (a) using $\mat{H}\mat{E}^{-1}$ or
-%$\mat{E}^{-1/2} \, \mat{H} \, \mat{E}^{-1/2}$.
-}
-
-In the discussion above, we considered the positive semi-definite matrix \mat{W} and
-corresponding ellipsoid to be
-referred to a Euclidean space, perhaps with different basis vectors.
-We showed that various measures of the ``size'' of the ellipsoid could be defined
-in terms of functions of the eigenvalues $\lambda_i$ of \mat{W}.
-
-We now consider the generalized
-case of an analogous $p \times p$ positive semi-definite symmetric matrix \mat{H}, but where measures of
-length, distance, and angles are referred to a metric defined by a positive-definite symmetric
-matrix \mat{E}. As is well known, the generalized eigenvalue problem is to find the scalars
-$\lambda_i$ and vectors $\vec{v}_i, i=1, 2, \dots p$,
-such that $\mat{H} \vec{v} = \lambda \mat{E} \vec{v}$, that is, the roots of
-$\det{\mat{H} - \lambda \mat{E}}=0$.
-
-%\TODO{More explanation here ...}
-\begin{figure}[htb]
-% two figs side-by-side
-  \begin{minipage}[c]{.495\textwidth}
-   \includegraphics[width=1\linewidth,clip]{fig/ellipse-geneig1}
-   \end{minipage}%
-  \hfill
-  \begin{minipage}[c]{.495\textwidth}
-   \includegraphics[width=1\linewidth,clip]{fig/ellipse-geneig2}
-  \end{minipage}
-  \caption{Left: Ellipses for \mat{H} and \mat{E} in Euclidean ``data space,''
-   Right: Ellipses for $\mat{H}^\star$ and $\mat{E}^\star$ in the transformed ``canonical space,''
-   with the eigenvectors of \mat{H} relative to \mat{E} shown as blue arrows, whose radii
-   are the corresponding eigenvalues, $\lambda_1, \lambda_2$. }%
-  \label{fig:ellipse-geneig}
-\end{figure}
-For such \mat{H} and \mat{E}, we can always find a factor \mat{A} of \mat{E}, so that
-$\mat{E} = \mat{A} \mat{A}\trans$, whose colums will be conjugate directions for \mat{E}
-and whose rows will also be conjugate directions for \mat{H}, in that $\mat{H} = \mat{A}\trans \mat{D} \mat{A}$,
-where $\mat{D}$ is diagonal.  Geometrically, this means that there exists a unique pair of
-bounding parallelograms for the \mat{H} and \mat{E} ellipsoids whose
-corresponding sides are parallel. A linear transformation of \mat{E} and \mat{H}
-that transforms the parallelogram
-for \mat{E} to a square (or cuboid), and hence \mat{E} to a sphere (or spheroid), generates an
-equivalent view in what we describe below as canonical space.
-
-
-In statistical applications (e.g., MANOVA, canonical correlation), the generalized
-eigenvalue problem is transformed to an ordinary eigenvalue problem by considering
-the following equivalent forms with the same $\lambda_i$, $\vec{v}_i$,
-\begin{eqnarray*}
-(\mat{H} - \lambda \mat{E}) \vec{v} & = & \vec{0} \\
-\Rightarrow (\mat{H} \, \inv{\mat{E}} - \lambda \mat{I}) \vec{v} & = & \vec{0} \\
-\Rightarrow (\invhalf{\mat{E}} \, \mat{H} \, \invhalf{\mat{E}} - \lambda \mat{I}) \vec{v} & = & \vec{0} \comma
-\end{eqnarray*}
-where the last form gives a symmetric matrix, $\mat{H}^\star = \invhalf{E} \, \mat{H} \, \invhalf{E}$.
-Using the square root of \mat{E} defined by the
-principal-component factorization $\half{E} = \mat{\Gamma} \half{\mat{\Lambda}}$ produces
-the ellipsoid of $\mat{H}^\star$
-orthogonal axes corresponding to the $\vec{v}_i$, whose radii are the corresponding
-eigenvalues $\lambda_i$.  This can be seen geometrically as a rotation of ``data space''
-to an orientation defined by the principal axes of \mat{E}, followed by a re-scaling, so
-that the \mat{E} ellipsoid becomes the unit spheroid.  In this transformed space
-(``canonical space''), functions of the
-the radii $\lambda_i$ of the axes of $\mat{H}^\star$ give direct measures of
-the ``size'' of \mat{H} relative to \mat{E}. The orientation of the eigenvectors
-$\vec{v}_i$ can be related to the (orthogonal) linear combinations of the
-data variables that are successively largest in the metric of \mat{E}.
-
-
-To illustrate, \figref{fig:ellipse-geneig} (left) shows
-the ellipses generated by
-\begin{equation*}
- \mat{H} = \left[ \begin{array}{cc}
-                   9 & 3 \\
-                   3 & 4
-                  \end{array}\right]
- \quad \mbox{ and } \quad
- \mat{E} = \left[ \begin{array}{cc}
-                   1 & 0.5 \\
-                   0.5 & 2
-                  \end{array}\right]
-\end{equation*}
-together with their conjugate axes. For \mat{E}, the conjugate axes are defined by the columns of the right factor,
-$\mat{A}\trans$,
-in $\mat{E} = \mat{A} \mat{A}\trans$; for \mat{H}, the conjugate axes are defined by the columns of $\mat{A}$.
-The transformation to $\mat{H}^\star = \invhalf{E} \, \mat{H} \, \invhalf{E}$ is shown in the right panel
-of \figref{fig:ellipse-geneig}. In this ``canonical space,'' angles and lengths have the orginary interpretation
-of Euclidean space, so the size of $\mat{H}^\star$ can be interpreted directly in terms of functions of
-the radii $\lambda_1$ and $\lambda_2$.
-
-
-\section{The data ellipse and ellipsoids}\label{sec:data-ellipse}
-
-The \emph{data ellipse} \citep{Monette:90} (or \emph{concentration ellipse}, \citealp[Ch. 7]{Dempster:69})
-provides a remarkably
-simple and effective display for viewing and understanding
-bivariate \emph{marginal} relationships in multivariate data.
-The data ellipse is typically used to add a visual summary to a scatterplot,
-indicating the means, standard deviations, correlation,
-and slope of the regression line for
-two variables. Under classical (Gaussian) assumptions, the data ellipse
-provides a sufficient visual summary, as we describe below.
-
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=.9\textwidth,clip]{fig/galton-reg3}
-  \caption{Sunflower plot of Galton's data on heights of parents and their children (in.), with
-  40\%, 68\% and 95\% data ellipses and the regression lines of $y$ on $x$ (black) and
-  $x$ on $y$ (grey). The ratio of the vertical to the regression line (labeled `r') to the vertical
-  to the top of the ellipse gives a visual estimate of the correlation ($r$=0.46, here).
-  Shadows (projections) on the coordinate axes give standard intervals,
-  $\bar{x} \pm s_x$ and $\bar{y} \pm s_y$, with various coverage properties.
-  Plotting children's height on the abscissa follows Galton.
-  }%
-  \label{fig:galton-reg3}
-\end{figure}
-
-It is historically appropriate to illustrate the data ellipse and
-describe its properties using Galton's (\citeyear[Table
-I]{Galton:1886})
-data, from which he drew \figref{fig:galton-corr} as a conceptual
-diagram,%
-\footnote{These data are reproduced in \citet[Table 8.2, p.
-286]{Stigler:1986}}
-shown in \figref{fig:galton-reg3}, where the frequency at
-each point is represented by a sunflower symbol. We also overlay the 40\%,
-68\% and 95\% data ellipses, as described below.
-
-In \figref{fig:galton-reg3}, the ellipses have the mean vector
-$(\bar{x}, \bar{y})$ as their center;  the lengths of arms of the
-central cross show the standard deviation of each variable, which
-correspond to the shadows of the 40\% ellipse.  In
-addition, the correlation coefficient can be visually estimated as
-the fraction of a vertical tangent line from $\bar{y}$ to the top of
-the ellipse that is below the regression line $\hat{y} | x$, shown
-by the arrow labeled `r.' Finally, as Galton noted, the regression line
-for $\hat{y} \given x$ (or $\hat{x} \given y$)
-can be visually estimated as the locus of the points of vertical
-(or horizontal) tangents with the family of concentric ellipses.
-See \citet[Figs.~5.1--5.2]{Monette:90} and
-\citet[p.~183]{Friendly:91} for illustrations and further discussion
-of the properties of the data ellipse.
-
-More formally \citep{Dempster:69,Monette:90}, for a $p$-dimensional
-sample, $\mat{Y}_{n \times p}$,
-we recognize the quadratic form in \eqref{eq:ellipsoid3}
-as corresponding to the squared Mahalanobis distance,
-$D^2_M (\vec{y}) = \dev{\vec{y}}\trans \, \inv{S} \, \dev{\vec{y}}$,
-of the point
-$\vec{y} = (y_1, y_2, \dots , y_p)\trans$
-from the centroid of the sample,
-$\bar{\vec{y}} = (\bar{y}_1, \bar{y}_2, \dots , \bar{y}_p)\trans$.
-Thus, we define the data ellipsoid $\mathcal{E}_c$ of size (``radius'') $c$
-as the set of all points $\vec{y}$ with $D^2_M (\vec{y})$ less than or
-equal to $c^2$,
-\begin{equation}\label{eq:dsq}
-\mathcal{E}_c ( \vec{y}; \mat{S},  \bar{\vec{y}} )
-:= \{ \vec{y} :
-\dev{\vec{y}}\trans \, \inv{S} \, \dev{\vec{y}} \le c^2 \} \comma
-\end{equation}
-where
-$\mat{S} = ({n-1})^{-1} \sum_{i=1}^n (\vec{y}_i - \bar{\vec{y}})\trans (\vec{y}_i - \bar{\vec{y}})$
-is the sample variance-covariance matrix.  In the computational notation of \eqref{eq:ellipsoidW}, the boundary of the
-data ellipsoid of radius $c$ is thus
-\begin{equation}\label{eq:ellipsoidS}
-\mathcal{E}_c(\bar{\vec{y}}, \mat{S}) = \bar{\vec{y}} \oplus c \mat{S}^{1/2} \period
-\end{equation}
-
-Many properties of the data ellipsoid hold regardless of the joint distribution of the
-variables; but if the variables are multivariate normal, then the data ellipsoid represents
-a contour of constant density in their joint distribution.  In this case $D^2_M (x,y)$
-has a large-sample $\chi^2_p$ distribution (or, in finite samples, approximately
-$[p (n-1) / (n-p)] F_{p, n-p}$)).
-
-Hence, in the bivariate case, taking $c^2 = \chi^2_2(0.95)= 5.99 \approx 6$ encloses approximately
-95\% of the data points under normal theory.  Other radii also have useful interpretations:
-\begin{itemize*}
-\item In \figref{fig:galton-reg3}, we demonstrate that $c^2 = \chi^2_2(0.40) \approx 1$ gives
-a data ellipse of 40\% coverage with the property that its projection on either axis
-corresponds to a standard interval, $\bar{s} \pm 1 s_x$ and $\bar{y} \pm 1 s_y$.  The same property of univariate
-coverage pertains to
-any linear combination of $x$ and $y$.
-\item By analogy with a univariate sample, a 68\% coverage data ellipse with
-$c^2 = \chi^2_2(0.68) = 2.28$ gives a bivariate analog of the standard $\bar{x} \pm 1 s_x$ and $\bar{y} \pm 1 s_y$ intervals.
-The univariate shadows, or those of any linear combination, then correspond to standard
-intervals taking fishing in a $p=2$-dimensional space into account.
-\end{itemize*}
-
-
-\begin{figure}[htb]
-% two figs side-by-side
-  \begin{minipage}[c]{.485\textwidth}
-   \includegraphics[width=1\linewidth,clip]{fig/scatirisd1}
-   \end{minipage}%
-  \hfill
-  \begin{minipage}[c]{.485\textwidth}
-   \includegraphics[width=1\linewidth,clip]{fig/scatirisd3}
-  \end{minipage}
-  \caption{Scatterplot matrices of Anderson's iris data: (a) showing data, separate 68\% data
-  ellipses, and regression lines for each species; (b) showing only ellipses and regression lines.
-  Key-- \emph{Iris setosa}: blue, $\triangle$; \emph{Iris versicolor}: red, $+$;
-  \emph{Iris virginca}: green, $\Box$.}%
-  \label{fig:scatirisd1}
-\end{figure}
-
-As useful as the data ellipse might be for a single, unstructured
-sample, its value as a visual summary increases
-with the complexity of the data.
-For example, \figref{fig:scatirisd1} shows  scatterplot matrices
-of all pairwise plots of the variables from Edgar Anderson's \citeyear{Anderson:35}
-classic
-data on three species of iris flowers found in the Gasp\'{e} Peninsula,
-later used by \citet{Fisher:36} in his development of discriminant analysis.
-The data ellipses show clearly that the means, variances, correlations,
-and regression slopes differ systematically across the three iris species
-in all pairwise plots.
-We emphasize that these serve as sufficient visual summaries of the important
-statistical properties (first and second moments) by removing the data points
-from the plots in the version at the right.
-
-\subsection{Robust data ellipsoids}
-
-We recognize that a normal-theory summary (first and second moments),
-shown visually or numerically, can be distorted
-by multivariate outliers, particularly in smaller samples.
-Such effects can be countered by using
-robust covariance
-estimates such as multivariate trimming \citep{GnanadesikanKettenring:72}
-or the high-breakdown bound Minimum Volume Ellipsoid (MVE) and
-Minimum Covariance Determinant (MCD) methods
-developed by Rousseeuw and others
-\citep{RousseeuwLeroy:87,RousseeuwVanDriessen:99}.
-In what follows, it should be noted that
-robust covariance estimates could, in principle, be substituted
-for the classical, normal-theory estimates in all cases.
-To save space, we don't explore these possibilities further here.
-
+\input{geneig}
+\input{dataellipse}
 
 
 \section{Linear models: data ellipses and confidence ellipses}
@@ -512,192 +156,24 @@ We begin with views in the space of the variables (data space)
 and progress to related views in the space of model parameters
 ($\vec{\beta}$ space).
 
-\begin{comment}
-Topics:
-\begin{itemize*}
-%\item data ellipse as a sufficient visual summary
-\item visualizing CIs for slopes and visualizing r
-\item conditional/marginal effects and Simpson's paradox
-\item confidence ellipse as the representation in beta space
-\item VIFs \& GVIFs
-\item Added variable plots: ellipse of AVP as a 2d section
-\item other neat relations
-\end{itemize*}
-\end{comment}
+%\begin{comment}
+%Topics:
+%\begin{itemize*}
+%%\item data ellipse as a sufficient visual summary
+%\item visualizing CIs for slopes and visualizing r
+%\item conditional/marginal effects and Simpson's paradox
+%\item confidence ellipse as the representation in beta space
+%\item VIFs \& GVIFs
+%\item Added variable plots: ellipse of AVP as a 2d section
+%\item other neat relations
+%\end{itemize*}
+%\end{comment}
 
 \input{linreg}
 \input{simpson-iris}
 \input{paradoxes}
 \input{levdemo}
-
-\subsection[Ellipsoids in data space and beta space]{Ellipsoids in data space and $\vec{\beta}$ space}
-
-It is most common to look at data and fitted models in ``data space,'' where axes correspond to
-variables, points represent observations, and fitted models are plotted as lines (or planes) in this space.
-As we've suggested, data ellipsoids provide informative summaries of relationships in data space.
-For linear models, particularly regression models with quantitative predictors, there is another space---$\vec{\beta}$ space---that provides deeper views of models and the relationships among them.
-In $\vec{\beta}$ space, the axes pertain to coefficients and points are models (true, hypothesized, fitted) whose coordinates
-represent values of parameters.
-
-In the sense described below, data space and $\vec{\beta}$ space are \emph{dual} to each other.
-In simple linear regression, for example, each line in data space corresponds to a point in $\vec{\beta}$ space,
-the set of points on any line in $\vec{\beta}$ space corresponds to a pencil of lines through a given point
-in data space, and the proposition that every pair of points defines a line in one space corresponds to
-the proposition that every two lines intersect in a point in the other space.
-
-Moreover, ellipsoids in these spaces are dual and inversely related to each other.
-In data space, joint confidence intervals for the mean vector or joint prediction
-regions for the data are given by the ellipsoids $\bar{y} \oplus c \sqrt{\mat{S}}$.
-In the dual $\vec{\beta}$ space, joint confidence regions for the parameters
-are given by ellipsoids of the form $\hat{\beta} \oplus c \sqrt{\mat{S}^{-1}}$.
-We illustrate these relationships in the example below.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=.6\textwidth,clip]{fig/vis-reg-coffee11}
-  \caption{Scatterplot matrix, showing the pairwise relationships among Heart ($y$), Coffee ($x_1$), and Stress ($x_2$),
-  with linear regression lines and 68\% data ellipses for the marginal bivariate relationships.
-  }%
-  \label{fig:vis-reg-coffee11}
-\end{figure}
-
-\figref{fig:vis-reg-coffee11} shows a scatterplot matrix among the variables
-Heart ($y$), an index of cardiac damage; Coffee ($x_1$), a measure of daily
-coffee consumption; and Stress ($x_2$), a measure of occupational stress, in a contrived
-sample of $n=20$. For the sake of the example we assume that the main goal is
-to determine whether or not coffee is good or bad for your heart, and stress
-represents one potential confounding variable among others (age, smoking, etc.)
-that might be useful to control statistically.
-
-The plot in \figref{fig:vis-reg-coffee11} shows only the marginal relationship
-between each pair of variables. The marginal message seems to be that coffee is
-bad for your heart, stress is bad for your heart and coffee consumption is
-also related to occupational stress.
-\begin{figure}[htb]
-% two figs side-by-side
-  \begin{minipage}[c]{.485\textwidth}
-   \includegraphics[width=1\linewidth,clip]{fig/vis-reg-coffee12a}
-   \end{minipage}%
-  \hfill
-  \begin{minipage}[c]{.485\textwidth}
-   \includegraphics[width=1\linewidth,clip]{fig/vis-reg-coffee12b}
-  \end{minipage}
-  \caption{Data space and $\vec{\beta}$ space representations of Coffee and Stress.
-   Left: Standard (40\%) data ellipse. Right: Joint 95\% confidence ellipse (green) for
-   ($\beta_{\mathrm{Coffee}}, \beta_{\mathrm{Stress}}$), CI ellipse (red) with 95\% univariate shadows.
-  }%
-  \label{fig:vis-reg-coffee12}
-\end{figure}
-Yet, when we fit both variables together, we obtain the following results,
-suggesting that coffee is good for you (the coefficient for coffee is now
-negative, though non-significant).  How can this be?
-
-\begin{verbatim}
-Coefficients:
-            Estimate Std. Error t value Pr(>|t|)
-(Intercept)  -7.7943     5.7927  -1.346    0.196
-Coffee       -0.4091     0.2918  -1.402    0.179
-Stress        1.1993     0.2244   5.345 5.36e-05 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 10.36 on 17 degrees of freedom
-Multiple R-squared: 0.9462,     Adjusted R-squared: 0.9399
-F-statistic: 149.6 on 2 and 17 DF,  p-value: 1.620e-11
-\end{verbatim}
-
-\figref{fig:vis-reg-coffee12} shows the relationship between the
-predictors in data space and how this translates into joint and
-individual confidence intervals for the coefficients in
-$\vec{\beta}$ space.  The left panel is the same as the corresponding
-(Coffee, Stress) panel in \figref{fig:vis-reg-coffee11}, but with
-a standard (40\%) data ellipse. The right panel shows the joint 95\% confidence
-region and the individual 95\% confidence intervals in $\vec{\beta}$ space, determined as
-\begin{equation*}
- \widehat{\beta} \oplus \sqrt{d F^{.95}_{q, \nu}} \times s_e \times \mat{S}_X^{-1/2}
-\end{equation*}
-where $d$ is the number of dimensions for which we want coverage,
-$\nu$ is the residual degrees of freedom for $s_e$, and $\mat{S}_X$
-is the covariance matrix of the predictors.
-
-Thus, the green ellipse in \figref{fig:vis-reg-coffee12} is the
-ellipse of joint 95\% coverage, using the factor $\sqrt{2 F^{.95}_{2, \nu}}$
-and covering the true values of ($\beta_{\mathrm{Stress}}, \beta_{\mathrm{Coffee}}$)
-in 95\% of samples.  Moreover:
-\begin{itemize*}
-  \item Any \emph{joint} hypothesis (e.g., $H_0:\beta_{\mathrm{Stress}}=1, \beta_{\mathrm{Coffee}}=1$)
-can be tested visually, simply by observing whether the
-hypothesized point, $(1, 1)$ here, lies inside or outside the joint ellipse.
-  \item The shadows of this ellipse on the horizontal and vertical axes
-give Scheff\'e joint 95\%  confidence intervals for each parameter, with protection for ``fishing''
-in a 2-dimensional space.
-  \item Similarly, using the factor
-$\sqrt{F^{1-\alpha/d}_{1, \nu}} = t^{1-\alpha/2d}_\nu$ would give an
-ellipse whose 1D shadows are $1-\alpha$ Bonferroni confidence intervals
-for $d$ posterior hypotheses.
-\end{itemize*}
-
-Visual hypothesis tests and $d=1$ confidence intervals for the parameters \emph{separately}
-are obtained from the red ellipse in \figref{fig:vis-reg-coffee12},
-which is scaled by $\sqrt{F^{.95}_{1, \nu}} = t^{.975}_\nu$. We call this the ``confidence-interval generating ellipse'' (or, more compactly, the ``confidence-interval ellipse'').
-The shadows of the confidence-interval ellipse on the axes (thick red lines) give the
-corresponding individual 95\% confidence intervals, which are
-equivalent to the (partial, Type III) $t$-tests for each coefficient given in the
-standard multiple regression output shown above.
-Thus, controlling for Stress, the confidence interval for the slope for Coffee includes 0,
-so we cannot reject the hypothesis that $\beta_{\mathrm{Coffee}}=0$
-in the multiple regression model, as we saw above in the numerical output.
-On the other hand, the interval for the slope for Stress excludes the origin,
-so we reject the null hypothesis that $\beta_{\mathrm{Stress}}=0$,
-controlling for Coffee consumption.
-
-Finally, consider the relationship between the data ellipse and the
-confidence ellipse.  These have exactly the same shape, but
-(with equal coordinate scaling of the axes), the confidence ellipse
-is exactly a $90^o$ rotation of the data ellipse.  In directions in
-data space where the data ellipse is wide---where we have more information
-about the relationship between Coffee and Stress---the confidence ellipse is
-narrow, reflecting greater precision of the estimates of coefficients.
-Conversely, where the data ellipse is narrow (less information), the
-confidence ellipse is wide (less precision).
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=.6\textwidth,clip]{fig/vis-reg-coffee13}
-  \caption{Joint 95\% confidence ellipse for ($\beta_{\mathrm{Coffee}}, \beta_{\mathrm{Stress}}$),
-  together with the 1D marginal confidence interval for $\beta_{\mathrm{Coffee}}$
-  ignoring Stress (thick blue line), and a visual confidence interval for $\beta_{\mathrm{Stress}} - \beta_{\mathrm{Coffee}}=0$
-  (dark cyan).
-  }%
-  \label{fig:vis-reg-coffee13}
-\end{figure}
-
-The virtues of the confidence ellipse for visualizing hypothesis tests and interval estimates
-do not end here. Say we wanted to test the hypothesis that Coffee was unrelated to Heart damage
-in the \emph{simple} regression ignoring Stress.  The (Heart, Coffee) panel in \figref{fig:vis-reg-coffee11}
-showed the strong marginal relationship between the variables.  This can be seen in \figref{fig:vis-reg-coffee13} as
-the oblique projection of the confidence ellipse to the horizontal axis where $\beta_{\mathrm{Stress}}=0$.
-The estimated slope for Coffee in the simple regression is exactly the oblique shadow of
-the center of the ellipse $(\widehat{\beta}_{\mathrm{Coffee}}, \widehat{\beta}_{\mathrm{Stress}})$
-through the point where the ellipse has a horizontal tangent onto the horizontal axis at
-$\beta_{\mathrm{Stress}}=0$. The thick blue line in this figure shows the confidence interval
-for the slope for Coffee in the simple regression model. The confidence interval doesn't cover the origin, so
-we reject $H_0: \beta_{\mathrm{Coffee}} = 0$ in the simple regression model.
-The oblique shadow of the red 95\% confidence-interval ellipse onto the horizontal axis
-is slightly smaller.  How much smaller is a function of the size of the coefficient for Stress.
-
-We can go further.  As we noted earlier, all linear combinations of variables or parameters
-in data or models correspond graphically to projections (shadows) onto certain sub-spaces.
-Let's assume that Coffee and Stress were measured on the same scales\, so it makes sense
-to ask if they have equal impacts on Heart disease in the joint model that includes them both.
-\figref{fig:vis-reg-coffee13} also shows an auxiliary axis through the origin with slope $=-1$
-corresponding to values of $\beta_{\mathrm{Stress}} - \beta_{\mathrm{Coffee}}$. The orthogonal
-projection of the coefficient vector on this axis is the point estimate of
-$\widehat{\beta}_{\mathrm{Stress}} - \widehat{\beta}_{\mathrm{Coffee}}$
-and the shadow of the red ellipse along this axis is the 95\% confidence interval
-for the difference in slopes. This interval excludes 0, so we would reject the hypothesis
-that Coffee and Stress have equal coefficients.
-
+\input{betaspace}
 \input{measerror}
 \input{avplot}
 
@@ -708,11 +184,6 @@ that Coffee and Stress have equal coefficients.
 \input{MLM}
 
 \input{kiss}
-%\begin{itemize*}
-%\item Ridge regression
-%\item BLUEs and BLUPs as kissing ellipsoids
-%\item Bayesian models
-%\end{itemize*}
 
 \input{discrim}
 \input{ridge}
@@ -737,9 +208,10 @@ SAS and R scripts to generate many of the figures are included as supplementary 
 
 \section{Acknowledgments}
 
-This work was supported by Grant OGP0138748 from the National Sciences and Engineering Research Council of Canada to Michael Friendly, and by grants from the Social Sciences and Humanities Research Council of Canada to John Fox.
+This work was supported by Grant OGP0138748 from the National Sciences and Engineering Research Council of Canada to Michael Friendly, 
+and by grants from the Social Sciences and Humanities Research Council of Canada to John Fox.
 
 
-\bibliography{timeref,graphics,Rpackages}
-%\bibliography{references}        % processed by aux2bib
+%\bibliography{timeref,graphics,Rpackages}
+\bibliography{references}        % processed by aux2bib
 \end{document}

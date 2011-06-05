@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}
-\begin{thebibliography}{42}
+\begin{thebibliography}{46}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Anderson(1935)}]{Anderson:35}
@@ -60,6 +60,12 @@ Denis, D. (2001).
   {Auguste Bravais} and the error theorists.
 \newblock \emph{History and Philosophy of Psychology Bulletin}, 13, 36--44.
 
+\bibitem[{Diez-Roux(1998)}]{Diez-Roux:1998}
+Diez-Roux, A.~V. (1998).
+\newblock Bringing context back into epidemiology: Variables and fallacies in
+  multilevel analysis.
+\newblock \emph{American Journal of Public Health}, 88, 216--222.
+
 \bibitem[{Fisher(1936)}]{Fisher:36}
 Fisher, R.~A. (1936).
 \newblock The use of multiple measurements in taxonomic problems.
@@ -84,13 +90,6 @@ Fox, J. and Suschnigg, C. (1989).
 Fox, J. and Weisberg, S. (2011).
 \newblock \emph{car: Companion to Applied Regression}.
 \newblock R package version 2.0-11.
-
-\bibitem[{Freedman(2001)}]{Freedman:01}
-Freedman, D.~A. (2001).
-\newblock Ecological inference and the ecologocal falacy.
-\newblock In N.~J. Smelser and P.~B. Baltes, eds., \emph{Internaitonal
-  Encyclopedia of the Social and Behavioral Sciences}, (pp. 4027--4030).
-  Pergamon Press.
 
 \bibitem[{Friendly(1991)}]{Friendly:91}
 Friendly, M. (1991).
@@ -144,6 +143,17 @@ Hotelling, H. (1933).
   components.
 \newblock \emph{Journal of Educational Psychology}, 24, 417--441.
 
+\bibitem[{Kramer(1983)}]{Kramer:1983}
+Kramer, G.~H. (1983).
+\newblock The ecological fallacy revisited: Aggregate- versus individual-level
+  findings on economics and elections, and sociotropic voting.
+\newblock \emph{The American Political Science Review}, 77(1), 92--111.
+
+\bibitem[{Lichtman(1974)}]{Lichtman:1974}
+Lichtman, A.~J. (1974).
+\newblock Correlation, regression, and the ecological fallacy: A critique.
+\newblock \emph{The Journal of Interdisciplinary History}, 4(3), 417--433.
+
 \bibitem[{Longley(1967)}]{Longley:1967}
 Longley, J.~W. (1967).
 \newblock An appraisal of least squares programs for the electronic computer
@@ -179,11 +189,23 @@ Pearson, K. (1920).
 \newblock Notes on the history of correlation.
 \newblock \emph{Biometrika}, 13(1), 25--45.
 
+\bibitem[{R.(1969)}]{Alker:1969}
+R., A.~H. (1969).
+\newblock A typology of ecological fallacies.
+\newblock In M.~Dogan and S.~Rokkam, eds., \emph{Social Ecology}, (pp. 69--86).
+  Boston: The MIT Press.
+
 \bibitem[{Raudenbush and Bryk(2002)}]{RaudenbushBryk:2002}
 Raudenbush, S.~W. and Bryk, A.~S. (2002).
 \newblock \emph{Hierarchical linear models: Applications and data analysis
   methods}.
 \newblock Newbury Park, CA: Sage, 2nd edn.
+
+\bibitem[{Riley(1963)}]{Riley:1963}
+Riley, M.~W. (1963).
+\newblock Special problems of sociological analysis.
+\newblock In M.~W. Riley, ed., \emph{Sociological research I: a case approach},
+  (pp. 700--725). New York: Harcourt, Brace, and World.
 
 \bibitem[{Robinson(1950)}]{Robinson:1950}
 Robinson, W.~S. (1950).

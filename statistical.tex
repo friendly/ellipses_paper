@@ -8,7 +8,7 @@ Hence, we will also use the following notation:
 For a positive definite matrix
 $\mat{\Sigma}$ we use $\mathcal{E}(\vec{\mu},\mat{\Sigma})$ to denote the ellipsoid
 \begin{equation}\label{eq:ellipsoid3}
-\mathcal{E} = \{ \vec{x} : (\vec{x}-\vec{\mu})\trans \inv{\Sigma} (x-\vec{\mu}) = 1 \} \period
+\mathcal{E} := \{ \vec{x} : (\vec{x}-\vec{\mu})\trans \inv{\Sigma} (x-\vec{\mu}) = 1 \} \period
  \end{equation}
 
 When $\mat{\Sigma}$ is the covariance matrix of a multivariate vector $\vec{x}$ with eigenvalues
@@ -54,6 +54,6 @@ $\mat{L}$
 the image of the ellipse is
 
 \begin{equation*}
-\mat{L}(E(\vec{\mu} ,\mat{W}))=E(\mat{L}\vec{\mu} ,\mat{L}\mat{W}{\mat{L}}\trans)=\mat{L}\vec{\mu} \oplus \sqrt{\mat{L}\mat{W}{\mat{L}}\trans}=\mat{L}\vec{\mu} \oplus \mat{L}\sqrt{\mat{W}} \period
+\mat{L}(\mathcal{E}(\vec{\mu} ,\mat{W}))=\mathcal{E}(\mat{L}\vec{\mu} ,\mat{L}\mat{W}{\mat{L}}\trans)=\mat{L}\vec{\mu} \oplus \sqrt{\mat{L}\mat{W}{\mat{L}}\trans}=\mat{L}\vec{\mu} \oplus \mat{L}\sqrt{\mat{W}} \period
 \end{equation*}
 
