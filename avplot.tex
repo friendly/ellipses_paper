@@ -77,23 +77,37 @@ Arrows connect the mean-centered marginal points (open circles) to the residual 
   \label{fig:coffee-avplot-B}
 \end{figure}
 
-\begin{itemize*}
+\begin{enumerate*}
  \item The data ellipse of the AVP for $(x_k, y)$ is to the estimate of a coefficient in a multiple regression as
  the data ellipse of $(x, y)$ is to simple regression. Thus:
+
  \item The simple regression least squares fit of $\vec{y}^\star$ on $\vec{x}_k^\star$ has slope $\hat{\beta_k}$,
  the partial slope for $x_k$ in the full model (and intercept = 0).
+
+ \item The residuals, $(\vec{y}^\star - \widehat{\vec{y}}^\star)$, shown in this plot are the residuals for $\vec{y}$ in the full model.
+
  \item The correlation between $\vec{x}_k^\star$ and $\vec{y}^\star$, seen in the shape of the data ellipse for these residuals,
  is the partial correlation between $y$ and $x_k$ with the other predictors in $\mat{X}_{[-k]}$ partialled out.
+
  \item The horizontal half-width of the AVP data ellipse is proportional to the conditional standard deviation of
  $x_k$ remaining after all other predictors have been accounted for, providing a visual interpretation
  of variance inflation due to collinear predictors, as we describe below.
- \item the vertical half-width of the data ellipse is proportional to the residual standard deviation $s_e$ in the multiple regression.
- \item the squared horizontal positions, $(\vec{x}_k^\star)^2$, in the plot give the partial contributions
- to leverage on the coefficient $\hat{\beta}_k$ of $x_k$.
- \item The last two points imply that the collection of added-variable plots for $\vec{y}$ and
+
+ \item The vertical half-width of the data ellipse is proportional to the residual standard deviation $s_e$ in the multiple regression.
+
+ \item The squared horizontal positions, $(\vec{x}_k^\star)^2$, in the plot give the partial contributions
+ to leverage on the coefficient $\hat{\beta}_k$ of $x_k$. 
+
+ \item Items (3) and (7) imply that 
+ that the AVP for $x_k$ shows the \emph{partial} influence of individual observations on the coefficient $\hat{\beta}_k$, 
+ in the same way as in \figref{fig:levdemo21} for marginal models. These influence statistics are
+ often shown numerically
+ as DFBETA statistics \citep{Belsley-etal:80}.
+ 
+ \item The last three items imply that the collection of added-variable plots for $\vec{y}$ and
  $\mat{X}$ provide an easy way to visualize the influence that individual observations---and indeed the joint influence of subsets of observations---have on
  the esimation of \emph{each} coefficient in a given model.
-\end{itemize*}
+\end{enumerate*}
 
 
 Elliptical insight also permits us to go further, to depict the relationship between conditional and marginal views

@@ -100,6 +100,7 @@
 \newlabel{sec:avp}{{4.8}{22}}
 \@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Biasing effect of measurement error in one variable (Stress) on on the coefficient of another variable (Coffee) in a multiple regression. The coefficient for Coffee is driven towards its value in the marginal model using Coffee alone, as measurement error in Stress makes it less informative in the joint model. }}{23}}
 \newlabel{fig:coffee-measerr}{{18}{23}}
+\citation{Belsley-etal:80}
 \@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Added variable plots for Stress and Coffee in the multiple regression predicting Heart disease. Each panel also shows the 50\% conditional data ellipse for residuals $(\ensuremath  {\bm  {x}}_k^\star , \ensuremath  {\bm  {y}}^\star )$, shaded red. }}{24}}
 \newlabel{fig:coffee-avplot-A}{{19}{24}}
 \citation{Timm:75}
@@ -107,7 +108,7 @@
 \newlabel{fig:coffee-avplot-B}{{20}{25}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Multivariate linear models: HE plots}{25}}
 \newlabel{sec:mlm}{{5}{25}}
-\newlabel{eq:mglt}{{14}{25}}
+\newlabel{eq:mglt}{{14}{26}}
 \newlabel{eq:hmat}{{15}{26}}
 \newlabel{eq:emat}{{16}{26}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Multivariate test statistics as functions of the eigenvalues $\lambda _i$ solving $\ensuremath  {\mathrm  {det} (\ensuremath  {\bm  {H}} - \lambda \ensuremath  {\bm  {E}})}=0$ or eigenvalues $\rho _i$ solving $\ensuremath  {\mathrm  {det} [\ensuremath  {\bm  {H}} - \rho (\ensuremath  {\bm  {H}}+\ensuremath  {\bm  {E}})]}=0$. }}{26}}
@@ -116,28 +117,28 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces (a) Data ellipses and (b) corresponding HE plot for sepal length and petal length in the iris dataset. The \ensuremath  {\bm  {H}} ellipse is the data ellipse of the fitted values defined by the group means, $\mathaccentV {bar}016{\ensuremath  {\bm  {y}}}_{i \cdot }$ The \ensuremath  {\bm  {E}} ellipse is the data ellipse of the residuals, $(\ensuremath  {\bm  {y}}_{ij} - \mathaccentV {bar}016{\ensuremath  {\bm  {y}}}_{i \cdot })$. Using evidence (``significance'') scaling of the \ensuremath  {\bm  {H}} ellipse, the plot has the property that the multivariate test for a given hypothesis is significant by Roy's largest-root test \emph  {iff} the \ensuremath  {\bm  {H}} ellipse protrudes anywhere outside the \ensuremath  {\bm  {E}} ellipse.}}{27}}
 \newlabel{fig:heplot3a}{{21}{27}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Linear hypotheses: geometries of contrasts and sums of effects}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces $\ensuremath  {\bm  {H}}$ and $\ensuremath  {\bm  {E}}$ matrices for sepal width and sepal length in the iris data, together with $\ensuremath  {\bm  {H}}$ matrices for testing two orthogonal contrasts in the species effect.}}{28}}
-\newlabel{fig:HE-contrasts-iris}{{22}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Canonical projections: ellipses in data space and canonical space}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Canonical HE plot for the Iris data. In this plot, the \ensuremath  {\bm  {H}} ellipse is shown using effect-size scaling to preserve resolution, and the variable vectors have been multiplied by a constant to approximately fill the plot space. The projections of the variable vectors on the coordinate axes show the correlations of the variables with the canonical dimensions.}}{29}}
-\newlabel{fig:HE-can-iris}{{23}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Canonical projections: ellipses in data space and canonical space}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces $\ensuremath  {\bm  {H}}$ and $\ensuremath  {\bm  {E}}$ matrices for sepal width and sepal length in the iris data, together with $\ensuremath  {\bm  {H}}$ matrices for testing two orthogonal contrasts in the species effect.}}{29}}
+\newlabel{fig:HE-contrasts-iris}{{22}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Canonical HE plot for the Iris data. In this plot, the \ensuremath  {\bm  {H}} ellipse is shown using effect-size scaling to preserve resolution, and the variable vectors have been multiplied by a constant to approximately fill the plot space. The projections of the variable vectors on the coordinate axes show the correlations of the variables with the canonical dimensions.}}{30}}
+\newlabel{fig:HE-can-iris}{{23}{30}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Kissing ellipsoids}{30}}
 \newlabel{eq:kiss-demoA}{{18}{31}}
 \@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Locus of osculation for two families of ellipsoidal level curves, with centers at $\ensuremath  {\bm  {m}}_1 = (-2, 2)$ and $\ensuremath  {\bm  {m}}_2 = (2, 6)$, and shape matrices $\ensuremath  {\bm  {A}}_1$ and $\ensuremath  {\bm  {A}}_2$ given in Eqn.\nobreakspace  {}(18\hbox {}). The left ellipsoids (red) have radii=1, 2, 3. The right ellipsoids have radii=1, 1.74, 3.1, where the last two values were chosen to make them kiss at the points marked with squares. The black curve is an approximation to the path of osculation, using a spline function connecting $\ensuremath  {\bm  {m}}_1$ to $\ensuremath  {\bm  {m}}_2$ via the marked points of osculation.}}{31}}
 \newlabel{fig:kiss-demo}{{24}{31}}
-\newlabel{eq:locus}{{20}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Locus of osculation for two families of ellipsoidal level curves, showing contour lines of the vector cross-product function Eqn.\nobreakspace  {}(20\hbox {}). The thick black curve shows the complete locus of osculation for these two families of ellipses, where the cross-product function equals 0. Left:\nobreakspace  {}with parameters as in Figure\nobreakspace  {}24\hbox {} and Eqn.\nobreakspace  {}(18\hbox {}). Right:\nobreakspace  {}with the same shape matrix $\ensuremath  {\bm  {A}}_1$ for both ellipsoids.}}{32}}
-\newlabel{fig:kiss-demo2}{{25}{32}}
 \citation{Fox:2008}
+\newlabel{eq:locus}{{20}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Discriminant analysis}{32}}
 \citation{HoerlKennard:1970a,HoerlKennard:1970b}
-\citation{Marquardt:1970}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Discriminant analysis}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Locus of osculation for two families of ellipsoidal level curves, showing contour lines of the vector cross-product function Eqn.\nobreakspace  {}(20\hbox {}). The thick black curve shows the complete locus of osculation for these two families of ellipses, where the cross-product function equals 0. Left:\nobreakspace  {}with parameters as in Figure\nobreakspace  {}24\hbox {} and Eqn.\nobreakspace  {}(18\hbox {}). Right:\nobreakspace  {}with the same shape matrix $\ensuremath  {\bm  {A}}_1$ for both ellipsoids.}}{33}}
+\newlabel{fig:kiss-demo2}{{25}{33}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Ridge regression}{33}}
 \newlabel{eq:ridgeRSS}{{22}{33}}
 \newlabel{eq:ridge-beta}{{23}{33}}
-\newlabel{eq:ridge}{{24}{33}}
+\citation{Marquardt:1970}
 \@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Elliptical contours of the OLS residual sum of squares for two parameters in a regression, together with circular contours for the constraint function, $\beta _1^2 + \beta _2^2 \le t$. Ridge regression finds the point $\ensuremath  {\bm  {\beta }}^{RR}$ where the OLS contours just kiss the contstraint region.}}{34}}
 \newlabel{fig:ridge-demo}{{26}{34}}
+\newlabel{eq:ridge}{{24}{34}}
 \newlabel{eq:ridge-sup1}{{25}{34}}
 \newlabel{eq:ridge-sup2}{{26}{34}}
 \citation{HoerlKennard:1970b}
@@ -147,14 +148,14 @@
 \citation{Longley:1967}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Bivariate ridge trace plots}{35}}
 \newlabel{sec:ridge2}{{6.2.1}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Bayesian linear models}{35}}
 \@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Bivariate ridge trace plots for the coefficients of four predictors against the coefficient for GNP in Longley's data, with $k = 0, 0.005, 0.01, 0.02, 0.04, 0.08$. In most cases the coefficients are driven toward zero, but the bivariate plot also makes clear the reduction in variance. To reduce overlap, all confidence ellipses are shown with 1/2 the standard radius.}}{36}}
 \newlabel{fig:ridge2}{{27}{36}}
-\newlabel{eq:bayes-qform}{{28}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Bayesian linear models}{36}}
 \citation{BrykRaudenbush:1992,RaudenbushBryk:2002}
-\citation{RaudenbushBryk:2002}
+\newlabel{eq:bayes-qform}{{28}{37}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Mixed models: BLUEs and BLUPs}{37}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Example: Math achievement and SES}{37}}
+\citation{RaudenbushBryk:2002}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Example: Math achievement and SES}{38}}
 \@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Comparing BLUEs and BLUPs. Each panel plots the OLS estimates from separate regressions for each school (BLUEs) versus the mixed model estimates from the random intercepts and slopes model (BLUPs). Left: intercepts; Right: slopes for CSES. The shrinkage of the BLUPs toward the OLS estimate is much greater for slopes than intercepts. }}{38}}
 \newlabel{fig:hsbmix4}{{28}{38}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Discussion and Conclusions}{38}}
@@ -171,51 +172,52 @@
 \citation{car,heplots1}
 \citation{Friendly:07:manova}
 \bibdata{references}
-\bibcite{Anderson:35}{{1}{1935}{{Anderson}}{{}}}
-\bibcite{Beaton:64}{{2}{1964}{{Beaton}}{{}}}
-\bibcite{Boyer:91}{{3}{1991}{{Boyer}}{{}}}
-\bibcite{Bravais:1846}{{4}{1846}{{Bravais}}{{}}}
-\bibcite{Bryant:1984}{{5}{1984}{{Bryant}}{{}}}
-\bibcite{BrykRaudenbush:1992}{{6}{1992}{{Bryk and Raudenbush}}{{}}}
-\bibcite{CampbellAtchley:81}{{7}{1981}{{Campbell and Atchley}}{{}}}
-\bibcite{Cramer:1946}{{8}{1946}{{Cram{\'e}r}}{{}}}
-\bibcite{Dempster:69}{{9}{1969}{{Dempster}}{{}}}
-\bibcite{Denis:2001}{{10}{2001}{{Denis}}{{}}}
-\bibcite{Diez-Roux:1998}{{11}{1998}{{Diez-Roux}}{{}}}
-\bibcite{Fisher:36}{{12}{1936}{{Fisher}}{{}}}
-\bibcite{Fox:2008}{{13}{2008}{{Fox}}{{}}}
-\bibcite{heplots1}{{14}{2010}{{Fox \emph  {et~al.}}}{{Fox, Friendly, and Monette}}}
-\bibcite{FoxSuschnigg:89}{{15}{1989}{{Fox and Suschnigg}}{{}}}
+\bibcite{Alker:1969}{{1}{1969}{{Alker}}{{}}}
+\bibcite{Anderson:35}{{2}{1935}{{Anderson}}{{}}}
+\bibcite{Beaton:64}{{3}{1964}{{Beaton}}{{}}}
+\bibcite{Belsley-etal:80}{{4}{1980}{{Belsley \emph  {et~al.}}}{{Belsley, Kuh, and Welsch}}}
+\bibcite{Boyer:91}{{5}{1991}{{Boyer}}{{}}}
+\bibcite{Bravais:1846}{{6}{1846}{{Bravais}}{{}}}
+\bibcite{Bryant:1984}{{7}{1984}{{Bryant}}{{}}}
+\bibcite{BrykRaudenbush:1992}{{8}{1992}{{Bryk and Raudenbush}}{{}}}
+\bibcite{CampbellAtchley:81}{{9}{1981}{{Campbell and Atchley}}{{}}}
+\bibcite{Cramer:1946}{{10}{1946}{{Cram{\'e}r}}{{}}}
+\bibcite{Dempster:69}{{11}{1969}{{Dempster}}{{}}}
+\bibcite{Denis:2001}{{12}{2001}{{Denis}}{{}}}
 \@writefile{toc}{\contentsline {section}{\numberline {8}Supplementary materials}{41}}
 \@writefile{toc}{\contentsline {section}{\numberline {9}Acknowledgments}{41}}
-\bibcite{car}{{16}{2011}{{Fox and Weisberg}}{{}}}
-\bibcite{Friendly:91}{{17}{1991}{{Friendly}}{{}}}
-\bibcite{Friendly:07:guerry}{{18}{2007{a}}{{Friendly}}{{}}}
-\bibcite{Friendly:07:manova}{{19}{2007{b}}{{Friendly}}{{}}}
-\bibcite{Galton:1886}{{20}{1886}{{Galton}}{{}}}
-\bibcite{GnanadesikanKettenring:72}{{21}{1972}{{Gnanadesikan and Kettenring}}{{}}}
-\bibcite{Guerry:1833}{{22}{1833}{{Guerry}}{{}}}
-\bibcite{HoerlKennard:1970b}{{23}{1970{a}}{{Hoerl and Kennard}}{{}}}
-\bibcite{HoerlKennard:1970a}{{24}{1970{b}}{{Hoerl and Kennard}}{{}}}
-\bibcite{Hotelling:1933}{{25}{1933}{{Hotelling}}{{}}}
-\bibcite{Kramer:1983}{{26}{1983}{{Kramer}}{{}}}
-\bibcite{Lichtman:1974}{{27}{1974}{{Lichtman}}{{}}}
-\bibcite{Longley:1967}{{28}{1967}{{Longley}}{{}}}
-\bibcite{Marquardt:1970}{{29}{1970}{{Marquardt}}{{}}}
-\bibcite{Monette:90}{{30}{1990}{{Monette}}{{}}}
-\bibcite{Pearson:1896}{{31}{1896}{{Pearson}}{{}}}
-\bibcite{Pearson:1901}{{32}{1901}{{Pearson}}{{}}}
-\bibcite{Pearson:1920}{{33}{1920}{{Pearson}}{{}}}
-\bibcite{Alker:1969}{{34}{1969}{{R.}}{{}}}
-\bibcite{RaudenbushBryk:2002}{{35}{2002}{{Raudenbush and Bryk}}{{}}}
-\bibcite{Riley:1963}{{36}{1963}{{Riley}}{{}}}
-\bibcite{Robinson:1950}{{37}{1950}{{Robinson}}{{}}}
-\bibcite{RousseeuwLeroy:87}{{38}{1987}{{Rousseeuw and Leroy}}{{}}}
-\bibcite{RousseeuwVanDriessen:99}{{39}{1999}{{Rousseeuw and Van~Driessen}}{{}}}
-\bibcite{SavilleWood:1986}{{40}{1986}{{Saville and Wood}}{{}}}
-\bibcite{Simpson:51}{{41}{1951}{{Simpson}}{{}}}
-\bibcite{Stigler:1986}{{42}{1986}{{Stigler}}{{}}}
-\bibcite{Timm:75}{{43}{1975}{{Timm}}{{}}}
-\bibcite{VellemanWelsh:81}{{44}{1981}{{Velleman and Welsh}}{{}}}
-\bibcite{Humboldt:1811a}{{45}{1811}{{von Humboldt}}{{}}}
-\bibcite{Wickens:1995}{{46}{1995}{{Wickens}}{{}}}
+\bibcite{Diez-Roux:1998}{{13}{1998}{{Diez-Roux}}{{}}}
+\bibcite{Fisher:36}{{14}{1936}{{Fisher}}{{}}}
+\bibcite{Fox:2008}{{15}{2008}{{Fox}}{{}}}
+\bibcite{heplots1}{{16}{2010}{{Fox \emph  {et~al.}}}{{Fox, Friendly, and Monette}}}
+\bibcite{FoxSuschnigg:89}{{17}{1989}{{Fox and Suschnigg}}{{}}}
+\bibcite{car}{{18}{2011}{{Fox and Weisberg}}{{}}}
+\bibcite{Friendly:91}{{19}{1991}{{Friendly}}{{}}}
+\bibcite{Friendly:07:guerry}{{20}{2007{a}}{{Friendly}}{{}}}
+\bibcite{Friendly:07:manova}{{21}{2007{b}}{{Friendly}}{{}}}
+\bibcite{Galton:1886}{{22}{1886}{{Galton}}{{}}}
+\bibcite{GnanadesikanKettenring:72}{{23}{1972}{{Gnanadesikan and Kettenring}}{{}}}
+\bibcite{Guerry:1833}{{24}{1833}{{Guerry}}{{}}}
+\bibcite{HoerlKennard:1970a}{{25}{1970{a}}{{Hoerl and Kennard}}{{}}}
+\bibcite{HoerlKennard:1970b}{{26}{1970{b}}{{Hoerl and Kennard}}{{}}}
+\bibcite{Hotelling:1933}{{27}{1933}{{Hotelling}}{{}}}
+\bibcite{Kramer:1983}{{28}{1983}{{Kramer}}{{}}}
+\bibcite{Lichtman:1974}{{29}{1974}{{Lichtman}}{{}}}
+\bibcite{Longley:1967}{{30}{1967}{{Longley}}{{}}}
+\bibcite{Marquardt:1970}{{31}{1970}{{Marquardt}}{{}}}
+\bibcite{Monette:90}{{32}{1990}{{Monette}}{{}}}
+\bibcite{Pearson:1896}{{33}{1896}{{Pearson}}{{}}}
+\bibcite{Pearson:1901}{{34}{1901}{{Pearson}}{{}}}
+\bibcite{Pearson:1920}{{35}{1920}{{Pearson}}{{}}}
+\bibcite{RaudenbushBryk:2002}{{36}{2002}{{Raudenbush and Bryk}}{{}}}
+\bibcite{Riley:1963}{{37}{1963}{{Riley}}{{}}}
+\bibcite{Robinson:1950}{{38}{1950}{{Robinson}}{{}}}
+\bibcite{RousseeuwLeroy:87}{{39}{1987}{{Rousseeuw and Leroy}}{{}}}
+\bibcite{RousseeuwVanDriessen:99}{{40}{1999}{{Rousseeuw and Van~Driessen}}{{}}}
+\bibcite{SavilleWood:1986}{{41}{1986}{{Saville and Wood}}{{}}}
+\bibcite{Simpson:51}{{42}{1951}{{Simpson}}{{}}}
+\bibcite{Stigler:1986}{{43}{1986}{{Stigler}}{{}}}
+\bibcite{Timm:75}{{44}{1975}{{Timm}}{{}}}
+\bibcite{VellemanWelsh:81}{{45}{1981}{{Velleman and Welsh}}{{}}}
+\bibcite{Humboldt:1811a}{{46}{1811}{{von Humboldt}}{{}}}
+\bibcite{Wickens:1995}{{47}{1995}{{Wickens}}{{}}}

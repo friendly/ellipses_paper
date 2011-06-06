@@ -1,7 +1,13 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
-  \providecommand{\Loc}[1]{\textsf{#1}}
-\begin{thebibliography}{46}
+  \providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
+\begin{thebibliography}{47}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Alker(1969)}]{Alker:1969}
+Alker, H.~R. (1969).
+\newblock A typology of ecological fallacies.
+\newblock In M.~Dogan and S.~Rokkam, eds., \emph{Social Ecology}, (pp. 69--86).
+  Boston: The MIT Press.
 
 \bibitem[{Anderson(1935)}]{Anderson:35}
 Anderson, E. (1935).
@@ -14,6 +20,13 @@ Beaton, A.~E. (1964).
 \newblock Ed.d. thesis, Harvard University.
 \newblock Reprinted as Educational Testing Service Research Bulletin 64-51,
   Princeton, NJ.
+
+\bibitem[{Belsley \emph{et~al.}(1980)Belsley, Kuh, and
+  Welsch}]{Belsley-etal:80}
+Belsley, D.~A., Kuh, E., and Welsch, R.~E. (1980).
+\newblock \emph{Regression Diagnostics: Identifying Influential Data and
+  Sources of Collinearity}.
+\newblock New York: John Wiley and Sons.
 
 \bibitem[{Boyer(1991)}]{Boyer:91}
 Boyer, C.~B. (1991).
@@ -126,16 +139,17 @@ Guerry, A.-M. (1833).
 \newblock English translation: Hugh P. Whitt and Victor W. Reinking, Lewiston,
   N.Y. : Edwin Mellen Press, 2002.
 
-\bibitem[{Hoerl and Kennard(1970{\natexlab{a}})}]{HoerlKennard:1970b}
+\bibitem[{Hoerl and Kennard(1970{\natexlab{a}})}]{HoerlKennard:1970a}
 Hoerl, A.~E. and Kennard, R.~W. (1970{\natexlab{a}}).
+\newblock Ridge regression: {\SortNoop{a}}{B}iased estimation for nonorthogonal
+  problems.
+\newblock \emph{Technometrics}, 12, 55--67.
+
+\bibitem[{Hoerl and Kennard(1970{\natexlab{b}})}]{HoerlKennard:1970b}
+Hoerl, A.~E. and Kennard, R.~W. (1970{\natexlab{b}}).
 \newblock Ridge regression: {A}pplications to nonorthogonal problems ({C}orr:
   {V}12 p723).
 \newblock \emph{Technometrics}, 12, 69--82.
-
-\bibitem[{Hoerl and Kennard(1970{\natexlab{b}})}]{HoerlKennard:1970a}
-Hoerl, A.~E. and Kennard, R.~W. (1970{\natexlab{b}}).
-\newblock Ridge regression: {B}iased estimation for nonorthogonal problems.
-\newblock \emph{Technometrics}, 12, 55--67.
 
 \bibitem[{Hotelling(1933)}]{Hotelling:1933}
 Hotelling, H. (1933).
@@ -188,12 +202,6 @@ Pearson, K. (1901).
 Pearson, K. (1920).
 \newblock Notes on the history of correlation.
 \newblock \emph{Biometrika}, 13(1), 25--45.
-
-\bibitem[{R.(1969)}]{Alker:1969}
-R., A.~H. (1969).
-\newblock A typology of ecological fallacies.
-\newblock In M.~Dogan and S.~Rokkam, eds., \emph{Social Ecology}, (pp. 69--86).
-  Boston: The MIT Press.
 
 \bibitem[{Raudenbush and Bryk(2002)}]{RaudenbushBryk:2002}
 Raudenbush, S.~W. and Bryk, A.~S. (2002).

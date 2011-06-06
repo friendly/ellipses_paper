@@ -16,17 +16,20 @@
 
 %% \bibliographystyle{apalike} % for John
 
-\usepackage{afterpage}
-\usepackage{fancyhdr}
+% Only to include a page header on the first page for preprints
+%\usepackage{afterpage}
+%\usepackage{fancyhdr}
 
-\newif\iftth
+%  Abbreviations for cross-references
 \newcommand*{\figref}[1]{Figure~\ref{#1}}
 \newcommand*{\tabref}[1]{Table~\ref{#1}}
 \newcommand*{\secref}[1]{Section~\ref{#1}}
 \renewcommand*{\eqref}[1]{Eqn.~(\ref{#1})}
+
+
 \newcommand{\keywords}[1]{\par\noindent\textbf{Key words:} #1}
 \newcommand*{\todo}[1]{\marginpar{ToDo:\small{#1}}}
-\newcommand{\TODO}[1]{\begin{quotation}\color{blue}\textbf{ToDo}: #1\end{quotation}}
+\newcommand{\TODO}[1]{\begin{quotation}\noindent\color{blue}\textbf{ToDo}: #1\end{quotation}}
 
 
 %  Page dimensions
@@ -36,11 +39,11 @@
 \addtolength{\textheight}{4cm}
 
 % Math stuff
-% math stuff
-\renewcommand*{\vec}[1]{\ensuremath{\bm{#1}}}
+%   vector and matrix expressions
+\renewcommand*{\vec}[1]{\ensuremath{\bm{#1}}}     % \vec{} is already used 
+\newcommand*{\mat}[1]{\ensuremath{\bm{#1}}}
 %\newcommand{\trans}{\ensuremath{'}}
 \newcommand{\trans}{\ensuremath{^\mathsf{T}}}
-\newcommand*{\mat}[1]{\ensuremath{\bm{#1}}}
 \newcommand*{\diag}[1]{\ensuremath{\mathrm{diag}\, #1}}
 \renewcommand*{\det}[1]{\ensuremath{\mathrm{det} (#1)}}
 \newcommand*{\detbracket}[1]{\ensuremath{\mathrm{det} [#1]}}
@@ -51,12 +54,14 @@
 \newcommand*{\half}[1]{\ensuremath{\mat{#1}^{1/2}}}
 \newcommand*{\invhalf}[1]{\ensuremath{\mat{#1}^{-1/2}}}
 \newcommand*{\nvec}[2]{\ensuremath{{#1}_{1}, {#1}_{2},\ldots,{#1}_{#2}}}
+\newcommand*{\given}{\ensuremath{\, | \,}}
 \newcommand*{\Beta}{B}
 \newcommand*{\Epsilon}{E}
-\newcommand*{\period}{\:\: .}
+%    punctuation in display equations
+\newcommand*{\period}{\:\: .}   
 \newcommand*{\comma}{\:\: ,}
-\newcommand*{\given}{\ensuremath{\, | \,}}
-\newcommand*{\Real}[1]{\mathbb{R}^{#1}}
+
+\newcommand*{\Real}[1]{\mathbb{R}^{#1}}     % nicer looking than \Re
 \newcommand*{\degree}[1]{\ensuremath{{#1}^{\circ}}}
 \newcommand{\sizedmat}[2]{%
   \mathord{\mathop{\mat{#1}}\limits_{(#2)}}%
@@ -67,11 +72,10 @@
 
 
 % abbreviations
-\newcommand{\nway} {\emph{n}-way}
-\newcommand{\loglin} {log-linear}
 \newcommand{\MLM}{MvLM}
 
-% \fig{name}{includegraphicsoptions}{caption}
+% shorthand for including simple figures
+%   \fig{name}{includegraphicsoptions}{caption}
 \newcommand{\fig}[3]{%
 \begin{figure}[!htb]
   \centering%
@@ -81,6 +85,7 @@
 \end{figure}
 }
 
+% set width for \epigraph{}{}
 \setlength{\epigraphwidth}{.9\textwidth}
 
 \begin{document}
@@ -96,7 +101,7 @@ Georges Monette \\ York University
 \and
 John Fox \\ McMaster University
 }
-\date{Draft v. 0.9-0, \today}
+\date{Draft v. 0.9-1, \today}
 \end{titlepage}
 \maketitle
 %\thispagestyle{fancy}\lhead{In press: \emph{Journal of Computational and Statistical Graphics}, 2001}\rhead{}\afterpage{\lhead{}\rhead{}}
@@ -121,7 +126,7 @@ Bayesian estimation;
 concentration ellipse;
 data ellipse;
 discriminant analysis;
-Galton;
+Francis Galton;
 hypothesis-error plots;
 measurement error;
 mixed-effect models;
@@ -156,19 +161,6 @@ We begin with views in the space of the variables (data space)
 and progress to related views in the space of model parameters
 ($\vec{\beta}$ space).
 
-%\begin{comment}
-%Topics:
-%\begin{itemize*}
-%%\item data ellipse as a sufficient visual summary
-%\item visualizing CIs for slopes and visualizing r
-%\item conditional/marginal effects and Simpson's paradox
-%\item confidence ellipse as the representation in beta space
-%\item VIFs \& GVIFs
-%\item Added variable plots: ellipse of AVP as a 2d section
-%\item other neat relations
-%\end{itemize*}
-%\end{comment}
-
 \input{linreg}
 \input{simpson-iris}
 \input{paradoxes}
@@ -178,13 +170,9 @@ and progress to related views in the space of model parameters
 \input{avplot}
 
 
-%\subsection{Collinearity: VIF and GVIF}
-%\todo{Is this section useful?}
-
 \input{MLM}
 
 \input{kiss}
-
 \input{discrim}
 \input{ridge}
 \input{ridge2}
