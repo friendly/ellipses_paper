@@ -48,6 +48,29 @@ $(\vec{y}, \mat{X})$, viewed in the plane defined by the intersection of two hyp
 the plane of the regression of $\vec{y}$ on all of $\mat{X}$, and the plane of regression of
 $\vec{y}$ on $\mat{X}_{[-k]}$. A third plane, that of the regression of $x_k$ on $\mat{X}_{[-k]}$
 also intersects in this space, and defines the horizontal axis in the AVP.
+This is illustrated in \figref{fig:coffee-av3D}, showing one view defined by the intersection of
+the three planes in the right panel.%
+\footnote{Animated 3D movies of this plot are included among the supplementary materials for this paper.}
+
+\begin{figure}[htb]
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/coffee-av3D-1}
+%  \caption{}%
+%  \label{fig:}
+ \end{minipage}%
+ \hfill
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/coffee-av3D-2}
+ \end{minipage}
+  \caption{3D views of the relationship between Heart, Coffee and Stress, showing the three regression planes
+  for the marginal models, Heart $\sim$ Coffee (green), Heart $\sim$ Stress (pink), and the joint model, Heart $\sim$ Coffee $+$ Stress (light blue).
+  Left: a standard view; right: a view showing all three regression planes on edge.
+  The ellipses in the side panels are 2D projections of the standard conditional (red) and marginal (blue) ellipsoids, as shown in \figref{fig:coffee-avplot-B}.
+  }
+  \label{fig:coffee-av3D}
+\end{figure}
 
 %For three variables, $(y, x_1, x_2)$, the added variable plot for, say $x_1$, has particularly simple geometric interpretations in 3D in terms
 %of the fitted planes for the full model, $y \sim x_1 + x_2$, the marginal model, $y \sim  x_2$
