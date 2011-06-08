@@ -62,7 +62,9 @@ with year and/or population, yet both of these are also included among the
 predictors.
 }
 The standard linear model for these data, in R notation,
-is \verb|lm(Employed ~ ., data=longley)|.  For each value of $k$, the plot
+is \verb|lm(Employed ~ ., data=longley)|, where ``\texttt{.}''  in the model formula means
+``all other variables'' in the data set as predictors.  
+For each value of $k$, the plot
 shows the estimate $\widehat{\vec{\beta}}$, together with the confidence
 ellipse.  For the sake of this example, we assume that GNP is a primary
 predictor of Employment, and we wish to know how other predictors modify the
