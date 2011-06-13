@@ -1,6 +1,6 @@
 \subsection{Conjugate axes and inner-product spaces}\label{sec:conjugate}
 
-For any $\mat{A}$ that generates an ellipsoid,
+For any non-singular $\mat{A}$ that generates an ellipsoid,  %% added non-singular / GM
 the columns of
 $\mat{A}=\left[
    \vec{a}_{1}, \vec{a}_{2}, \cdots, \vec{a}_{p}  \\
@@ -92,8 +92,10 @@ In the Choleski factorization (shown in green), where
 $\mat{B}$ is lower triangular, the last conjugate axis, $\vec{b}_2$, is aligned with the coordinate
 axis $\vec{x}_2$.  Each previous axis ($\vec{b}_1$, here) is the orthogonal complement to
 all later axes in the  inner-product space of
-$\mat{W}^{-1}$.  The Choleski factorization is unique in this respect, subject to a
-permutation of the rows and columns of \mat{W}.
+$\mat{W}^{-1}$.  
+The Choleski factorization is unique in this respect, subject to a
+permutation of the rows and columns of \mat{W}. 
+The subspace $\{ c_1 \vec{b}_1 + ... + c_{p-1} \vec{b}_{p-1}  , c_i \in \mathbb{R}\}$, is the plane of the regression of the last variable on the others, a fact that generalizes naturally to ellipsoids that are not necessarily centerered at the origin.  %% added fact /GM  
 
 In the principal-component (PC) factorization (shown in brown) $\mat{W}=\mat{C} \mat{C}\trans$, where
 $\mat{C}=\mat{\Gamma \Lambda }^{1/2}$

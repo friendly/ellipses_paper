@@ -19,16 +19,16 @@ properties represent the ``size'' of the ellipsoid in $\Real{p}$:
 \begin{tabular}{llll}
     Size                   &  Conceptual formula                    & Geometry       & Function \\
 \hline
-(a) Generalized variance:  & $\det{\mat{\Sigma}} = \prod^p \lambda_i$ & area, (hyper)volume & geometric mean\\
-(b) Average variance:        & $\trace{\mat{\Sigma}} = \sum^p \lambda_i $ & linear sum & arithmetic mean\\
-(c) Average variance:        & $1/ \trace{\mat{\Sigma}^{-1}} = 1/\sum^p (1/\lambda_i) $ &  & harmonic mean\\
+(a) Generalized variance:  & $\det{\mat{\Sigma}} = \prod_i \lambda_i$ & area, (hyper)volume & geometric mean\\  
+(b) Average variance:        & $\trace{\mat{\Sigma}} = \sum_i \lambda_i $ & linear sum & arithmetic mean\\     %% superscripts turned to subscripts / GM
+(c) Average variance:        & $1/ \trace{\mat{\Sigma}^{-1}} = 1/\sum_i (1/\lambda_i) $ &  & harmonic mean\\
 (d) Maximal variance:      & $\lambda_1$ & maximum dimension & supremum
  \end{tabular}
 \medskip
 
 \noindent In multivariate tests, these correspond (with suitable transformations) to (a) Wilks's $\Lambda$,
-(b) the Pillai trace, (c) the Hotelling-Lawley  trace,  and (d) Roy's maximum root tests, as we describe
-below.
+(b) the Hotelling-Lawley  trace, (c) the Pillai trace, and (d) Roy's maximum root tests, as we describe
+below in \secref{sec:mlm}.
 
 Note that every non-negative definite matrix $\mat{W}$ can be factored as $\mat{W}=\mat{A}\mat{A}\trans$,
 and the matrix $\mat{A}$ can always be selected so that it is square.
