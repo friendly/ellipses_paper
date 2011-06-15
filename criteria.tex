@@ -16,9 +16,9 @@ or eigenvalues $\rho_i$ solving  $\detbracket{\mat{H} - \rho (\mat{H}+\mat{E})}=
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   Criterion & Formula & ``mean'' of $\rho$ & Partial $\eta^2$   \\
   \hline
-  Wilks' $\Lambda$ & $\Lambda = \prod^s \frac{1}{1+\lambda_i} = \prod^s (1-\rho_i)$ & geometric & $\eta^2 = 1-\Lambda^{1/s}$   \\
-  Pillai trace & $V = \sum^s \frac{\lambda_i}{1+\lambda_i} = \sum^s \rho_i$ & arithmetic & $\eta^2 = \frac{V}{s} $   \\
-  Hotelling-Lawley trace & $H = \sum^s \lambda_i = \sum^s \frac{\rho_i}{1-\rho_i} $ & harmonic & $\eta^2 = \frac{H}{H+s}$   \\
+  Wilks' $\Lambda$ & $\Lambda = \prod^s_i \frac{1}{1+\lambda_i} = \prod^s_i (1-\rho_i)$ & geometric & $\eta^2 = 1-\Lambda^{1/s}$   \\
+  Pillai trace & $V = \sum^s_i \frac{\lambda_i}{1+\lambda_i} = \sum^s_i \rho_i$ & arithmetic & $\eta^2 = \frac{V}{s} $   \\
+  Hotelling-Lawley trace & $H = \sum^s_i \lambda_i = \sum^s_i \frac{\rho_i}{1-\rho_i} $ & harmonic & $\eta^2 = \frac{H}{H+s}$   \\
   Roy maximum root & $R = \lambda_1 = \frac{\rho_i}{1-\rho_i}$  & supremum & $ \eta^2 = \frac{\lambda_1}{1+\lambda_1} = \rho_1$   \\
   \hline
 \end{tabular}
