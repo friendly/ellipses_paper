@@ -67,12 +67,12 @@ where the last form gives a symmetric matrix, $\mat{H}^\star = \invhalf{E} \, \m
 Using the square root of \mat{E} defined by the
 principal-component factorization $\half{E} = \mat{\Gamma} \half{\mat{\Lambda}}$ produces
 the ellipsoid of $\mat{H}^\star$
-orthogonal axes corresponding to the $\vec{v}_i$, whose radii are the corresponding
+orthogonal axes corresponding to the $\vec{v}_i$, whose squared radii are the corresponding %% squared / GM
 eigenvalues $\lambda_i$.  This can be seen geometrically as a rotation of ``data space''
 to an orientation defined by the principal axes of \mat{E}, followed by a re-scaling, so
 that the \mat{E} ellipsoid becomes the unit spheroid.  In this transformed space
 (``canonical space''), functions of the
-the radii $\lambda_i$ of the axes of $\mat{H}^\star$ give direct measures of
+the squared radii $\lambda_i$ of the axes of $\mat{H}^\star$ give direct measures of %% squared / GM
 the ``size'' of \mat{H} relative to \mat{E}. The orientation of the eigenvectors
 $\vec{v}_i$ can be related to the (orthogonal) linear combinations of the
 data variables that are successively largest in the metric of \mat{E}.
@@ -97,5 +97,5 @@ in $\mat{E} = \mat{A} \mat{A}\trans$; for \mat{H}, the conjugate axes are define
 The transformation to $\mat{H}^\star = \invhalf{E} \, \mat{H} \, \invhalf{E}$ is shown in the right panel
 of \figref{fig:ellipse-geneig}. In this ``canonical space,'' angles and lengths have the orginary interpretation
 of Euclidean space, so the size of $\mat{H}^\star$ can be interpreted directly in terms of functions of
-the radii $\lambda_1$ and $\lambda_2$.
+the radii $\sqrt{\lambda_1}$ and $\sqrt{\lambda_2}$.
 
