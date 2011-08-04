@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
-\begin{thebibliography}{47}
+\begin{thebibliography}{52}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alker(1969)}]{Alker:1969}
@@ -13,6 +13,13 @@ Alker, H.~R. (1969).
 Anderson, E. (1935).
 \newblock The irises of the {Gasp\'{e}} peninsula.
 \newblock \emph{Bulletin of the American Iris Society}, 35, 2--5.
+
+\bibitem[{Antczak-Bouckoms \emph{et~al.}(1993)Antczak-Bouckoms, Joshipura,
+  Burdick, and F.}]{Antczak-Bouckoms-etal:1993}
+Antczak-Bouckoms, A., Joshipura, K., Burdick, E., and F., T.~J. (1993).
+\newblock Meta-analysis of surgical versus non-surgical methods of treatment
+  for periodontal disease.
+\newblock \emph{Journal of Clinical Periodontology}, 20(4), 259--268.
 
 \bibitem[{Beaton(1964)}]{Beaton:64}
 Beaton, A.~E. (1964).
@@ -27,6 +34,13 @@ Belsley, D.~A., Kuh, E., and Welsch, R.~E. (1980).
 \newblock \emph{Regression Diagnostics: Identifying Influential Data and
   Sources of Collinearity}.
 \newblock New York: John Wiley and Sons.
+
+\bibitem[{Berkey \emph{et~al.}(1998)Berkey, Hoaglin, Antczak-Bouckoms,
+  Mosteller, and Colditz}]{Berkey-etal:1998}
+Berkey, C.~S., Hoaglin, D.~C., Antczak-Bouckoms, A., Mosteller, F., and
+  Colditz, G.~A. (1998).
+\newblock Meta-analysis of multiple outcomes by regression with random effects.
+\newblock \emph{Statistics in Medicine}, 17(22), 2537--2550.
 
 \bibitem[{Boyer(1991)}]{Boyer:91}
 Boyer, C.~B. (1991).
@@ -126,6 +140,11 @@ Galton, F. (1886).
 \newblock Regression towards mediocrity in hereditary stature.
 \newblock \emph{Journal of the Anthropological Institute}, 15, 246--263.
 
+\bibitem[{Gasparrini(2011)}]{mvmeta}
+Gasparrini, A. (2011).
+\newblock \emph{mvmeta: multivariate meta-analysis and meta-regression.}
+\newblock R package version 0.2.3.
+
 \bibitem[{Gnanadesikan and Kettenring(1972)}]{GnanadesikanKettenring:72}
 Gnanadesikan, R. and Kettenring, J.~R. (1972).
 \newblock Robust estimates, residuals, and outlier detection with multiresponse
@@ -157,6 +176,12 @@ Hotelling, H. (1933).
   components.
 \newblock \emph{Journal of Educational Psychology}, 24, 417--441.
 
+\bibitem[{Jackson \emph{et~al.}(2011)Jackson, Riley, and
+  White}]{Jackson-etal-2011}
+Jackson, D., Riley, R., and White, I.~R. (2011).
+\newblock Multivariate meta-analysis: Potential and promise.
+\newblock \emph{Statistics in Medicine}, 30, n/a--n/a.
+
 \bibitem[{Kramer(1983)}]{Kramer:1983}
 Kramer, G.~H. (1983).
 \newblock The ecological fallacy revisited: Aggregate- versus individual-level
@@ -185,6 +210,12 @@ Monette, G. (1990).
 \newblock Geometry of multiple regression and interactive 3-{D} graphics.
 \newblock In J.~Fox and S.~Long, eds., \emph{Modern Methods of Data Analysis},
   chap.~5, (pp. 209--256). Beverly Hills, CA: Sage Publications.
+
+\bibitem[{Nam \emph{et~al.}(2003)Nam, Mengersen, and
+  Garthwaite}]{Nam-etal:2003}
+Nam, I.-S., Mengersen, K., and Garthwaite, P. (2003).
+\newblock Multivariate meta-analysis.
+\newblock \emph{Statistics in Medicine}, 22(14), 2309--2333.
 
 \bibitem[{Pearson(1896)}]{Pearson:1896}
 Pearson, K. (1896).

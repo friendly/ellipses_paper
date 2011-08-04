@@ -40,7 +40,7 @@
 
 % Math stuff
 %   vector and matrix expressions
-\renewcommand*{\vec}[1]{\ensuremath{\bm{#1}}}     % \vec{} is already used 
+\renewcommand*{\vec}[1]{\ensuremath{\bm{#1}}}     % \vec{} is already used
 \newcommand*{\mat}[1]{\ensuremath{\bm{#1}}}
 %\newcommand{\trans}{\ensuremath{'}}
 \newcommand{\trans}{\ensuremath{^\mathsf{T}}}
@@ -58,7 +58,7 @@
 \newcommand*{\Beta}{B}
 \newcommand*{\Epsilon}{E}
 %    punctuation in display equations
-\newcommand*{\period}{\:\: .}   
+\newcommand*{\period}{\:\: .}
 \newcommand*{\comma}{\:\: ,}
 
 \newcommand*{\Real}[1]{\mathbb{R}^{#1}}     % nicer looking than \Re
@@ -101,7 +101,7 @@ Georges Monette \\ York University
 \and
 John Fox \\ McMaster University
 }
-\date{Draft v. 0.9-3, \today}
+\date{Draft v. 0.9-4, \today}
 \end{titlepage}
 \maketitle
 %\thispagestyle{fancy}\lhead{In press: \emph{Journal of Computational and Statistical Graphics}, 2001}\rhead{}\afterpage{\lhead{}\rhead{}}
@@ -130,6 +130,7 @@ Francis Galton;
 hypothesis-error plots;
 measurement error;
 mixed-effect models;
+multivariate meta-analysis;
 regression paradoxes;
 ridge regression;
 statistical geometry
@@ -182,7 +183,7 @@ and progress to related views in the space of model parameters
 %\subsection{Mixed models: BLUEs and BLUPs}
 \input{mixed}
 \input{hsbmix}
-
+\input{mvmeta}
 \input{conclusions}
 
 \section{Supplementary materials}
@@ -197,10 +198,12 @@ along with several 3D movies.
 
 \section{Acknowledgments}
 
-This work was supported by Grant OGP0138748 from the National Sciences and Engineering Research Council of Canada to Michael Friendly, 
+This work was supported by Grant OGP0138748 from the National Sciences and Engineering Research Council of Canada to Michael Friendly,
 and by grants from the Social Sciences and Humanities Research Council of Canada to John Fox.
+We are grateful to Antonio Gasparini for helpful discussion regarding multivariate meta-analysis models.
 
 
 %\bibliography{timeref,graphics,Rpackages}
 \bibliography{references}        % processed by aux2bib
+%\bibliography{references,mvmeta}        % processed by aux2bib
 \end{document}
