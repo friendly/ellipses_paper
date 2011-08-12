@@ -1,0 +1,1 @@
+/home/friendly/sasuser/teaching/psy6140/examples/Private/mixed/hsbmix4.sas
