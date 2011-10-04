@@ -57,6 +57,9 @@
 \newcommand*{\given}{\ensuremath{\, | \,}}
 \newcommand*{\Beta}{B}
 \newcommand*{\Epsilon}{E}
+\newcommand*{\XTX}{\mat{X}\trans \mat{X}}
+\newcommand*{\XTXinv}{\inv{\mat{X}\trans \mat{X}}}
+
 %    punctuation in display equations
 \newcommand*{\period}{\:\: .}
 \newcommand*{\comma}{\:\: ,}
@@ -101,7 +104,7 @@ Georges Monette \\ York University
 \and
 John Fox \\ McMaster University
 }
-\date{Draft v. 0.9-4, \today}
+\date{Draft v. 0.9-5, \today}
 \end{titlepage}
 \maketitle
 %\thispagestyle{fancy}\lhead{In press: \emph{Journal of Computational and Statistical Graphics}, 2001}\rhead{}\afterpage{\lhead{}\rhead{}}
@@ -170,15 +173,15 @@ and progress to related views in the space of model parameters
 \input{measerror}
 \input{avplot}
 
-
+\section{Multivariate linear models: HE plots}\label{sec:mlm}
 \input{MLM}
 
+\section{Kissing ellipsoids}
 \input{kiss}
 \input{discrim}
 \input{ridge}
 \input{ridge2}
 
-%\subsection{Bayesian models}
 \input{bayesian}
 %\subsection{Mixed models: BLUEs and BLUPs}
 \input{mixed}
@@ -203,7 +206,7 @@ and by grants from the Social Sciences and Humanities Research Council of Canada
 We are grateful to Antonio Gasparini for helpful discussion regarding multivariate meta-analysis models.
 
 
-%\bibliography{timeref,graphics,Rpackages}
-\bibliography{references}        % processed by aux2bib
+\bibliography{timeref,graphics,Rpackages,statistics}
+%\bibliography{references}        % processed by aux2bib
 %\bibliography{references,mvmeta}        % processed by aux2bib
 \end{document}

@@ -1,7 +1,8 @@
 \subsection{Discriminant analysis}
 
 The right panel of \figref{fig:kiss-demo2}, considered in data space, provides a
-visual interpretation of the classical, normal theory two-group discriminant analysis problem.
+visual interpretation of the classical, normal theory two-group discriminant analysis problem
+under the assumption of equal population covariance matrices, $\mat{\Sigma}_1 = \mat{\Sigma}_2$.
 Here, we imagine that the plot shows the contours of data ellipsoids for two groups,
 with mean vectors $\vec{m}_1$ and $\vec{m}_2$, and common covariance matrix
 $\mat{A} = \mat{S}_{\textrm{pooled}} = [ (n_1 -1)\mat{S}_1 + (n_2 -1)\mat{S}_2 ] / (n_1 +n_2 -2) $.
@@ -23,7 +24,9 @@ will then be the tangent lines (planes) to the ellipsoids at points of osculatio
 The location of the classification region along the line from $\vec{m}_1$ to $\vec{m}_2$
 typically takes into account both the
 prior probabilities of membership in Groups 1 and 2, and the costs of misclassification.
-
+Similarly, the left panel of \figref{fig:kiss-demo2} is a visual representation of the
+same problem when $\mat{\Sigma}_1 \ne \mat{\Sigma}_2$, giving rise to quadratic classification
+boundaries.
 
 
 

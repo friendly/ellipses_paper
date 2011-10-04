@@ -38,6 +38,27 @@ equal to meanSES for that school).
   \label{fig:hsbmix4}
 \end{figure}
 
+For simplicity, we consider the case of CSES as
+a single quantitative predictor in $\mat{X}$ in the example below.  We fit and compare the following models:
+\begin{eqnarray}
+ \vec{y}_{i} & \sim & \mathcal{N} ( \beta_0 + x_{i} \beta_1 + \epsilon_{i}  , \sigma^2 ) \quad\quad \textrm{pooled OLS} \\
+ \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} + \epsilon_{i}  , \sigma^2_i ) \quad\quad \textrm{unpooled BLUEs} \\
+ \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} + u_{0i} + x_{i} u_{1i} + \epsilon_{i}  , \sigma^2_i ) \quad\quad \textrm{random intercepts and slopes} 
+%
+\end{eqnarray}
+and also include a fixed effect of Sector, common to all models; this effect is elided in the notation above.
+
+For exposition, such models are often compared visually by plotting predicted values in data space, where each school appears
+as a fitted line under one of the models above (sometimes called ``spaghetti plots'').
+Our geometric approach leads us to consider the equivalent, but simpler plots in the dual $\beta$ space,
+where each school appears as a point.
+
+\figref{fig:hsbmix4} plots the unpooled BLUE estimates against those from the random effects model, with separate panels for intercepts
+and slopes to illustrate the shrinkage of different parameters.  In this data, the variance in intercepts (average math achievement
+for students at CSES=0), $g_{00}$,
+among schools in each sector is large, so the mixed effects estimates have small weight and there is little
+shrinkage.  On the other hand, the variance component for slopes, $g_{11}$ is relatively small, so there is greater
+shrinkage toward the BLUE, fixed effect estimates.
 
 \begin{figure}[htb!]
   \centering
@@ -49,3 +70,9 @@ equal to meanSES for that school).
   BLUPs compared to the BLUEs, particularly for slope estimates. }%
   \label{fig:hsbmix43}
 \end{figure}
+
+For the present purposes, a more useful visual representation of these model comparisons can be shown together in
+the space of $(\beta_0, \beta_1)$, as in \figref{fig:hsbmix43}.  Estimates for individual schools are not shown,
+but rather these are summarized by the ellipses of 50\% coverage for the BLUEs and BLUPs within each sector.
+The centers of the ellipsoids indicate the relatively greater shrinkage of slopes compared to intercepts.
+The sizes of ellipsoids show directly the greater precision of the BLUP estimates, particularly for slopes.

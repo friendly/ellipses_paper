@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
-\begin{thebibliography}{52}
+\begin{thebibliography}{55}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alker(1969)}]{Alker:1969}
@@ -158,6 +158,12 @@ Guerry, A.-M. (1833).
 \newblock English translation: Hugh P. Whitt and Victor W. Reinking, Lewiston,
   N.Y. : Edwin Mellen Press, 2002.
 
+\bibitem[{Henderson(1975)}]{Henderson:1975}
+Henderson, C.~R. (1975).
+\newblock Best linear unbiased estimation and prediction under a selection
+  model.
+\newblock \emph{Biometrics}, 31, 423--448.
+
 \bibitem[{Hoerl and Kennard(1970{\natexlab{a}})}]{HoerlKennard:1970a}
 Hoerl, A.~E. and Kennard, R.~W. (1970{\natexlab{a}}).
 \newblock Ridge regression: {\SortNoop{a}}{B}iased estimation for nonorthogonal
@@ -177,7 +183,7 @@ Hotelling, H. (1933).
 \newblock \emph{Journal of Educational Psychology}, 24, 417--441.
 
 \bibitem[{Jackson \emph{et~al.}(2011)Jackson, Riley, and
-  White}]{Jackson-etal-2011}
+  White}]{Jackson-etal:2011}
 Jackson, D., Riley, R., and White, I.~R. (2011).
 \newblock Multivariate meta-analysis: Potential and promise.
 \newblock \emph{Statistics in Medicine}, 30, n/a--n/a.
@@ -246,6 +252,11 @@ Riley, M.~W. (1963).
 \newblock In M.~W. Riley, ed., \emph{Sociological research I: a case approach},
   (pp. 700--725). New York: Harcourt, Brace, and World.
 
+\bibitem[{Robinson(1991)}]{Robinson:1991}
+Robinson, G.~K. (1991).
+\newblock That blup is a good thing: The estimation of random effects.
+\newblock \emph{Statistical Science}, 6(1), 15--32.
+
 \bibitem[{Robinson(1950)}]{Robinson:1950}
 Robinson, W.~S. (1950).
 \newblock Ecological correlations and the behavior of individuals.
@@ -271,6 +282,12 @@ Simpson, E.~H. (1951).
 \newblock The interpretation of interaction in contingency tables.
 \newblock \emph{Journal of the Royal Statistical Society, Series B}, 30,
   238--241.
+
+\bibitem[{Speed(1991)}]{Speed:1991}
+Speed, T. (1991).
+\newblock [that blup is a good thing: The estimation of random effects]:
+  Comment.
+\newblock \emph{Statistical Science}, 6(1), pp. 42--44.
 
 \bibitem[{Stigler(1986)}]{Stigler:1986}
 Stigler, S.~M. (1986).

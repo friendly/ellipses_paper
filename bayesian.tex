@@ -36,7 +36,7 @@ $\Pr (\vec{\beta}, \sigma^2 \given \vec{y}, \mat{X}) \propto \Pr (\vec{y} \given
 whence, after some simplification,
 the posterior mean can be expressed as
 
-\begin{equation}
+\begin{equation}\label{eq:bayes-posterior}
 \widehat{\vec{\beta}}^{\mathrm{posterior}} =
 (\mat{X}\trans \mat{X}\widehat{\vec{\beta}}^{\mathrm{OLS}} + \mat{A} \vec{\beta}^{\mathrm{prior}})
 (\mat{X}\trans \mat{X}+\mat{A})^{-1}
@@ -50,11 +50,11 @@ In this context, ridge regression can be seen as the special case where $\wideha
 and where \figref{fig:ridge-demo} provides an elliptical visualization. In \eqref{eq:ridge-sup2}, the number of observations,
 $n(k)$ corresponding to $\mat{X}_k^0$ can be seen as another way of expressing the weight of the prior in relation to the data.
 
-\TODO{Complete this section.  What have I omitted in the development, necessary for this paper?
-Are there other geometric insights?  Does it need another, Bayesian specific graph?
-Is there a simple expression for $\Var({\widehat{\vec{\beta}}^{\mathrm{posterior}}})$
-that could be exploited?
-}
+% \TODO{Complete this section.  What have I omitted in the development, necessary for this paper?
+% Are there other geometric insights?  Does it need another, Bayesian specific graph?
+% Is there a simple expression for $\Var({\widehat{\vec{\beta}}^{\mathrm{posterior}}})$
+% that could be exploited?
+% }
 
 
 
