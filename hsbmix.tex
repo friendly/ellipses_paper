@@ -1,21 +1,21 @@
 \subsubsection{Example: Math achievement and SES}
 
-To illustrate, we use the classic data set from %Bryk \& Raudenbush (2002)
-\citet{BrykRaudenbush:1992,RaudenbushBryk:2002}
-dealing with math achievement scores from a subsample of 7,185 students from 160 schools
-in a 1982 High School \& Beyond survey of U.S. public and Catholic high
+To illustrate, we use a classic data set from %Bryk \& Raudenbush (2002)
+\citet{BrykRaudenbush:1992} and \citet{RaudenbushBryk:2002}
+dealing with math achievement scores for a subsample of 7,185 students from 160 schools
+in the 1982 High School \& Beyond survey of U.S. public and Catholic high
 schools conducted by the National Center for Education Statistics (NCES).
 The data set contains 90 public schools and 70 Catholic schools, with
 sample sizes ranging from 14 to 67.
 
 The response is a standardized measure of math achievement, while
-student-level predictor variables include Sex and student SES, and
-school-level predictors include Sector (public or Catholic) and mean SES for the
+student-level predictor variables include sex and student socioeconomic status (SES), and
+school-level predictors include sector (public or Catholic) and mean SES for the
 school (among other variables).
-Following \citet{RaudenbushBryk:2002}, student SES is considered the main predictor, and is 
-typically analyzed in centered form,
-CSES = SES - meanSES for ease of interpretation (making the within-school intercept
-equal to meanSES for that school).
+Following \citet{RaudenbushBryk:2002}, student SES is considered the main predictor, and is
+typically analyzed in centered within schools,
+$\mathrm{CSES}_{ij} = \mathrm{SES}_{ij} - \mathrm{(mean SES)}_i$, for ease of interpretation (making the within-school intercept for school $i$
+equal to the mean SES in that school).
 
 
 
@@ -43,21 +43,21 @@ a single quantitative predictor in $\mat{X}$ in the example below.  We fit and c
 \begin{eqnarray}
  \vec{y}_{i} & \sim & \mathcal{N} ( \beta_0 + x_{i} \beta_1 + \epsilon_{i}  , \sigma^2 ) \quad\quad \textrm{pooled OLS} \\
  \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} + \epsilon_{i}  , \sigma^2_i ) \quad\quad \textrm{unpooled BLUEs} \\
- \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} + u_{0i} + x_{i} u_{1i} + \epsilon_{i}  , \sigma^2_i ) \quad\quad \textrm{random intercepts and slopes} 
+ \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} + u_{0i} + x_{i} u_{1i} + \epsilon_{i}  , \sigma^2_i ) \quad\quad \textrm{random intercepts and slopes}
 %
 \end{eqnarray}
-and also include a fixed effect of Sector, common to all models; this effect is elided in the notation above.
+and also include a fixed effect of sector, common to all models; for compactness, the sector effect is elided in the notation above.
 
-For exposition, such models are often compared visually by plotting predicted values in data space, where each school appears
+In expositions of mixed-effects models, such models are often compared visually by plotting predicted values in data space, where each school appears
 as a fitted line under one of the models above (sometimes called ``spaghetti plots'').
-Our geometric approach leads us to consider the equivalent, but simpler plots in the dual $\beta$ space,
+Our geometric approach leads us to consider the equivalent but simpler plots in the dual $\beta$ space,
 where each school appears as a point.
 
 \figref{fig:hsbmix4} plots the unpooled BLUE estimates against those from the random effects model, with separate panels for intercepts
-and slopes to illustrate the shrinkage of different parameters.  In this data, the variance in intercepts (average math achievement
-for students at CSES=0), $g_{00}$,
+and slopes to illustrate the shrinkage of different parameters.  In these data, the variance in intercepts (average math achievement
+for students at $\mathrm{CSES}=0$), $g_{00}$,
 among schools in each sector is large, so the mixed effects estimates have small weight and there is little
-shrinkage.  On the other hand, the variance component for slopes, $g_{11}$ is relatively small, so there is greater
+shrinkage.  On the other hand, the variance component for slopes, $g_{11}$, is relatively small, so there is greater
 shrinkage toward the BLUE, fixed effect estimates.
 
 \begin{figure}[htb!]
@@ -75,4 +75,4 @@ For the present purposes, a more useful visual representation of these model com
 the space of $(\beta_0, \beta_1)$, as in \figref{fig:hsbmix43}.  Estimates for individual schools are not shown,
 but rather these are summarized by the ellipses of 50\% coverage for the BLUEs and BLUPs within each sector.
 The centers of the ellipsoids indicate the relatively greater shrinkage of slopes compared to intercepts.
-The sizes of ellipsoids show directly the greater precision of the BLUP estimates, particularly for slopes.
+The sizes of ellipsoids show directly the greater precision of the BLUPs, particularly for slopes.

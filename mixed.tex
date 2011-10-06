@@ -4,31 +4,33 @@ the notation is the best.}
 
 In this section we make implicit use of the duality between data space and $\beta$
 space, where lines in one map into points in the other and ellipsoids help to
-visualize the precision of estimates in the context of the general linear mixed
+visualize the precision of estimates in the context of the linear mixed
 model for hierarchical data.  We also show visually how the best linear unbiased
 predictors (BLUPs) from the mixed model can be seen as a weighted average
-of OLS regression, best linear unbiased estimates (BLUEs) \emph{within} strata
-and the variation of random effect estimates \emph{between} strata.
+of the best linear unbiased estimates (BLUEs) derived from OLS regressions performed \emph{within} clusters of related data
+and pooled OLS estimates computed \emph{ignoring} clusters.
 
-The mixed model for hierarchical data provides a general framework for 
+The mixed model for hierarchical data provides a general framework for
 dealing with lack of independence among observations in linear models,
 such as occurs when students are sampled within schools, schools within
-counties and so forth. In these situations, the assumption of OLS that
-the residuals are conditionally independent is likely to be violated,
-because, for example, students nested within the same school are 
-likely to have more similar outcomes than those from separate schools.
+counties and so forth (e.g., citealp{}). In these situations, the assumption of OLS that
+the errors are conditionally independent is likely to be violated,
+because, for example, students nested within the same school are
+likely to have more similar outcomes than those from different schools. Essentially the same model, with provision for serially correlated errors, can be applied to longitudinal data (e.g., \citealp{LairdWare:1982}), although we will not pursue this application here.
 
-In this context, the mixed model for the $n_i \times 1$ response vector $\vec{y}_i$ in
-stratum $i$ can be given as 
+%\TODO{add to references: Laird, N. M. and J. H. Ware. 1982. Random-Effects Models for Longitudinal Data. Biometrics 38:963-974.}
+
+The mixed model for the $n_i \times 1$ response vector $\vec{y}_i$ in
+cluster $i$ can be given as
 % \begin{equation}\label{eq:mixed0}
 %  \vec{y}_i = \mat{X}_i \vec{\beta} + \mat{Z}_i \vec{u}_i + \vec{\epsilon}_i
 % \end{equation}
 \begin{eqnarray}
  \vec{y}_i & = & \mat{X}_i \vec{\beta} + \mat{Z}_i \vec{u}_i + \vec{\epsilon}_i \label{eq:mixed1} \\
  \vec{u}_i & \sim & \mathcal{N}_q (\vec{0}, \mat{G}) \nonumber\\
- \vec{\epsilon}_i & \sim & \mathcal{N}_{n_i} (\vec{0}, \mat{R}_i) \nonumber 
+ \vec{\epsilon}_i & \sim & \mathcal{N}_{n_i} (\vec{0}, \mat{R}_i) \nonumber
 \end{eqnarray}
-where 
+where
 %$\vec{y}_i$ is the $n_i \times 1$ response vector of observations in the $i$th stratum,
 $\vec{\beta}$ is a $p \times 1$ vector of parameters corresponding to the fixed effects
 in the $n_i \times p$ model matrix $\mat{X}_i$,
@@ -37,14 +39,14 @@ in the $n_i \times q$ model matrix $\mat{Z}_i$,
 $\mat{G}$ is the $q \times q$ covariance matrix of the random effects in $\vec{u}_i$,
 and $\mat{R}_i$ is the $n_i \times n_i$ covariance matrix of the errors in $\vec{\epsilon}_i$.
 
-Stacking the $\vec{y}_i$, $\mat{X}_i$, $\mat{Z}_i$ and so forth in the obvious way then gives
+Stacking the $\vec{y}_i$, $\mat{X}_i$, $\mat{Z}_i$, and so forth in the obvious way then gives
 \begin{equation}\label{eq:mixed2}
  \vec{y} = \mat{X} \vec{\beta} + \mat{Z} \vec{u} + \vec{\epsilon}
 \end{equation}
 where $\vec{u}$ and $\vec{\epsilon}$ are assumed to have normal distributions with mean $\vec{0}$
 and
 \begin{equation}\label{eq:mixed3}
- \Var  
+ \Var
       \begin{pmatrix}
        \vec{u} \\ \vec{\epsilon}
       \end{pmatrix}
@@ -54,44 +56,44 @@ and
       \end{bmatrix} \period
 \end{equation}
 The variance of $\vec{y}$ is therefore $\mat{V} = \mat{Z} \mat{G} \mat{Z}\trans + \mat{R}$, and when
-$\mat{Z} = \mat{0}$ and $\mat{R} = \sigma^2 \mat{I}$ the mixed model \eqref{eq:mixed2} reduces to the
+$\mat{Z} = \mat{0}$ and $\mat{R} = \sigma^2 \mat{I}$, the mixed model in \eqref{eq:mixed2} reduces to the
 standard linear model.
 
-In this situation, assume our interest lies in estimating the parameters in $\vec{\beta}$.  At one extreme
-(complete pooling) we could simply ignore strata and calculate the pooled OLS estimate,
+Assume that our interest lies primarily in estimating the fixed-effect parameters in $\vec{\beta}$.  At one extreme
+(complete pooling) we could simply ignore clusters and calculate the pooled OLS estimate,
 \begin{equation}\label{eq:mixed4}
  \widehat{\vec{\beta}}^{\textrm{pooled}} = \inv{(\mat{X}\trans \mat{X})} \mat{X}\trans \vec{y}
  \quad\quad \textrm{with} \quad\quad
  \widehat{\mat{S}} \equiv \widehat{\Var}(\widehat{\vec{\beta}}^{\textrm{pooled}}) = \hat{\sigma}^2 \inv{(\mat{X}\trans \mat{X})} \period
 \end{equation}
-At the other extreme (no pooling), we can ignore the variation across strata and calculate the
-separate BLUE estimates within each stratum, giving the results of a fixed-effects analysis,
+At the other extreme (no pooling), we can ignore the variation across clusters and calculate the
+separate BLUE estimate within each cluster, giving the results of a fixed-effects analysis,
 \begin{equation}\label{eq:mixed5}
  \widehat{\vec{\beta}}^{\textrm{unpooled}}_i = \inv{(\mat{X}_i\trans \mat{X}_i)} \mat{X}_i\trans \vec{y}_i
  \quad\quad \textrm{with} \quad\quad
  \widehat{\mat{S}}_i \equiv \widehat{\Var}(\widehat{\vec{\beta}}^{\textrm{unpooled}}_i) = \hat{\sigma}^2 \inv{(\mat{X}_i\trans \mat{X}_i)} \period
 \end{equation}
-Both extremes have drawbacks:  whereas the pooled analysis ignores variation among strata, the unpooled analysis ignores the
-strata-averaged result and overstates variation within each stratum, making them appear to differ more than they actually do.
+Both extremes have drawbacks:  whereas the pooled analysis ignores variation among clusters, the unpooled analysis ignores the
+cluster-averaged result and overstates variation within each clusters, making the clusters appear to differ more than they actually do.
 
-This contrast led to the development of BLUP estimates in models with random effects \citep{Henderson:1975,Robinson:1991,Speed:1991}.
-In the case considered here, where $\mat{Z}_i = \mat{X}_i$, so $\widehat{\vec{u}}_i$ gives estimates of the random effects with
-$\widehat{\Var} (\widehat{\vec{u}}_i) = \widehat{\mat{G}}$, the BLUP estimates are a weighted average of the $\widehat{\vec{\beta}}_i$
-and $\widehat{\vec{u}}_i$ using the precision ($\inv{\Var}$) as weights,
+This dilemma led to the development of BLUPs in models with random effects \citep{Henderson:1975,Robinson:1991,Speed:1991}.
+In the case considered here, $\mat{Z}_i = \mat{X}_i$, and so $\widehat{\vec{u}}_i$ gives ``estimates'' of the random effects with
+$\widehat{\Var} (\widehat{\vec{u}}_i) = \widehat{\mat{G}}$. The BLUPs are a weighted average of the $\widehat{\vec{\beta}}_i$
+and $\widehat{\vec{u}}_i$ using the precision ($\Var^{-1}$) as weights,
 
 \begin{equation}\label{eq:mixed6}
- \widetilde{\vec{\beta}}^{\textrm{blup}}_i = 
- \left\lbrace
+ \widetilde{\vec{\beta}}^{\textrm{blup}}_i =
+ \left(
    \widehat{\vec{\beta}}^{\textrm{unpooled}}_i \inv{\widehat{\mat{S}}_i}  + \inv{\widehat{\vec{u}}_i \widehat{\mat{G}}}
- \right\rbrace
- \inv{ \left[ \inv{\widehat{\mat{S}}_i} + \inv{\widehat{\mat{G}}} \right] } \period
+ \right)
+ \inv{ \left( \inv{\widehat{\mat{S}}_i} + \inv{\widehat{\mat{G}}} \right) } \period
 \end{equation}
-This ``partial pooling''optimally combines the information from stratm $i$ with the information from all strata,
-shrinking the $\widehat{\vec{\beta}}_i$ toward $\widehat{\vec{\beta}}^{\textrm{pooled}}$. Shrinkage 
-for a given parameter $\beta_j$ is greater
-when the sample size $n_i$ is small or when the estimated variance of the random effects, $g_{jj}$ is small.
+This ``partial pooling''optimally combines the information from cluster $i$ with the information from all clusters,
+shrinking the $\widehat{\vec{\beta}}_i$ toward $\widehat{\vec{\beta}}^{\textrm{pooled}}$. Shrinkage
+for a given parameter $\beta_{ij}$ is greater
+when the sample size $n_i$ is small or when the estimated variance of the corresponding random effects, $g_{jj}$, is small.
 
-Note that \eqref{eq:mixed6}
+\eqref{eq:mixed6}
 is of the same form as \eqref{eq:bayes-posterior} and other convex combinations of estimates considered
 earlier in this section. So once again, we can understand these results geometrically as the locus of
 osculation of ellipsoids.

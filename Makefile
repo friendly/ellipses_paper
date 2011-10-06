@@ -20,7 +20,7 @@ LATEXFLAGS = -interaction=nonstopmode
 
 # texdepend, v0.96 (Michael Friendly (friendly@yorku.ca))
 # commandline: texdepend ellipses.tex
-INCLUDES = introduction.tex geometric.tex statistical.tex conjugate.tex geneig.tex dataellipse.tex linreg.tex simpson-iris.tex paradoxes.tex levdemo.tex betaspace.tex measerror.tex avplot.tex MLM.tex criteria.tex kiss.tex discrim.tex ridge.tex ridge2.tex bayesian.tex mixed.tex hsbmix.tex conclusions.tex
+INCLUDES = introduction.tex geometric.tex statistical.tex conjugate.tex geneig.tex dataellipse.tex linreg.tex simpson-iris.tex paradoxes.tex levdemo.tex betaspace.tex measerror.tex avplot.tex MLM.tex criteria.tex kiss.tex discrim.tex ridge.tex ridge2.tex bayesian.tex mixed.tex hsbmix.tex mvmeta.tex conclusions.tex
 #
 PACKAGES = article.cls times.sty natbib.sty url.sty bm.sty graphicx.sty epigraph.sty comment.sty mdwlist.sty amsmath.sty amssymb.sty latexsym.sty color.sty afterpage.sty fancyhdr.sty
 #
@@ -36,7 +36,7 @@ ALTFIGS =
 SHIPSTYLES = styles/*
 
 EXTRAS = $(MAIN:%=%.aux) $(MAIN:%=%.bbl)  \
- $(SHIPSTYLES) Makefile 
+ $(SHIPSTYLES) Makefile FIGLIST
 
 ALLFILES = $(MAIN).tex $(MAIN).pdf  $(INCLUDES) $(BIB_FILES) $(FIGS) $(ALTFIGS) $(EXTRAS)
 
@@ -55,10 +55,12 @@ $(MAIN).dvi: $(MAIN).tex $(FIGS)
 
 $(MAIN).ps: $(MAIN).dvi
 
+references.bib : $(MAIN).aux
+	aux2bib $(MAIN)
 
 ## Hand edited FIGLIST because of multiple images/fig
-#FIGLIST:
-#	$(TEXDEPEND) -format=1 -print=f $(MAIN)  | perl -pe 'unless (/^#/){$f++; s/^/Figure $f: /}' > FIGLIST
+FIGLIST:
+	$(TEXDEPEND) -format=1 -print=f $(MAIN)  | perl -pe 'unless (/^#/){\$f++; s/^/Figure \$f: /}' > FIGLIST
 	
 
 

@@ -1,6 +1,5 @@
-\providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
-  \providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
-\begin{thebibliography}{55}
+\providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
+\begin{thebibliography}{57}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alker(1969)}]{Alker:1969}
@@ -113,10 +112,15 @@ Fox, J. and Suschnigg, C. (1989).
 \newblock A note on gender and the prestige of occupations.
 \newblock \emph{Canadian Journal of Sociology}, 14, 353--360.
 
-\bibitem[{Fox and Weisberg(2011)}]{car}
-Fox, J. and Weisberg, S. (2011).
+\bibitem[{Fox and Weisberg(2011{\natexlab{a}})}]{car}
+Fox, J. and Weisberg, S. (2011{\natexlab{a}}).
 \newblock \emph{car: Companion to Applied Regression}.
 \newblock R package version 2.0-11.
+
+\bibitem[{Fox and Weisberg(2011{\natexlab{b}})}]{FoxWeisberg:2011}
+Fox, J. and Weisberg, S. (2011{\natexlab{b}}).
+\newblock \emph{An {R} Companion to Applied Regression}.
+\newblock Thousand Oaks {CA}: Sage, 2nd edn.
 
 \bibitem[{Friendly(1991)}]{Friendly:91}
 Friendly, M. (1991).
@@ -193,6 +197,11 @@ Kramer, G.~H. (1983).
 \newblock The ecological fallacy revisited: Aggregate- versus individual-level
   findings on economics and elections, and sociotropic voting.
 \newblock \emph{The American Political Science Review}, 77(1), 92--111.
+
+\bibitem[{Laird and Ware(1982)}]{LairdWare:1982}
+Laird, N.~M. and Ware, J.~H. (1982).
+\newblock Random-effects models for longitudinal data.
+\newblock \emph{Biometrics}, 38, 963--974.
 
 \bibitem[{Lichtman(1974)}]{Lichtman:1974}
 Lichtman, A.~J. (1974).
