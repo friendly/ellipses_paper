@@ -1,4 +1,5 @@
-\providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
+\providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
+  \providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
 \begin{thebibliography}{57}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
