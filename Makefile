@@ -35,7 +35,8 @@ STYLES = /usr/share/texmf-texlive/tex/latex/psnfss/times.sty /usr/share/texmf-te
 ALTFIGS =
 #
 
-SUPPFILES = SAS/*.sas R/*.R movies/*.gif
+#SUPPFILES = SAS/*.sas R/*.R  movies/*.gif
+SUPPFILES = SAS/*.sas R/*.R 
 
 SHIPSTYLES = styles/*
 

@@ -9,7 +9,8 @@ showing the changes
 in individual coefficient estimates as a function of $k$.
 A bivariate version of this plot, with confidence ellipses for
 the parameters is introduced here.  This plot provides greater
-insight into the effects of $k$ on coefficient variance.\footnote{Bias and mean-squared error are a different matter: Although \citet{HoerlKennard:1970a} demonstrate that there is a range of values for the ridge constant $k$ for which the MSE of the ridge estimator is smaller than that of the OLS estimator, to know where this range is located requires knowledge of $\vec{\beta}$. As we explain in the following subsection, the constraint on $\vec{\hat{\beta}}$ incorporated in the ridge estimator can be construed as a Bayesian prior; the fly in the ointment of ridge regression, however, is that there is no reason to suppose that the ridge-regression prior is in general reasonable.}
+insight into the effects of $k$ on coefficient variance.
+\footnote{Bias and mean-squared error are a different matter: Although \citet{HoerlKennard:1970a} demonstrate that there is a range of values for the ridge constant $k$ for which the MSE of the ridge estimator is smaller than that of the OLS estimator, to know where this range is located requires knowledge of $\vec{\beta}$. As we explain in the following subsection, the constraint on $\vec{\hat{\beta}}$ incorporated in the ridge estimator can be construed as a Bayesian prior; the fly in the ointment of ridge regression, however, is that there is no reason to suppose that the ridge-regression prior is in general reasonable.}
 
 Confidence ellipsoids for the OLS estimator are generated
 from the estimated covariance matrix of the coefficients,
@@ -17,7 +18,6 @@ from the estimated covariance matrix of the coefficients,
 \widehat{\Var} (\vec{\beta}^{\mathrm{OLS}}) = \hat{\sigma}^2_e (\mat{X}\trans \mat{X})^{-1} \period
 \end{equation*}
 For the ridge estimator, this becomes
-%(Marquandt, 1970)
 \citep{Marquardt:1970}
 \begin{equation}
 \widehat{\Var} (\vec{\beta}^{\mathrm{RR}}) = \hat{\sigma}^2_e
