@@ -1,4 +1,4 @@
-\section{The data ellipse and ellipsoids}\label{sec:data-ellipse}
+%\section{The data ellipse and ellipsoids}\label{sec:data-ellipse}
 
 The \emph{data ellipse} \citep{Monette:90} (or \emph{concentration ellipse}, \citealp[Ch. 7]{Dempster:69})
 provides a remarkably
@@ -70,7 +70,7 @@ equal to $c^2$,
 \end{equation}
 where
 $\mat{S} = ({n-1})^{-1} \sum_{i=1}^n (\vec{y}_i - \bar{\vec{y}})\trans (\vec{y}_i - \bar{\vec{y}})$
-is the sample variance-covariance matrix.  In the computational notation of \eqref{eq:ellipsoidW}, the boundary of the
+is the sample covariance matrix.  In the computational notation of \eqref{eq:ellipsoidW}, the boundary of the
 data ellipsoid of radius $c$ is thus
 \begin{equation}\label{eq:ellipsoidS}
 \mathcal{E}_c(\bar{\vec{y}}, \mat{S}) = \bar{\vec{y}} \oplus c \mat{S}^{1/2} \period
@@ -125,23 +125,28 @@ The data ellipses show clearly that the means, variances, correlations,
 and regression slopes differ systematically across the three iris species
 in all pairwise plots.
 We emphasize that these serve as sufficient visual summaries of the important
-statistical properties (first and second moments) by removing the data points
-from the plots in the version at the right.
-
-\subsection{Robust data ellipsoids}
-
+statistical properties (first and second moments)% 
+\footnote{
 We recognize that a normal-theory summary (first and second moments),
 shown visually or numerically, can be distorted
 by multivariate outliers, particularly in smaller samples.
-Such effects can be countered by using
-robust covariance
-estimates such as multivariate trimming \citep{GnanadesikanKettenring:72}
-or the high-breakdown bound Minimum Volume Ellipsoid (MVE) and
-Minimum Covariance Determinant (MCD) methods
-developed by Rousseeuw and others
-\citep{RousseeuwLeroy:87,RousseeuwVanDriessen:99}.
-In what follows, it should be noted that
-robust covariance estimates could, in principle, be substituted
+In what follows,
+robust covariance estimates can, in principle, be substituted
 for the classical, normal-theory estimates in all cases.
+% Such effects can be countered by using
+% robust covariance
+% estimates such as multivariate trimming \citep{GnanadesikanKettenring:72}
+% or the high-breakdown bound Minimum Volume Ellipsoid (MVE) and
+% Minimum Covariance Determinant (MCD) methods
+% developed by Rousseeuw and others
+% \citep{RousseeuwLeroy:87,RousseeuwVanDriessen:99}.
+% In what follows, it should be noted that
+% robust covariance estimates could, in principle, be substituted
+% for the classical, normal-theory estimates in all cases.
 To save space, we don't explore these possibilities further here.
+}
+by removing the data points
+from the plots in the version at the right.
+
+%\subsection{Robust data ellipsoids}
 

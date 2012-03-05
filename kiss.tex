@@ -1,25 +1,33 @@
 %\begin{document}
 %\section{Kissing ellipsoids}
 
-In this section, we consider some circumstances in which there are two
-principles and procedures for deriving estimates of a parameter vector $\vec{\beta}$
+In this section, we consider some circumstances in which there is a data stratification factor or there are two (or more)
+principles or procedures for deriving estimates of a parameter vector $\vec{\beta}$
 of a linear model,
-each with its associated estimated variance-covariance matrix, e.g.,
+each with its associated estimated covariance matrix, e.g.,
 $\widehat{\vec{\beta}}^A$ with covariance matrix $\widehat{\Var}(\hat{\vec{\beta}}^A)$,
 and
 $\widehat{\vec{\beta}}^B$ with covariance matrix $\widehat{\Var}(\hat{\vec{\beta}}^B)$.
-We will take method A to be OLS estimation and consider several alternatives
-for method B.  In $\beta$ space, the parameter estimates appear as points and their
-corresponding confidence ellipsoids have the property that they will just ``kiss''
-(or \emph{osculate}) along a path between the two estimates.
-In the examples we consider, the alternative methods B represent a convex combination
-of information from two sources and the path of osculation is interpretable in
-terms of what method B aims to achieve.
-The same geometric ideas can also be applied in data space, where we can consider
-the data ellipsoids for two (or more) groups and find statistical interpretations of
-their (pairwise) path of osculation.
+The simplest motivating example is two-group discriminant analysis (\secref{sec:discrim}).
+In data space, solutions to this statistical problem can be described geometrically
+in terms of the property that the data ellipsoids around the group centroids 
+have the property that they will just ``kiss''
+(or \emph{osculate}) along a path between the two centroids. We call this path
+the \emph{locus of osculation}, whose properties are described in \secref{sec:locus}.
 
-These problems all have a similar and simple physical interpretation:  Imagine two stones dropped
+Perhaps more interesting and more productive is that the same geometric ideas
+apply equally well in parameter ($\beta$) space. Consider, for example,
+method A to be OLS estimation and several alternatives
+for method B, such as ridge regression (\secref{sec:ridge}) or Bayesian estimation
+(\secref{sec:bayesian}). The remarkable fact is that the geometry of such kissing
+ellipsoids provides a clear visual interpretation of these cases and others,
+whenever we consider a convex combination of information from two sources. In all cases,
+the locus of osculation is interpretable in
+terms of the statistical goal to be achived.
+
+
+\subsection{Locus of osculation}\label{sec:locus}
+The problems mentioned above all have a similar and simple physical interpretation:  Imagine two stones dropped
 into a pond at locations with coordinates $\vec{m}_1$ and $\vec{m}_2$.  The waves emanating from the centers
 form concentric circles which osculate along the line from $\vec{m}_1$ to $\vec{m}_2$.
 Now imagine a world with ellipse-generating stones, where instead of circles, the waves form concentric ellipses determined by

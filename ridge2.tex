@@ -30,11 +30,11 @@ which coincides with the OLS result when $k=0$.
 	
 \begin{figure}[htb!]
   \centering
-  \includegraphics[width=\textwidth,clip]{fig/ridge2}
-  \caption{Bivariate ridge trace plots for the coefficients of four predictors
+  \includegraphics[width=\textwidth,clip]{fig/ridge2ab}    % changed figure from ridge2 to save space
+  \caption{Bivariate ridge trace plots for the coefficients of Unemployed and Population
   	against the coefficient for GNP in Longley's data, with
   	$k = 0, 0.005, 0.01, 0.02, 0.04, 0.08$.
-  	In most cases the coefficients are driven toward zero, but the bivariate
+  	In both cases the coefficients are driven on average toward zero, but the bivariate
   	plot also makes clear the reduction in variance.
   	To reduce overlap, all confidence ellipses are shown with 1/2 the standard radius.}%
   \label{fig:ridge2}
@@ -74,4 +74,6 @@ For these data, it can be seen that even small values of $k$ have substantial
 impact on the estimates $\widehat{\vec{\beta}}$. What is perhaps more dramatic
 (and unseen in univariate trace plots) is the impact on the size of the confidence
 ellipse.  Moreover, shrinkage in variance is generally in a similar direction to the
-shrinkage in the coefficients.
+shrinkage in the coefficients. This new graphical method is developed more fully in \citet{Friendly:genridge:2012},
+including 2D and 3D plots, as well as more informative representations of shrinkage by ellipsoids in 
+the transformed space of the SVD of the predictors.

@@ -55,7 +55,7 @@ conic sections may be traced to Apollonius  of Perga (ca.~262 BC--ca.~190 BC),  
 Greek geometer and astronomer who gave the ellipse, parabola, and hyperbola their
 modern names. In a work popularly called the Conics \citep{Boyer:91}, he  described
 the  fundamental  properties  of  ellipses  (eccentricity,  axes,  principles of
-tange+ncy,  normals as  minimum and  maximum straight  lines to  the curve)  with
+tangency,  normals as  minimum and  maximum straight  lines to  the curve)  with
 remarkable clarity nearly 2000 years before the development of analytic geometry
 by Descartes.
 
@@ -74,19 +74,21 @@ Over time, the ellipse would be called to duty to provide simple explanations of
 phenomena  once thought  complex.  Most  notable is  Kepler's insight  that the
 Copernican theory of the orbits of planets as concentric circles (which required
 notions  of  epicycles  to  account  for  observations)  could  be  brought into
-alignment with the detailed observations by  Tycho Brahe and others by a  simple
+alignment with the detailed observational data from  Tycho Brahe and others by an exquisitely  simple
 law: ``The orbit  of every planet  is an ellipse  with the sun  at a focus.''  One
-century later, Isaac  Newton was able  to derive all  three of Kepler's  laws as
+century later, Isaac  Newton was able  to connect this elliptical geometry with astrophysics by
+deriving all  three of Kepler's  laws as
 simpler consequences of general laws of motion and universal gravitation.
 
 This paper  takes up  the cause  of the  ellipse as  a geometric  form that  can
 provide similar service to statistical understanding and data analysis.  Indeed,
 it has been doing that since the time of Galton, but these graphic and geometric
 contributions have often  been incidental and  scattered in the  literature
-(e.g., \citet{Bryant:1984,CampbellAtchley:81,SavilleWood:1986,Wickens:1995}). 
-We
-focus here on visual  insights through ellipses in  the areas of linear  models,
-multivariate linear models, and mixed-effect models.
+(e.g., \citet{Bryant:1984,CampbellAtchley:81,SavilleWood:1991,Wickens:1995}). 
+We focus here on visual  insights through ellipses in  the areas of linear  models,
+multivariate linear models, and mixed-effect models.  Our goal is to provide as
+comprehensive a treatment of this topic as can be done in a single article
+together with online supplements.
 
 
 \begin{comment}
@@ -107,3 +109,19 @@ multivariate linear models, and mixed-effect models.
  \end{minipage}
 \end{figure}
 \end{comment}
+
+The plan of this paper is as follows: \secref{sec:notation} provides the minimal notation and
+properties of ellipsoids%
+\footnote{As in this paragraph,    
+we generally use the term ``ellipsoid'' as to refer to ``ellipse or ellipsoid'' where dimensionality doesn't matter, or context is clear.}
+ necessary for the remainder of the paper.  Due to length restrictions,
+other useful and important properties of geometric and statistical ellipsoids have been relegated
+to the (online?) Appendix. \secref{sec:data-ellipse} describes the use of the \emph{data ellipsoid}
+as a visual summary for multivariate data. In \secref{sec:lm}, we apply data ellipsoids and
+confidence ellipsoids for parameters in linear models to explain a wide range of phenomena, paradoxes and fallacies
+that are clarified by this geometric approach.    
+This approach is extended to multivariate linear models in \secref{sec:mlm}, primarily through the use
+of ellipsoids to portray hypothesis (H) and error (E) covariation in what we call \emph{HE plots}.
+Finally, in \secref{sec:kiss}, we discuss a diverse collection of statistical problems whose solutions
+can all be described in terms of ``kissing ellipsoids.''
+                                                                                                                    

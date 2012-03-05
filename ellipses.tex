@@ -104,7 +104,7 @@ Georges Monette \\ York University
 \and
 John Fox \\ McMaster University
 }
-\date{Draft v. 1.0-0, \today}
+\date{Draft v. 2.0-1, \today}
 \end{titlepage}
 \maketitle
 %\thispagestyle{fancy}\lhead{Submitted: \emph{Statistical Science}, 2011}\rhead{Elliptical Insights}\afterpage{\lhead{}\rhead{}}
@@ -131,6 +131,7 @@ data ellipse;
 discriminant analysis;
 Francis Galton;
 hypothesis-error plots;
+kissing ellipsoids
 measurement error;
 mixed-effect models;
 multivariate meta-analysis;
@@ -145,15 +146,17 @@ statistical geometry
 \section{Notation and basic results}\label{sec:notation}
 
 There are various representations of an ellipse (or ellipsoid in three or more dimensions),
-both geometric and statistical.
-To avoid repeating ``ellipse or ellipsoid'' we generally use ``ellipsoid'' as generic where context is clear.
-We make use of the following definitions and results in what follows for geometric and
-statistical properties.
+both geometric and statistical. Some basic notation and properties are described below.
+% To avoid repeating ``ellipse or ellipsoid'' we generally use ``ellipsoid'' as generic where context is clear.
+% We make use of the following definitions and results in what follows for geometric and
+% statistical properties.
 
 \input{geometric}
 \input{statistical}
-\input{conjugate}
-\input{geneig}
+%\input{conjugate}
+%\input{geneig}
+
+\section{The data ellipse and ellipsoids}\label{sec:data-ellipse}
 \input{dataellipse}
 
 
@@ -208,6 +211,15 @@ We are grateful to Antonio Gasparini for helpful discussion regarding multivaria
 
 
 %\bibliography{timeref,graphics,Rpackages,statistics}
-\bibliography{ellipses}        % processed by bibtool -r aux2bib -x ellipses.aux -o ellipses.bib
+\bibliography{ellipses}        % processed by bibtool -- quiet=on -r ~/texmf/bibtex/bib/aux2bib.rsc -x ellipses.aux -o ellipses.bib
 %\bibliography{references}        % processed by aux2bib
+\appendix
+\section{Geometrical and statistical ellipsoids}
+This appendix outlines useful results and properties concerning the representation of geometric and statistical         ellipsoids.
+\input{properties}
+\input{conjugate}
+\input{geneig}
+
+
+
 \end{document}

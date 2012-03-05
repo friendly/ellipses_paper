@@ -79,7 +79,10 @@ the three planes in the right panel.%
 supplemented by data ellipses for the residuals $(\vec{x}_k^\star, \vec{y}^\star)$.  With reference to the properties
 of data ellipses in marginal scatterplots (see \figref{fig:ellipses-demo}), the following visual properties (among others)
 are useful in this discussion.  These results follow simply from translating ``marginal'' into ``conditional'' (or ``partial'')
-in the present context.
+in the present context. 
+The essential idea is that the data ellipse of the AVP for $(x_k, y)$ is to the estimate of a coefficient in a multiple regression as
+ the data ellipse of $(x, y)$ is to simple regression. Thus:
+
 
 \begin{figure}[htb]
  \begin{minipage}[b]{.49\linewidth}
@@ -101,8 +104,8 @@ Arrows connect the mean-centered marginal points (open circles) to the residual 
 \end{figure}
 
 \begin{enumerate*}
- \item The data ellipse of the AVP for $(x_k, y)$ is to the estimate of a coefficient in a multiple regression as
- the data ellipse of $(x, y)$ is to simple regression. Thus:
+%  \item The data ellipse of the AVP for $(x_k, y)$ is to the estimate of a coefficient in a multiple regression as
+%  the data ellipse of $(x, y)$ is to simple regression. Thus:
 
  \item The simple regression least squares fit of $\vec{y}^\star$ on $\vec{x}_k^\star$ has slope $\hat{\beta_k}$,
  the partial slope for $x_k$ in the full model (and intercept = 0).

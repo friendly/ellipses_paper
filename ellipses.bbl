@@ -1,6 +1,6 @@
 \providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
   \providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
-\begin{thebibliography}{57}
+\begin{thebibliography}{53}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alker(1969)}]{Alker:1969}
@@ -103,23 +103,13 @@ Fox, J. (2008).
 \newblock \emph{Applied Regression Analysis and Generalized Linear Models}.
 \newblock Thousand Oaks, CA: Sage, 2nd edn.
 
-\bibitem[{Fox \emph{et~al.}(2010)Fox, Friendly, and Monette}]{heplots1}
-Fox, J., Friendly, M., and Monette, G. (2010).
-\newblock \emph{{heplots}: Visualizing Tests in Multivariate Linear Models}.
-\newblock R package version 0.9-8.
-
 \bibitem[{Fox and Suschnigg(1989)}]{FoxSuschnigg:89}
 Fox, J. and Suschnigg, C. (1989).
 \newblock A note on gender and the prestige of occupations.
 \newblock \emph{Canadian Journal of Sociology}, 14, 353--360.
 
-\bibitem[{Fox and Weisberg(2011{\natexlab{a}})}]{car}
-Fox, J. and Weisberg, S. (2011{\natexlab{a}}).
-\newblock \emph{car: Companion to Applied Regression}.
-\newblock R package version 2.0-11.
-
-\bibitem[{Fox and Weisberg(2011{\natexlab{b}})}]{FoxWeisberg:2011}
-Fox, J. and Weisberg, S. (2011{\natexlab{b}}).
+\bibitem[{Fox and Weisberg(2011)}]{FoxWeisberg:2011}
+Fox, J. and Weisberg, S. (2011).
 \newblock \emph{An {R} Companion to Applied Regression}.
 \newblock Thousand Oaks {CA}: Sage, 2nd edn.
 
@@ -140,21 +130,21 @@ Friendly, M. (2007{\natexlab{b}}).
 \newblock \emph{Journal of Computational and Graphical Statistics}, 16(2),
   421--444.
 
+\bibitem[{Friendly(2012)}]{Friendly:genridge:2012}
+Friendly, M. (2012).
+\newblock The generalized ridge trace plot: Visualizing bias and precision.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 21.
+\newblock In press; Accepted, 2/1/2012.
+
 \bibitem[{Galton(1886)}]{Galton:1886}
 Galton, F. (1886).
 \newblock Regression towards mediocrity in hereditary stature.
 \newblock \emph{Journal of the Anthropological Institute}, 15, 246--263.
 
-\bibitem[{Gasparrini(2011)}]{mvmeta}
-Gasparrini, A. (2011).
+\bibitem[{Gasparrini(2012)}]{mvmeta}
+Gasparrini, A. (2012).
 \newblock \emph{mvmeta: multivariate meta-analysis and meta-regression.}
-\newblock R package version 0.2.3.
-
-\bibitem[{Gnanadesikan and Kettenring(1972)}]{GnanadesikanKettenring:72}
-Gnanadesikan, R. and Kettenring, J.~R. (1972).
-\newblock Robust estimates, residuals, and outlier detection with multiresponse
-  data.
-\newblock \emph{Biometrics}, 28, 81--124.
+\newblock R package version 0.2.4.
 
 \bibitem[{Guerry(1833)}]{Guerry:1833}
 Guerry, A.-M. (1833).
@@ -272,20 +262,10 @@ Robinson, W.~S. (1950).
 \newblock Ecological correlations and the behavior of individuals.
 \newblock \emph{American Sociological Review}, 15, 351--357.
 
-\bibitem[{Rousseeuw and Leroy(1987)}]{RousseeuwLeroy:87}
-Rousseeuw, P. and Leroy, A. (1987).
-\newblock \emph{Robust Regression and Outlier Detection}.
-\newblock New York: John Wiley and Sons.
-
-\bibitem[{Rousseeuw and Van~Driessen(1999)}]{RousseeuwVanDriessen:99}
-Rousseeuw, P. and Van~Driessen, K. (1999).
-\newblock A fast algorithm for the minimum covariance determinant estimator.
-\newblock \emph{Technometrics}, 41, 212--223.
-
-\bibitem[{Saville and Wood(1986)}]{SavilleWood:1986}
-Saville, D.~J. and Wood, G.~R. (1986).
-\newblock A method for teaching statistics using {N}-dimensional geometry.
-\newblock \emph{The American Statistician}, 40(3), 205--214.
+\bibitem[{Saville and Wood(1991)}]{SavilleWood:1991}
+Saville, D. and Wood, G. (1991).
+\newblock \emph{Statistical methods: the geometric approach}.
+\newblock Springer texts in statistics. New York: Springer-Verlag.
 
 \bibitem[{Simpson(1951)}]{Simpson:51}
 Simpson, E.~H. (1951).
