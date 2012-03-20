@@ -10,7 +10,7 @@ form a set of ``conjugate axes'' of the ellipse. (Two diameters are conjugate \e
 the tangent line at the endpoint of one diameter is parallel to the other diameter.)
 Each vector
 $\vec{a}_{i}$
-lies on the ellipse, and the tangent space at that point is parallel to the span of all the other column vectors of
+lies on the ellipse, and the tangent hyperplane at that point is parallel to the span of all the other column vectors of
 $\vec{A}$.
 \begin{figure}[htb]
  \begin{minipage}[b]{.49\linewidth}
@@ -26,7 +26,7 @@ $\vec{A}$.
 basis vectors.
 The conjugate vectors lie on the ellipsoid, and their tangents can be extended to form a parallelogram framing it.
 Left: for an arbitrary factorization, given in \eqref{eq:fac1}.
-Right: for the Choleski factorization (green, $b_1, b_2$) and the principal component factorization (brown, $c_1, c_2$).
+Right: for the Choleski factorization (solid, green, $b_1, b_2$) and the principal component factorization (dashed, brown, $c_1, c_2$).
 }
 \label{fig:conjugate}
 \end{figure}
@@ -88,7 +88,7 @@ have the same properties as the columns of
 $\mat{A}$.
 Particular factorizations yield interesting and statistically useful sets of conjugate axes.
 The illustration in \figref{fig:conjugate} (right) shows two such cases with special properties:
-In the Choleski factorization (shown in green), where
+In the Choleski factorization (shown solid in green), where
 $\mat{B}$ is lower triangular, the last conjugate axis, $\vec{b}_2$, is aligned with the coordinate
 axis $\vec{x}_2$.  Each previous axis ($\vec{b}_1$, here) is the orthogonal complement to
 all later axes in the  inner-product space of
@@ -97,7 +97,7 @@ The Choleski factorization is unique in this respect, subject to a
 permutation of the rows and columns of \mat{W}. 
 The subspace $\{ c_1 \vec{b}_1 + ... + c_{p-1} \vec{b}_{p-1}  , c_i \in \mathbb{R}\}$, is the plane of the regression of the last variable on the others, a fact that generalizes naturally to ellipsoids that are not necessarily centerered at the origin.  %% added fact /GM  
 
-In the principal-component (PC) factorization (shown in brown) $\mat{W}=\mat{C} \mat{C}\trans$, where
+In the principal-component (PC) factorization (shown dashed in brown) $\mat{W}=\mat{C} \mat{C}\trans$, where
 $\mat{C}=\mat{\Gamma \Lambda }^{1/2}$
 and hence
 $\mat{W}=\mat{\Gamma \Lambda {\Gamma }'}$

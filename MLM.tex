@@ -26,7 +26,7 @@ A convenient feature of the \MLM\ for general multivariate responses is that
 \emph{all} tests of linear hypotheses (for null effects) can be represented in the form of a general
 linear test,
 \begin{equation}\label{eq:mglt}
-H_0 : \sizedmat{L}{h \times q}
+H_0: \sizedmat{L}{h \times q}
 \sizedmat{\Beta}{q \times p} =
 \sizedmat{0}{h \times p}
 \comma
@@ -38,7 +38,7 @@ by a multivariate test.
 
 For \emph{any} such hypothesis of the form given in \eqref{eq:mglt}, the analogs of the univariate
 sums of squares for hypothesis ($\mathrm{SS}_H$) and error ($\mathrm{SS}_E$)
-are the $p \times p$  sum of squares and crossproducts (SSP) matrices given by:
+are the $p \times p$  sum of squares and cross-products (SSP) matrices given by:
 \begin{equation} \label{eq:hmat}
 \mat{H}  \equiv \mat{SSP}_H =
  (\mat{L} \widehat{\mat{B}})\trans \,
@@ -61,8 +61,8 @@ for testing \eqref{eq:mglt} are based on the $s = \min(p, h)$ non-zero latent ro
 $\lambda_{1}>\lambda_{2}>\cdots>\lambda_{s}$ of
 the matrix \mat{H} relative to the matrix \mat{E}, that is,
 the values of $\lambda$ for which $
-\detbracket{\mat{H}-\lambda\mat{E}}=0$, or equivalently
-the latent roots $\rho_i$ for which $\det{\mat{H} - \rho (\mat{H}+\mat{E})}=0$.
+\det{\mat{H}-\lambda\mat{E}}=0$, or equivalently
+the latent roots $\rho_i$ for which $\detbracket{\mat{H} - \rho (\mat{H}+\mat{E})}=0$.
 The details are shown in \tabref{tab:criteria}.
 % but note that $\rho_i = \lambda_i / (1+\lambda_i)$ 
 These measures
@@ -78,9 +78,10 @@ we refer to these as the \emph{canonical discriminant} dimensions.
 \input{criteria}
 
 %% added by GM; edited by MF
-Beyond the informal characterization of the four classical tests of hypotheses for multivariate linear models given in
+Beyond the informal characterization of the four classical tests of hypotheses for multivariate linear 
+models given in
 \tabref{tab:criteria}, there is an interesting geometrical representation 
-that helps to appreciate their relative power for various alternatives.  
+that helps one to appreciate their relative power for various alternatives.  
 %Let $\mat{H}$ be a hypothesis sums of squares and cross-products matrix,  
 %$\mat{H}=(\mat{L}\hat{\mat{B}}-\mat{C})\trans (L(X\trans X)^{-1}L\trans )^{-1}(\mat{L}\hat{\mat{B}}-\mat{C})$ and let $\mat{E}$ be the residual sum of squares and cross-products matrix.
 %Letting $\mat{\Lambda}$ be defined as it was above, 
@@ -103,12 +104,12 @@ as shown in \figref{fig:mtests} for $p=2$.
 With $\lambda_i$ as described above, 
 the eigenvalues and squared radii of $(\mat{H}+\mat{E})^\star$ are $\lambda_i + 1$,
 so the lengths of the major and minor axes are  $a=\sqrt{\lambda_1 + 1}$ and $b=\sqrt{\lambda_2 + 1}$ respectively.
-The diagonal of the triangle comprising the segments $a, b$ labelled $c$ has length
+The diagonal of the triangle comprising the segments $a, b$ (labelled $c$) has length
 $c = \sqrt{a^2 + b^2}$.
 Finally, a line segment from the origin dropped perpendicularly to the diagonal joining the two ellipsoid axes is labelled $d$.
 
 In these terms, 
-Wilks' test, based on $\prod{(1+\lambda_i)^{-1}}$ is equivalent to a test based on
+Wilks's test, based on $\prod{(1+\lambda_i)^{-1}}$ is equivalent to a test based on
 $a \times b$ which is proportional to the area of the framing rectangle, shown shaded in \figref{fig:mtests}.
 The Hotelling-Lawley trace test, based on
 $\sum{\lambda_i}$ 
@@ -121,7 +122,7 @@ $2-d^{-2}$ for $p=2$. Thus it is strictly monotone in $d$ and equivalent to a te
 The geometry makes it easy to see that if there is a large discrepancy between $\lambda_1$ and $\lambda_2$, Roy's test depends 
 only on $\lambda_1$ 
 while the Pillai test depends more on $\lambda_2$. 
-Wilks' $\Lambda$ and the Hotelling-Lawley trace criterion are also functional averages of $\lambda_1$ and $\lambda_2$, with the 
+Wilks's $\Lambda$ and the Hotelling-Lawley trace criterion are also functional averages of $\lambda_1$ and $\lambda_2$, with the 
 former being penalized when $\lambda_2$ is small.  In practice, when $s \le 2$, all four test criteria are equivalent, in that
 their standard transformations to $F$ statistics are exact and give rise to identical $p$-values.
 
@@ -130,7 +131,7 @@ their standard transformations to $F$ statistics are exact and give rise to iden
 \subsection{Hypothesis-Error (HE) plots}
 
 The essential idea behind HE plots is that any multivariate hypothesis
-test \eqref{eq:mglt} can be represented visually by ellipses (or ellipsoids beyond 2D) that express
+test, \eqref{eq:mglt}, can be represented visually by ellipses (or ellipsoids beyond 2D) that express
 the size  of covariation against a multivariate null hypothesis
 ($\mat{H}$) relative to error covariation ($\mat{E}$).
 The multivariate tests, based on the latent roots of $\mat{H} \mat{E}^{-1}$,
@@ -155,7 +156,7 @@ various effect sizes and significance.
 \figref{fig:heplot3a} illustrates this idea for two variables from the iris dataset.
 Panel (a) shows the data ellipses for sepal length and petal length, equivalent to
 the corresponding plot in \figref{fig:scatirisd1}. Panel (b) shows the HE plot for these
-variables from the one-way MANOVA model $\vec{y}_{ij} = \vec{\mu}_i + \vec{e}_{ij}$
+variables from the one-way MANOVA model $\vec{y}_{ij} = \vec{\mu}_i + \vec{u}_{ij}$
 testing equal mean vectors across species, $H_0: \vec{\mu}_1 = \vec{\mu}_2 = \vec{\mu}_3$.
 Let $\widehat{\mat{Y}}$ be the $n \times p$ matrix of fitted values for this model,
 i.e., $\widehat{\mat{Y}} = \{ \bar{\vec{y}}_{i \cdot} \}$.
@@ -188,8 +189,8 @@ can be scaled to show either the \emph{effect size} or strength of
 \emph{evidence} against $H_0$ (significance).
 
 For effect-size scaling, each \mat{H} is divided by $df_e$ to conform
-to \mat{E}.  The resulting ellipses are then exactly the data ellipses
-of the fitted values, and correspond visually to multivariate analogs of
+to \mat{E}.  The resulting ellipse is then exactly the data ellipse
+of the fitted values, and corresponds visually to a multivariate analog of
 univariate effect-size measures (e.g., $(\bar{y}_1 - \bar{y}_2)/s_e$
 where $s_e$ is the within-group standard deviation).
 
@@ -209,9 +210,9 @@ Using this scaling gives a simple visual test of
 $H_0$: Roy's test rejects $H_0$ at a given $\alpha$ level \emph{iff}
 the corresponding $\alpha$-level \mat{H} ellipse protrudes \emph{anywhere} outside the \mat{E}
 ellipse.%
-\footnote{Other multivariate tests (Wilks' $\Lambda$, Hotelling-Lawley trace,
+\footnote{Other multivariate tests (Wilks's $\Lambda$, Hotelling-Lawley trace,
 Pillai trace) also have geometric interpretations
-in HE plots (e.g.,  Wilks' $\Lambda$ is the ratio of areas (volumes)
+in HE plots (e.g.,  Wilks's $\Lambda$ is the ratio of areas (volumes)
 of the \mat{H} and \mat{E} ellipses (ellipsoids); Hotelling-Lawley trace
 is based on the sum of the $\lambda_i$), but these statistics do not provide
 such simple visual comparisons. All HE plots shown in this paper use
@@ -221,7 +222,7 @@ Moreover, the directions in which the hypothesis ellipse exceed the error ellips
 are informative about the responses and their linear combinations that depart significantly
 from $H_0$.  Thus, in \figref{fig:heplot3a}(b), the variation of the means of the iris species
 shown for these two variables
-appears to be largely one-dimensional, corresponding to a weighted sum ( or average) of petal length and
+appears to be largely one-dimensional, corresponding to a weighted sum (or average) of petal length and
 sepal length, perhaps a measure of overall size.
 
 
@@ -230,13 +231,13 @@ sepal length, perhaps a measure of overall size.
 Just as in univariate ANOVA designs, important overall effects ($\textrm{df}_h>1$) in MANOVA may be usefully
 explored and interpreted by the use of contrasts among the levels of the factors involved.
 In the general linear hypothesis test of \eqref{eq:mglt}, contrasts are easily specified as one or more $(h_i \times q)$ \mat{L}
-matrices, $\mat{L}_1, \mat{L}_2, \dots $, each of whose rows sum to zero.
+matrices, $\mat{L}_1, \mat{L}_2, \dots $, each of whose rows sums to zero.
 
 As an important special case,
 for an overall effect with
 $\textrm{df}_h$ degrees of freedom (and balanced sample sizes), a set of $\textrm{df}_h$ pairwise orthogonal $(1 \times q)$
-\mat{L} matrices ($\mat{L}_i \trans \mat{L}_j =0$) gives rise to a set of $\textrm{df}_h$ rank-one $\mat{H}_i$
-matrices that additively decompose the overall hypothesis SSCP matrix,
+\mat{L} matrices ($\mat{L}_i \trans \mat{L}_j =0$ for $i\ne j$) gives rise to a set of $\textrm{df}_h$ rank-one $\mat{H}_i$
+matrices that additively decompose the overall hypothesis SSCP matrix (by a multivariate analog of Pythagoras' Theorem),
 \begin{equation*}
 \mat{H} = \mat{H}_1 + \mat{H}_2 + \cdots + \mat{H}_{\textrm{df}_h}
 \comma
@@ -323,7 +324,7 @@ eigenvalues are relatively large, a two-dimensional display will
 capture the bulk of between-group differences. The 2D canonical
 discriminant HE plot is then simply an HE plot of the scores
 $\vec{z}_1$ and $\vec{z}_2$ on the first two canonical dimensions.
-(If $s\ge3$, an analogous 3D version may be obtained.)
+(If $s\ge3$, an analogous 3D version may also be obtained.)
 
 Because the $\vec{z}$ scores are all mutually uncorrelated, the \mat{H} and
 \mat{E} matrices will always have their axes aligned with the
@@ -360,7 +361,8 @@ Some rotation would
 show that the \mat{H}
 ellipsoid is really only two-dimensional, while \mat{E} is 4D.
 Applying the transformation given by $\inv{\mat{E}}$ as in \figref{fig:ellipse-geneig}
-and projecting into the 2D subspace of the non-zero dimensions would give a view equivalent to the
+and projecting into the 2D subspace of the non-zero dimensions of \mat{H}
+would give a view equivalent to the
 canonical HE plot in \figref{fig:HE-can-iris}.
 The variable vectors in this plot are just the shadows of the original coordinate axes.
 

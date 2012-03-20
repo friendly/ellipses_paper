@@ -4,7 +4,7 @@ meta-analysis
 \citep{Berkey-etal:1998,Nam-etal:2003},
 where several outcome measures are observed in a series of
 similar research studies and it is desired to synthesize
-those studies to provide an overall (pooled) summary of the outcomes
+those studies to provide an overall (pooled) summary of the outcomes,
 together with meta-analytic inferences and
 measures of heterogeneity across studies.
 
@@ -65,7 +65,7 @@ The two outcome measures for each patient were pre- to post-treatment changes af
 in probing depth (PD) and attachment level (AL), in mm, where successful treatment
 should decrease probing depth and increase attachment level.
 Each study was summarized by the mean difference, $\vec{y}_i = (\vec{y}_i^S - \vec{y}_i^{NS})$,
-between S and NS treated teeth, together with the covariance matrix, $\mat{S}_i$ for each study.
+between S and NS treated teeth, together with the covariance matrix $\mat{S}_i$ for each study.
 Sample sizes ranged from 14 to 89 across studies.
 
 \begin{figure}[htb]
@@ -92,7 +92,9 @@ Sample sizes ranged from 14 to 89 across studies.
 The left panel of \figref{fig:mvmeta2} shows the individual study estimates of PD and AL together with their covariances ellipses
 in a generic form that we propose as a more useful visualization of multivariate meta-analysis results than standard
 tabular displays: individual estimates plus model-based summary, all with associated covariance ellipsoids.%
-\footnote{The analyses described here were carried out using the \texttt{mvmeta} package for R \citep{mvmeta}.}
+\footnote{The analyses described here were carried out using the
+	 \pkg{mvmeta} package for R \citep{mvmeta}.
+}
 
 It can be seen that all studies show that surgical treatment yields better probing depth (estimates are positive), while
 non-surgical treatment results in better attachment level (all estimates are negative).  As well, within each study, there is a consistently

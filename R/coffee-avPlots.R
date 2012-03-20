@@ -78,8 +78,7 @@ res <- lsfit(mod.mat[, -2], cbind(mod.mat[, 2], coffee$Heart),
         intercept = FALSE)$residuals
 dataEllipse(res[,1], res[,2], level=lev, add=TRUE, fill=TRUE, fill.alpha=0.2)
 with(coffee, marginalEllipse(Coffee, Heart, col="blue", lwd=2, add=TRUE, levels=lev))
-with(coffee, arrows(dev(Coffee), dev(Heart), res[,1], res[,2], col="darkgray", angle=15, length=.1))
-par(op)
+ vpar(op)
 dev.off()
 
 

@@ -32,7 +32,7 @@ may be defined by the quadratic form
 where equality in \eqref{eq:ellisoid1} gives the boundary,
 $\vec{x} = (x_1, x_2, \dots , x_p)\trans$ is a vector referring to the coordinate axes and $\mat{C}$ is a symmetric
 positive definite $p \times p$ matrix.
-If $\mat{C}$ is positive semi-definite then the ellipsoid will be \emph{improper}, having the shape of a cylinder with elliptical cross-sections and unbounded in the direction of the null 
+If $\mat{C}$ is only positive semi-definite, then the ellipsoid will be \emph{improper}, having the shape of a cylinder with elliptical cross-sections and unbounded in the direction of the null 
 space of $\mat{C}$.
 To extend the definition to \emph{singular} (sometimes known as ``degenerate'') ellipsoids, we turn to a definition that is equivalent to \eqref{eq:ellisoid1} for proper ellipsoids.
 Let $\mathcal{S}$ denote the unit sphere in  $\Real{p}$,
@@ -43,6 +43,8 @@ and let
 \begin{equation}\label{eq:ellisoidsph}
 \mathcal{E} := \mat{A} \mathcal{S} \comma
 \end{equation}
-where $\mat{A}$ is a non-singular $p \times p$ matrix. Then $\mathcal{E}$ is a proper ellipsoid that could be defined using \eqref{eq:ellisoid1} with $\mat{C} = \left( \mat{A} \trans \mat{A} \right)^{-1}$.
+where $\mat{A}$ is a non-singular $p \times p$ matrix. Then $\mathcal{E}$ is a proper ellipsoid that could be defined using 
+\eqref{eq:ellisoid1} with $\mat{C} = \left( \mat{A} \trans \mat{A} \right)^{-1}$.
 We obtain singular ellipsoids by allowing $\mat{A}$ to be any matrix, not necessarily non-singular nor even square.
-Some useful properties of geometric ellipsoids are described in \secref{sec:properties}.
+A more general representation of ellipsoids based on the singular value decomposition (SVD) of $\mat{C}$ is given in \appref{sec:taxonomy}.
+Some useful properties of geometric ellipsoids are described in \appref{sec:properties}.

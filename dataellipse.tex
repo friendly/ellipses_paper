@@ -38,13 +38,13 @@ each point is represented by a sunflower symbol. We also overlay the 40\%,
 
 In \figref{fig:galton-reg3}, the ellipses have the mean vector
 $(\bar{x}, \bar{y})$ as their center;  the lengths of arms of the
-central cross show the standard deviation of each variable, which
+central cross show the standard deviations of the variables, which
 correspond to the shadows of the 40\% ellipse.  In
-addition, the correlation coefficient can be visually estimated as
+addition, the correlation coefficient can be visually represented as
 the fraction of a vertical tangent line from $\bar{y}$ to the top of
-the ellipse that is below the regression line $\hat{y} | x$, shown
+the ellipse that is below the regression line $\widehat{y} | x$, shown
 by the arrow labeled `r.' Finally, as Galton noted, the regression line
-for $\hat{y} \given x$ (or $\hat{x} \given y$)
+for $\widehat{y} \given x$ (or $\widehat{x} \given y$)
 can be visually estimated as the locus of the points of vertical
 (or horizontal) tangents with the family of concentric ellipses.
 See \citet[Figs.~5.1--5.2]{Monette:90} and
@@ -60,7 +60,8 @@ of the point
 $\vec{y} = (y_1, y_2, \dots , y_p)\trans$
 from the centroid of the sample,
 $\bar{\vec{y}} = (\bar{y}_1, \bar{y}_2, \dots , \bar{y}_p)\trans$.
-Thus, we define the data ellipsoid $\mathcal{E}_c$ of size (``radius'') $c$
+Thus, we use a more explicit notation to
+define the \emph{data ellipsoid} $\mathcal{E}_c$ of size (``radius'') $c$
 as the set of all points $\vec{y}$ with $D^2_M (\vec{y})$ less than or
 equal to $c^2$,
 \begin{equation}\label{eq:dsq}
@@ -77,10 +78,10 @@ data ellipsoid of radius $c$ is thus
 \end{equation}
 
 Many properties of the data ellipsoid hold regardless of the joint distribution of the
-variables; but if the variables are multivariate normal, then the data ellipsoid represents
+variables; but if the variables are multivariate normal, then the data ellipsoid approximates
 a contour of constant density in their joint distribution.  In this case $D^2_M (x,y)$
-has a large-sample $\chi^2_p$ distribution (or, in finite samples, approximately
-$[p (n-1) / (n-p)] F_{p, n-p}$)).
+has a large-sample $\chi^2_p$ distribution, or, in finite samples, approximately
+$[p (n-1) / (n-p)] F_{p, n-p}$).
 
 Hence, in the bivariate case, taking $c^2 = \chi^2_2(0.95)= 5.99 \approx 6$ encloses approximately
 95\% of the data points under normal theory.  Other radii also have useful interpretations:
@@ -92,8 +93,8 @@ coverage pertains to
 any linear combination of $x$ and $y$.
 \item By analogy with a univariate sample, a 68\% coverage data ellipse with
 $c^2 = \chi^2_2(0.68) = 2.28$ gives a bivariate analog of the standard $\bar{x} \pm 1 s_x$ and $\bar{y} \pm 1 s_y$ intervals.
-The univariate shadows, or those of any linear combination, then correspond to standard
-intervals taking fishing in a $p=2$-dimensional space into account.
+The univariate shadows, or those of any linear combination, then correspond to standard Scheff\'e
+intervals taking ``fishing'' (simultaneous interfence) in a $p=2$-dimensional space into account.
 \end{itemize*}
 
 
@@ -124,7 +125,7 @@ later used by \citet{Fisher:36} in his development of discriminant analysis.
 The data ellipses show clearly that the means, variances, correlations,
 and regression slopes differ systematically across the three iris species
 in all pairwise plots.
-We emphasize that these serve as sufficient visual summaries of the important
+We emphasize that the ellipses serve as sufficient visual summaries of the important
 statistical properties (first and second moments)% 
 \footnote{
 We recognize that a normal-theory summary (first and second moments),

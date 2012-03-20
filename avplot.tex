@@ -29,18 +29,23 @@ $\widehat{\vec{y}} \equiv \widehat{\vec{y}} \given \mat{X} = \beta_0 \vec{1} + \
 with model matrix $\mat{X} = [ \vec{1}, \vec{x}_1, \dots \vec{x}_p ]$.
 Let $\mat{X}_{[-k]}$ be the model matrix omitting the column for variable $k$.
 Then algebraically, the added variable plot for variable $k$ is the scatterplot of the residuals $(\vec{x}^\star_k, \vec{y}^\star)$ from
-two auxillary regressions, fitting $\vec{y}$ and $\vec{x}_k$ from $\mat{X}_{[-k]}$,
+two auxillary regressions,%
+\footnote{
+These quantities can all be computed \citep{VellemanWelsh:81} from the results of a 
+single regression for the full model.
+}
+fitting $\vec{y}$ and $\vec{x}_k$ from $\mat{X}_{[-k]}$,
 \begin{eqnarray*}
  \vec{y}^\star   & \equiv & \vec{y} \given \textrm{others}  =  \vec{y} - \widehat{\vec{y}} \given \mat{X}_{[-k]} \\
  \vec{x}^\star_k & \equiv & \vec{x}_k \given \textrm{others}  =  \vec{x}_k - \widehat{\vec{x}}_k \given \mat{X}_{[-k]}  \period \\
 \end{eqnarray*}
-(These quantities can all be computed \citep{VellemanWelsh:81} from the results of a single regression for the full model.)
 
 Geometrically, in the space of the observations,\footnote{The ``space of the observations'' is yet a third, $n$-dimensional, space, in which the observations are the axes and each variable is represented as a point (or vector). See, e.g., \citet[Ch.~10]{Fox:2008}.} the fitted vector $\widehat{\vec{y}}$ is the orthogonal projection of $\vec{y}$
 onto the subspace spanned by $\mat{X}$. Then $\vec{y}^\star$ and $\vec{x}^\star_k$ are the projections onto
 the orthogonal complement of the subspace spanned by $\mat{X}_{[-k]}$, so
 the simple regression of $\vec{y}^\star$ on $\vec{x}^\star_k$ has slope $\hat{\beta_k}$ in the full model,
-and the residuals from the line $\vec{y}^\star = \hat{\beta_k} \vec{x}^\star_k$ in this plot are identically
+and the residuals from the line 
+$\widehat{\vec{y}}^\star = \hat{\beta_k} \vec{x}^\star_k$ in this plot are identically
 the residuals from the overall regression of $\vec{y}$ on $\mat{X}$.
 
 Another way to describe the added-variable plot (AVP) for $x_k$ is as a 2D projection of the space of
@@ -80,7 +85,8 @@ supplemented by data ellipses for the residuals $(\vec{x}_k^\star, \vec{y}^\star
 of data ellipses in marginal scatterplots (see \figref{fig:ellipses-demo}), the following visual properties (among others)
 are useful in this discussion.  These results follow simply from translating ``marginal'' into ``conditional'' (or ``partial'')
 in the present context. 
-The essential idea is that the data ellipse of the AVP for $(x_k, y)$ is to the estimate of a coefficient in a multiple regression as
+The essential idea is that the data ellipse of the AVP for $(x_k\star, y\star)$ is to the estimate of a 
+coefficient in a multiple regression as
  the data ellipse of $(x, y)$ is to simple regression. Thus:
 
 
@@ -97,8 +103,8 @@ The essential idea is that the data ellipse of the AVP for $(x_k, y)$ is to the 
   \includegraphics[width=1\linewidth]{fig/coffee-avplot4}
  \end{minipage}
   \caption{Added-variable $+$ marginal plots for Stress and Coffee in the multiple regression predicting Heart disease.
-Each panel shows the 50\% conditional data ellipse for $x^{*}, y^{*}$ residuals (shaded, red) as well as the marginal 50\%
-data ellipse for the $(x, y)$ variables, shifted to the origin.
+Each panel shows the 50\% conditional data ellipse for $x_k^\star, y^\star$ residuals (shaded, red) as well as the marginal 50\%
+data ellipse for the $(x_k, y)$ variables, shifted to the origin.
 Arrows connect the mean-centered marginal points (open circles) to the residual points (filled circles).}
   \label{fig:coffee-avplot-B}
 \end{figure}
@@ -112,7 +118,8 @@ Arrows connect the mean-centered marginal points (open circles) to the residual 
 
  \item The residuals, $(\vec{y}^\star - \widehat{\vec{y}}^\star)$, shown in this plot are the residuals for $\vec{y}$ in the full model.
 
- \item The correlation between $\vec{x}_k^\star$ and $\vec{y}^\star$, seen in the shape of the data ellipse for these residuals,
+ \item The correlation between $\vec{x}_k^\star$ and $\vec{y}^\star$, seen in the shape of the 
+ data ellipse for these variables,
  is the partial correlation between $y$ and $x_k$ with the other predictors in $\mat{X}_{[-k]}$ partialled out.
 
  \item The horizontal half-width of the AVP data ellipse is proportional to the conditional standard deviation of
@@ -131,7 +138,8 @@ Arrows connect the mean-centered marginal points (open circles) to the residual 
  as DFBETA statistics \citep{Belsley-etal:80}.
  
  \item The last three items imply that the collection of added-variable plots for $\vec{y}$ and
- $\mat{X}$ provide an easy way to visualize the influence that individual observations---and indeed the joint influence of subsets of observations---have on
+ $\mat{X}$ provide an easy way to visualize the leverage and
+ influence that individual observations---and indeed the joint influence of subsets of observations---have on
  the esimation of \emph{each} coefficient in a given model.
 \end{enumerate*}
 
@@ -140,10 +148,10 @@ Elliptical insight also permits us to go further, to depict the relationship bet
 directly.
 \figref{fig:coffee-avplot-B} shows the same added-variable plots for Heart disease on Stress and Coffee
 as in \figref{fig:coffee-avplot-A} (with a zoomed-out scaling), but here we also overlay the
-marginal data ellipses for $(x, y)$,
+marginal data ellipses for $(x_k, y)$,
 and and marginal regression lines for Stress and Coffee separately.  In 3D data space,
 these are the shadows (projections) of the data ellipsoid onto the planes defined by the
-partial variables.  In 2D AVP space, these are just the marginal data ellipses translated to
+partial variables.  In 2D AVP space, they are just the marginal data ellipses translated to
 the origin.
 
 The most obvious feature of \figref{fig:coffee-avplot-B} is that the AVP for Coffee has a negative slope in the conditional
@@ -162,7 +170,7 @@ More importantly, the shrinkage of the width (projected onto a horizontal axis) 
 square root of the variance inflation factor (VIF), which can be shown to be the ratio of the horizontal
 width of the marginal ellipse of $(x_k, y)$, with standard deviation $s(x_k)$ to the width of the conditional
 ellipse of $(x_k^\star, y^\star)$, with standard deviation $s(x_k \given \textrm{others})$.
-This geometry implies interesting contraints among the three quantities: improvement in fit, VIF, and change from the marginal to conditional slope.
+This geometry implies interesting constraints among the three quantities: improvement in fit, VIF, and change from the marginal to conditional slope.
 
 Finally, \figref{fig:coffee-avplot-B} also shows how conditioning on other predictors works for individual
 observations, where each point of  $(\vec{x}_k^\star, \vec{y}^\star)$ is the image of $(\vec{x}_k, \vec{y})$

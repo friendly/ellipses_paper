@@ -41,12 +41,14 @@ the posterior mean can be expressed as
 (\mat{X}\trans \mat{X}\widehat{\vec{\beta}}^{\mathrm{OLS}} + \mat{A} \vec{\beta}^{\mathrm{prior}})
 (\mat{X}\trans \mat{X}+\mat{A})^{-1}
 \end{equation}
-with covariance matrix $(\mat{X}\trans \mat{X}+\mat{A})^{-1}$. The posterior coefficients are thus a weighted average of
+with covariance matrix $(\mat{X}\trans \mat{X}+\mat{A})^{-1}$. The posterior coefficients are 
+therefore a weighted average of
 the prior coefficients and the OLS estimates, with weights given by the conditional prior precision, $\mat{A}^{-1}$,
 and the data precision, $\mat{X}\trans\mat{X}$.  Thus, as we increase the strength of our prior precision (decreasing
 prior variance), we place greater weight on our prior beliefs relative to the data.
 
-In this context, ridge regression can be seen as the special case where $\widehat{\vec{\beta}}^{\mathrm{prior}} = \vec{0}$ and $\mat{A} = k \mat{I}$
+In this context, ridge regression can be seen as the special case 
+where $\widehat{\vec{\beta}}^{\mathrm{prior}} = \vec{0}$ and $\mat{A} = k \mat{I}$,
 and where \figref{fig:ridge-demo} provides an elliptical visualization. In \eqref{eq:ridge-sup2}, the number of observations,
 $n(k)$ corresponding to $\mat{X}_k^0$ can be seen as another way of expressing the weight of the prior in relation to the data.
 

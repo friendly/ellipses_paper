@@ -22,7 +22,8 @@ LATEXFLAGS = -interaction=nonstopmode
 
 # texdepend, v0.96 (Michael Friendly (friendly@yorku.ca))
 # commandline: texdepend ellipses.tex
-INCLUDES = introduction.tex geometric.tex statistical.tex dataellipse.tex linreg.tex simpson-iris.tex paradoxes.tex levdemo.tex betaspace.tex measerror.tex avplot.tex MLM.tex criteria.tex kiss.tex discrim.tex ridge.tex ridge2.tex bayesian.tex mixed.tex hsbmix.tex mvmeta.tex conclusions.tex properties.tex conjugate.tex geneig.tex
+#INCLUDES = introduction.tex geometric.tex statistical.tex dataellipse.tex linreg.tex simpson-iris.tex paradoxes.tex levdemo.tex betaspace.tex measerror.tex avplot.tex MLM.tex criteria.tex kiss.tex discrim.tex ridge.tex ridge2.tex bayesian.tex mixed.tex hsbmix.tex mvmeta.tex conclusions.tex properties.tex conjugate.tex geneig.tex
+INCLUDES = introduction.tex geometric.tex statistical.tex dataellipse.tex linreg.tex simpson-iris.tex paradoxes.tex levdemo.tex betaspace.tex measerror.tex avplot.tex MLM.tex criteria.tex kiss.tex discrim.tex ridge.tex ridge2.tex bayesian.tex mixed.tex hsbmix.tex mvmeta.tex conclusions.tex taxonomy.tex properties.tex conjugate.tex geneig.tex
 #
 PACKAGES = article.cls times.sty natbib.sty url.sty bm.sty graphicx.sty epigraph.sty comment.sty mdwlist.sty amsmath.sty amssymb.sty latexsym.sty color.sty afterpage.sty fancyhdr.sty
 #

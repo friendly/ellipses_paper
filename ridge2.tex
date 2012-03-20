@@ -9,7 +9,7 @@ showing the changes
 in individual coefficient estimates as a function of $k$.
 A bivariate version of this plot, with confidence ellipses for
 the parameters is introduced here.  This plot provides greater
-insight into the effects of $k$ on coefficient variance.
+insight into the effects of $k$ on coefficient variance.%
 \footnote{Bias and mean-squared error are a different matter: Although \citet{HoerlKennard:1970a} demonstrate that there is a range of values for the ridge constant $k$ for which the MSE of the ridge estimator is smaller than that of the OLS estimator, to know where this range is located requires knowledge of $\vec{\beta}$. As we explain in the following subsection, the constraint on $\vec{\hat{\beta}}$ incorporated in the ridge estimator can be construed as a Bayesian prior; the fly in the ointment of ridge regression, however, is that there is no reason to suppose that the ridge-regression prior is in general reasonable.}
 
 Confidence ellipsoids for the OLS estimator are generated
@@ -36,7 +36,7 @@ which coincides with the OLS result when $k=0$.
   	$k = 0, 0.005, 0.01, 0.02, 0.04, 0.08$.
   	In both cases the coefficients are driven on average toward zero, but the bivariate
   	plot also makes clear the reduction in variance.
-  	To reduce overlap, all confidence ellipses are shown with 1/2 the standard radius.}%
+  	To reduce overlap, all variance ellipses are shown with 1/2 the standard radius.}%
   \label{fig:ridge2}
 \end{figure}
 
@@ -61,19 +61,20 @@ a number of the predictors would be expected to have strong associations
 with year and/or population, yet both of these are also included among the
 predictors.
 }
-The standard linear model for these data, in R notation,
-is \verb|lm(Employed ~ ., data=longley)|, where ``\texttt{.}''  in the model formula means
-``all other variables'' in the data set as predictors.  
+%The standard linear model for these data, in R notation,
+%is \verb|lm(Employed ~ ., data=longley)|, where ``\texttt{.}''  in the model formula means
+%``all other variables'' in the data set as predictors.  
 For each value of $k$, the plot
-shows the estimate $\widehat{\vec{\beta}}$, together with the confidence
+shows the estimate $\widehat{\vec{\beta}}$, together with the variance
 ellipse.  For the sake of this example, we assume that GNP is a primary
 predictor of Employment, and we wish to know how other predictors modify the
 regression estimates and their variance when ridge regression is used.
 
 For these data, it can be seen that even small values of $k$ have substantial
 impact on the estimates $\widehat{\vec{\beta}}$. What is perhaps more dramatic
-(and unseen in univariate trace plots) is the impact on the size of the confidence
+(and unseen in univariate trace plots) is the impact on the size of the variance
 ellipse.  Moreover, shrinkage in variance is generally in a similar direction to the
-shrinkage in the coefficients. This new graphical method is developed more fully in \citet{Friendly:genridge:2012},
+shrinkage in the coefficients. This new graphical method is developed more fully in 
+\citet{Friendly:genridge:2012},
 including 2D and 3D plots, as well as more informative representations of shrinkage by ellipsoids in 
 the transformed space of the SVD of the predictors.

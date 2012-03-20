@@ -11,6 +11,7 @@
 \usepackage{amssymb}
 \usepackage{latexsym}        %% LaTeX symbols: \Box, etc.th}
 \usepackage{color}
+%\usepackage[update]{epstopdf} %% convert EPS to PDF
 
 \bibliographystyle{styles/abbrvnat-apa-nourl}
 
@@ -25,6 +26,7 @@
 \newcommand*{\tabref}[1]{Table~\ref{#1}}
 \newcommand*{\secref}[1]{Section~\ref{#1}}
 \renewcommand*{\eqref}[1]{Eqn.~(\ref{#1})}
+\newcommand*{\appref}[1]{Appendix~\ref{#1}}
 
 
 \newcommand{\keywords}[1]{\par\noindent\textbf{Key words:} #1}
@@ -35,8 +37,8 @@
 %  Page dimensions
 \addtolength{\hoffset}{-2cm}
 \addtolength{\textwidth}{4cm}
-\addtolength{\voffset}{-2cm}
-\addtolength{\textheight}{4cm}
+\addtolength{\voffset}{-2.2cm}
+\addtolength{\textheight}{4.4cm}
 
 % Math stuff
 %   vector and matrix expressions
@@ -69,10 +71,11 @@
 \newcommand{\sizedmat}[2]{%
   \mathord{\mathop{\mat{#1}}\limits_{(#2)}}%
 }
-\newcommand{\Var}{\ensuremath{\mathsf{Var}}}
-\newcommand{\Cov}{\ensuremath{\mathsf{Cov}}}
+\newcommand{\Var}{\ensuremath{\mathrm{Var}}}
+\newcommand{\Cov}{\ensuremath{\mathrm{Cov}}}
 \newcommand{\argmin}{\mathop{\mathrm{argmin}}}
 
+\newcommand*{\pkg}[1]{\textbf{#1}}     % R packages
 
 % abbreviations
 \newcommand{\MLM}{MvLM}
@@ -104,7 +107,7 @@ Georges Monette \\ York University
 \and
 John Fox \\ McMaster University
 }
-\date{Draft v. 2.0-1, \today}
+\date{Draft v. 2.2, \today}
 \end{titlepage}
 \maketitle
 %\thispagestyle{fancy}\lhead{Submitted: \emph{Statistical Science}, 2011}\rhead{Elliptical Insights}\afterpage{\lhead{}\rhead{}}
@@ -116,7 +119,7 @@ geometrically based statistical graphs.  This  paper extols and illustrates  the
 virtues  of  the  ellipse  and her  higher-dimensional  cousins  for  both these
 purposes in a variety of contexts, including linear models, multivariate
 linear models, and mixed-effect models.
-We emphasize the strong relations among statistical methods, matrix-algebraic
+We emphasize the strong relationships among statistical methods, matrix-algebraic
 solutions, and geometry that can often be easily understood in terms of
 ellipses.
 %Most of the statistical methods we discuss stem,
@@ -131,7 +134,7 @@ data ellipse;
 discriminant analysis;
 Francis Galton;
 hypothesis-error plots;
-kissing ellipsoids
+kissing ellipsoids;
 measurement error;
 mixed-effect models;
 multivariate meta-analysis;
@@ -156,7 +159,7 @@ both geometric and statistical. Some basic notation and properties are described
 %\input{conjugate}
 %\input{geneig}
 
-\section{The data ellipse and ellipsoids}\label{sec:data-ellipse}
+\section{The data ellipse and ellipsoid}\label{sec:data-ellipse}
 \input{dataellipse}
 
 
@@ -207,15 +210,27 @@ along with several 3D movies.
 
 This work was supported by Grant OGP0138748 from the National Sciences and Engineering Research Council of Canada to Michael Friendly,
 and by grants from the Social Sciences and Humanities Research Council of Canada to John Fox.
-We are grateful to Antonio Gasparini for helpful discussion regarding multivariate meta-analysis models.
+We are grateful to Antonio Gasparini for helpful discussion regarding multivariate meta-analysis models, to Duncan Murdoch for 
+advice on 3D graphics and comments on an earlier draft, and to the reviewers and Associate Editor for many helpful suggestions.
 
 
-%\bibliography{timeref,graphics,Rpackages,statistics}
-\bibliography{ellipses}        % processed by bibtool -- quiet=on -r ~/texmf/bibtex/bib/aux2bib.rsc -x ellipses.aux -o ellipses.bib
+\bibliography{timeref,graphics,Rpackages,statistics}
+%\bibliography{ellipses}        % processed by bibtool -- quiet=on -r ~/texmf/bibtex/bib/aux2bib.rsc -x ellipses.aux -o ellipses.bib
 %\bibliography{references}        % processed by aux2bib
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \appendix
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
 \section{Geometrical and statistical ellipsoids}
-This appendix outlines useful results and properties concerning the representation of geometric and statistical         ellipsoids.
+This appendix outlines useful results and properties concerning the representation of geometric and statistical ellipsoids.
+A number of these can be traced to or have more general descriptions within the abstract formulation of \citet{Dempster:69},
+%(henceforth, $\mathcal{D}$)
+but casting them in terms of ellipsoids provides a simpler and more easily visualized framework. 
+%Where appropriate such references are marked as $\mathcal{D}$\S.
+\input{taxonomy}
 \input{properties}
 \input{conjugate}
 \input{geneig}

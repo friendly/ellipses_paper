@@ -1,9 +1,9 @@
-\subsection[Ellipsoids in data space and beta space]{Ellipsoids in data space and $\vec{\beta}$ space}
+\subsection[Ellipsoids in data space and beta space]{Ellipsoids in data space and $\vec{\beta}$ space}\label{sec:betaspace}
 
 It is most common to look at data and fitted models in ``data space,'' where axes correspond to
 variables, points represent observations, and fitted models are plotted as lines (or planes) in this space.
 As we've suggested, data ellipsoids provide informative summaries of relationships in data space.
-For linear models, particularly regression models with quantitative predictors, there is another space---$\vec{\beta}$ space---that provides deeper views of models and the relationships among them.
+For linear models, particularly regression models with quantitative predictors, there is another space---``$\vec{\beta}$ space''---that provides deeper views of models and the relationships among them.
 In $\vec{\beta}$ space, the axes pertain to coefficients and points are models (true, hypothesized, fitted) whose coordinates
 represent values of parameters.
 
@@ -15,9 +15,9 @@ the proposition that every two lines intersect in a point in the other space.
 
 Moreover, ellipsoids in these spaces are dual and inversely related to each other.
 In data space, joint confidence intervals for the mean vector or joint prediction
-regions for the data are given by the ellipsoids $\bar{y} \oplus c \sqrt{\mat{S}}$.
+regions for the data are given by the ellipsoids $(\bar{x}_1, \bar{x}_2)\trans \oplus c \sqrt{\mat{S}}$.
 In the dual $\vec{\beta}$ space, joint confidence regions for the parameters
-are given by ellipsoids of the form $\hat{\beta} \oplus c \sqrt{\mat{S}^{-1}}$.
+are given by ellipsoids of the form $\widehat{\vec{\beta}} \oplus c \sqrt{\mat{S}^{-1}}$.
 We illustrate these relationships in the example below.
 
 \begin{figure}[htb]
@@ -30,8 +30,8 @@ We illustrate these relationships in the example below.
 \end{figure}
 
 \figref{fig:vis-reg-coffee11} shows a scatterplot matrix among the variables
-Heart ($y$), an index of cardiac damage; Coffee ($x_1$), a measure of daily
-coffee consumption; and Stress ($x_2$), a measure of occupational stress, in a contrived
+Heart ($y$), an index of cardiac damage, Coffee ($x_1$), a measure of daily
+coffee consumption, and Stress ($x_2$), a measure of occupational stress, in a contrived
 sample of $n=20$. For the sake of the example we assume that the main goal is
 to determine whether or not coffee is good or bad for your heart, and stress
 represents one potential confounding variable among others (age, smoking, etc.)
@@ -68,7 +68,7 @@ negative, though non-significant).  How can this be?
 %  \hline
  & Estimate ($\widehat{\beta}$) & Std. Error & $t$ value & Pr($>|t|$) \\ 
   \hline
-(Intercept) & -7.7943 & 5.7927 & -1.35 & 0.1961 \\ 
+  Intercept & -7.7943 & 5.7927 & -1.35 & 0.1961 \\ 
   Coffee & -0.4091 & 0.2918 & -1.40 & 0.1789 \\ 
   Stress & 1.1993 & 0.2244 & 5.34 & 0.0001 \\ 
    \hline
@@ -76,19 +76,6 @@ negative, though non-significant).  How can this be?
 \end{center}
 %\end{table}
 
-%\begin{verbatim}
-%Coefficients:
-%            Estimate Std. Error t value Pr(>|t|)
-%(Intercept)  -7.7943     5.7927  -1.346    0.196
-%Coffee       -0.4091     0.2918  -1.402    0.179
-%Stress        1.1993     0.2244   5.345 5.36e-05 ***
-%---
-%Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-%
-%Residual standard error: 10.36 on 17 degrees of freedom
-%Multiple R-squared: 0.9462,     Adjusted R-squared: 0.9399
-%F-statistic: 149.6 on 2 and 17 DF,  p-value: 1.620e-11
-%\end{verbatim}
 
 \figref{fig:vis-reg-coffee12} shows the relationship between the
 predictors in data space and how this translates into joint and
@@ -98,7 +85,7 @@ $\vec{\beta}$ space.  The left panel is the same as the corresponding
 a standard (40\%) data ellipse. The right panel shows the joint 95\% confidence
 region and the individual 95\% confidence intervals in $\vec{\beta}$ space, determined as
 \begin{equation*}
- \widehat{\beta} \oplus \sqrt{d F^{.95}_{q, \nu}} \times s_e \times \mat{S}_X^{-1/2}
+ \widehat{\vec{\beta}} \oplus \sqrt{d F^{.95}_{q, \nu}} \times s_e \times \mat{S}_X^{-1/2}
 \end{equation*}
 where $d$ is the number of dimensions for which we want coverage,
 $\nu$ is the residual degrees of freedom for $s_e$, and $\mat{S}_X$
@@ -111,9 +98,10 @@ in 95\% of samples.  Moreover:
 \begin{itemize*}
   \item Any \emph{joint} hypothesis (e.g., $H_0:\beta_{\mathrm{Stress}}=1, \beta_{\mathrm{Coffee}}=1$)
 can be tested visually, simply by observing whether the
-hypothesized point, $(1, 1)$ here, lies inside or outside the joint ellipse.
+hypothesized point, $(1, 1)$ here, lies inside or outside the joint confidence ellipse.
   \item The shadows of this ellipse on the horizontal and vertical axes
-give Scheff\'e joint 95\%  confidence intervals for each parameter, with protection for ``fishing''
+give Scheff\'e joint 95\%  confidence intervals for the parameters, with protection for 
+simultaneous inference (``fishing'')
 in a 2-dimensional space.
   \item Similarly, using the factor
 $\sqrt{F^{1-\alpha/d}_{1, \nu}} = t^{1-\alpha/2d}_\nu$ would give an
@@ -137,13 +125,15 @@ controlling for Coffee consumption.
 
 Finally, consider the relationship between the data ellipse and the
 confidence ellipse.  These have exactly the same shape, but
-(with equal coordinate scaling of the axes), the confidence ellipse
-is exactly a $90^o$ rotation of the data ellipse.  In directions in
+%(with equal coordinate scaling of the axes), 
+the confidence ellipse
+is exactly a $90^o$ rotation and rescaling of the data ellipse.  In directions in
 data space where the data ellipse is wide---where we have more information
 about the relationship between Coffee and Stress---the confidence ellipse is
 narrow, reflecting greater precision of the estimates of coefficients.
 Conversely, where the data ellipse is narrow (less information), the
-confidence ellipse is wide (less precision).
+confidence ellipse is wide (less precision). See \figref{fig:inverse}
+for the underlying geometry.
 
 \begin{figure}[htb]
   \centering
@@ -166,7 +156,7 @@ the center of the ellipse $(\widehat{\beta}_{\mathrm{Coffee}}, \widehat{\beta}_{
 through the point where the ellipse has a horizontal tangent onto the horizontal axis at
 $\beta_{\mathrm{Stress}}=0$. The thick blue line in this figure shows the confidence interval
 for the slope for Coffee in the simple regression model. The confidence interval doesn't cover the origin, so
-we reject $H_0: \beta_{\mathrm{Coffee}} = 0$ in the simple regression model.
+we reject $H_0:\beta_{\mathrm{Coffee}} = 0$ in the simple regression model.
 The oblique shadow of the red 95\% confidence-interval ellipse onto the horizontal axis
 is slightly smaller.  How much smaller is a function of the size of the coefficient for Stress.
 

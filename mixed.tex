@@ -11,14 +11,15 @@ of the best linear unbiased estimates (BLUEs) derived from OLS regressions perfo
 and pooled OLS estimates computed \emph{ignoring} clusters.
 
 The mixed model for hierarchical data provides a general framework for
-dealing with lack of independence among observations in linear models,
+dealing with dependence among observations in linear models,
 such as occurs when students are sampled within schools, schools within
-counties and so forth (e.g., citealp{}). In these situations, the assumption of OLS that
-the errors are conditionally independent is likely to be violated,
+counties, and so forth
+(e.g., \citealp{RaudenbushBryk:2002}). 
+In these situations, the assumption of OLS that
+the errors are conditionally independent is probably violated,
 because, for example, students nested within the same school are
 likely to have more similar outcomes than those from different schools. Essentially the same model, with provision for serially correlated errors, can be applied to longitudinal data (e.g., \citealp{LairdWare:1982}), although we will not pursue this application here.
 
-%\TODO{add to references: Laird, N. M. and J. H. Ware. 1982. Random-Effects Models for Longitudinal Data. Biometrics 38:963-974.}
 
 The mixed model for the $n_i \times 1$ response vector $\vec{y}_i$ in
 cluster $i$ can be given as
@@ -33,10 +34,10 @@ cluster $i$ can be given as
 where
 %$\vec{y}_i$ is the $n_i \times 1$ response vector of observations in the $i$th stratum,
 $\vec{\beta}$ is a $p \times 1$ vector of parameters corresponding to the fixed effects
-in the $n_i \times p$ model matrix $\mat{X}_i$,
+in the $n_i \times p$ model matrix $\mat{X}_i$;
 $\vec{u}_i$ is a $q \times 1$ vector of coefficients corresponding to the random effects
-in the $n_i \times q$ model matrix $\mat{Z}_i$,
-$\mat{G}$ is the $q \times q$ covariance matrix of the random effects in $\vec{u}_i$,
+in the $n_i \times q$ model matrix $\mat{Z}_i$;
+$\mat{G}$ is the $q \times q$ covariance matrix of the random effects in $\vec{u}_i$;
 and $\mat{R}_i$ is the $n_i \times n_i$ covariance matrix of the errors in $\vec{\epsilon}_i$.
 
 Stacking the $\vec{y}_i$, $\mat{X}_i$, $\mat{Z}_i$, and so forth in the obvious way then gives
@@ -74,7 +75,7 @@ separate BLUE estimate within each cluster, giving the results of a fixed-effect
  \widehat{\mat{S}}_i \equiv \widehat{\Var}(\widehat{\vec{\beta}}^{\textrm{unpooled}}_i) = \hat{\sigma}^2 \inv{(\mat{X}_i\trans \mat{X}_i)} \period
 \end{equation}
 Both extremes have drawbacks:  whereas the pooled analysis ignores variation among clusters, the unpooled analysis ignores the
-cluster-averaged result and overstates variation within each clusters, making the clusters appear to differ more than they actually do.
+cluster-averaged result and overstates variation within each cluster, making the clusters appear to differ more than they actually do.
 
 This dilemma led to the development of BLUPs in models with random effects \citep{Henderson:1975,Robinson:1991,Speed:1991}.
 In the case considered here, $\mat{Z}_i = \mat{X}_i$, and so $\widehat{\vec{u}}_i$ gives ``estimates'' of the random effects with
@@ -91,7 +92,8 @@ and $\widehat{\vec{u}}_i$ using the precision ($\Var^{-1}$) as weights,
 This ``partial pooling''optimally combines the information from cluster $i$ with the information from all clusters,
 shrinking the $\widehat{\vec{\beta}}_i$ toward $\widehat{\vec{\beta}}^{\textrm{pooled}}$. Shrinkage
 for a given parameter $\beta_{ij}$ is greater
-when the sample size $n_i$ is small or when the estimated variance of the corresponding random effects, $g_{jj}$, is small.
+when the sample size $n_i$ is small or when the estimated variance of the corresponding 
+random effect, $g_{jj}$, is small.
 
 \eqref{eq:mixed6}
 is of the same form as \eqref{eq:bayes-posterior} and other convex combinations of estimates considered

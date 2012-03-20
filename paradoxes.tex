@@ -41,7 +41,11 @@ the separate within-group slopes, $\beta_i$.
 
 \figref{fig:between-within} illustrates these estimates in a simulation of five groups, with $n_i=10$,  means
 $\bar{x}_i = 2 \, i + \mathcal{U}(-0.4, 0.4)$  and
-$\bar{y}_i = \bar{x}_i + \mathcal{N}(0, 0.5)$, so that $r_{\textrm{between}} \approx 0.95$.
+$\bar{y}_i = \bar{x}_i + \mathcal{N}(0, 0.5^2)$, 
+so that $r_{\textrm{between}} \approx 0.95$.
+Here $\mathcal{U}(a,b)$ represents the uniform distribution between $a$ and $b$, and
+$\mathcal{N}(\mu,\sigma^2)$ represents the normal distribution with mean $\mu$ and 
+variance $\sigma^2$.
 For simplicity, we have set the within-group covariance matrices to be identical in all groups, with
 $\Var(x)=6$, $\Var(y)=2$ ,and $\Cov(x,y)=\pm 3$ in the left and right panels, respectively, giving
 $r_{\textrm{within}} = \pm 0.87$.
@@ -79,7 +83,8 @@ See \figref{fig:between-HE} for a visual demonstration, using the same data  as 
   \label{fig:between-HE}
 \end{figure}
 
-The right panel of \figref{fig:between-within} provides a prototypical illustration of Simpson's paradox,
+The right panels of \figref{fig:between-within} and \figref{fig:between-HE} 
+provide a prototypical illustration of Simpson's paradox,
 where $\beta_{\textrm{within}}$ and $\beta_{\textrm{marginal}}$ can have opposite signs. Underlying this is a
 more general \emph{marginal fallacy} (requiring only substantively different estimates, but not necessarily
 different signs),
@@ -93,7 +98,7 @@ controlled. In a regression context, the antidote to the marginal fallacy is the
 plot (described in \secref{sec:avp}),
 which displays the conditional relationship between the response and a predictor directly, controlling for all other predictors.
 
-The right panel of \figref{fig:between-within} also illustrates Robinson's paradox \citep{Robinson:1950},
+The right panels of \figref{fig:between-within} and \figref{fig:between-HE} also illustrate Robinson's paradox \citep{Robinson:1950},
 where $\beta_{\textrm{within}}$ and $\beta_{\textrm{between}}$ can have opposite signs.%
 \footnote{
 William Robinson \citeyearpar{Robinson:1950} examined the relationship between literacy rate and percentage

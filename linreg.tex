@@ -31,7 +31,7 @@ These properties are also useful in more complex contexts.
 
 \subsection{Visualizing a confidence interval for the slope}
 
-A visual approximation to a 95\% confidence interval for the slope, and thus a visual test of $H_0 : \beta = 0$
+A visual approximation to a 95\% confidence interval for the slope, and thus a visual test of $H_0: \beta = 0$
 can be seen in \figref{vis-reg-prestige}.  From the formula for a 95\% confidence interval,
 $\mathrm{CI}_{.95} (\beta) = b \pm t_{n-2}^{0.975} \times \mathrm{SE}(b)$, we can take $t_{n-2}^{0.975} \approx 2$
 and
@@ -59,7 +59,7 @@ leading to
 To show this visually, the left panel of \figref{vis-reg-prestige} displays the standard data ellipse
 surrounded by the ``regression parallelogram,'' formed with the vertical tangent lines and the
 tangent lines parallel to the regression line. This corresponds to the conjugate axes of the
-ellipse induced by the Choleski factor of $S_{yx}$ as shown in \figref{fig:conjugate}.
+ellipse induced by the Choleski factor of $S_{yx}$ as shown in \figref{fig:conjugate} in \appref{sec:conjugate}.
 Simple algebra demonstrates that the diagonal lines through
 this parallelogram have slopes of
 \begin{equation*}
@@ -71,4 +71,4 @@ in the right panel of \figref{vis-reg-prestige}.
 In the data used for this
 example, $n=102$, so the factor  is approximately 0.2 here.\footnote{The data are for the rated prestige and average years of education of 102 Canadian occupations circa 1970; see \citet{FoxSuschnigg:89}.}
 Now consider the horizontal line through the center of the data ellipse.  If this line is outside the
-envelope of the confidence lines, as it is in \figref{vis-reg-prestige}, we can reject $H_0 : \beta = 0$ via this simple visual approximation.
+envelope of the confidence lines, as it is in \figref{vis-reg-prestige}, we can reject $H_0: \beta = 0$ via this simple visual approximation.

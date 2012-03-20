@@ -1,4 +1,4 @@
-\subsection{Statistical ellipsoids}
+\subsection{Statistical ellipsoids}\label{sec:statistical}
 
 In statistical applications, $\mat{C}$ will often be the inverse of a covariance
 matrix (or a sum of squares and cross-products matrix), and the ellipsoid will
@@ -26,7 +26,8 @@ properties represent the ``size'' of the ellipsoid in $\Real{p}$:
  \end{tabular}
 \medskip
 
-\noindent In multivariate tests, these correspond (with suitable transformations) to (a) Wilks's $\Lambda$,
+\noindent For testing hypotheses for parameters of multivariate linear models, these different senses of ``size''
+correspond (with suitable transformations) to (a) Wilks's $\Lambda$,
 (b) the Hotelling-Lawley  trace, (c) the Pillai trace, and (d) Roy's maximum root tests, as we describe
 below in \secref{sec:mlm}.
 
@@ -39,7 +40,7 @@ definition of an ellipsoid that can be used for all non-negative definite matric
 \mathcal{E}(\vec{\mu},\mat{W}) = \vec{\mu} + \mat{A} \mathcal{S} \comma
 \end{equation}
 where $\mathcal{S}$ is a unit sphere of conformable dimension and $\vec{\mu}$ is the centroid of the ellipsoid.
-One convenient choice of \mat{A} is the Choleski square root, $\mat{W}^{1/2}$, as we describe in \secref{sec:conjugate}.
+One convenient choice of \mat{A} is the Choleski square root, $\mat{W}^{1/2}$, as we describe in \appref{sec:conjugate}.
 Thus, for some results below, a convenient notation in terms of $\mat{W}$ is
 \begin{equation}\label{eq:ellipsoidW}
 \mathcal{E}(\vec{\mu}, \mat{W}) = \vec{\mu} \oplus \sqrt{\mat{W}} = \vec{\mu} \oplus \mat{W}^{1/2} \comma
@@ -54,6 +55,6 @@ $\mat{L}$
 the image of the ellipse is
 
 \begin{equation*}
-\mat{L}(\mathcal{E}(\vec{\mu} ,\mat{W}))=\mathcal{E}(\mat{L}\vec{\mu} ,\mat{L}\mat{W}{\mat{L}}\trans)=\mat{L}\vec{\mu} \oplus \sqrt{\mat{L}\mat{W}{\mat{L}}\trans}=\mat{L}\vec{\mu} \oplus \mat{L}\sqrt{\mat{W}} \period
+\mat{L} [ (\mathcal{E}(\vec{\mu} ,\mat{W})) ] = \mathcal{E}(\mat{L}\vec{\mu} ,\mat{L}\mat{W}{\mat{L}}\trans)=\mat{L}\vec{\mu} \oplus \sqrt{\mat{L}\mat{W}{\mat{L}}\trans}=\mat{L}\vec{\mu} \oplus \mat{L}\sqrt{\mat{W}} \period
 \end{equation*}
 
