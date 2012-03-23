@@ -9,18 +9,21 @@ degenerate (singular) ellipsoids that are ``flat'' in  $\Real{p}$ with empty int
 one dimension (collapsing to an ellipse), or in two dimensions (collapsing to a line).
 
 The motivation for this more general representation is to allow a notation for a set of general ellipsoids to be
-algebraicly closed under operations (a) image and preimage under a linear transformation and (b) inversion,
-where we can think about, visualize, and compute a linear transformation of an ellipsoid with central matrix
-$\mat{C}$ or its' inverse transformation via an analog of $\mat{C}^{-1}$, which apply equally to unbounded
-and/or degenerate ellipsoids. Applications concern the relationship between a predictor data ellipsoid and the
-corresponding $\vec{\beta}$ confidence ellipsoid (\secref{sec:betaspace}): The $\vec{\beta}$ will be unbounded (some linear combinations
+algebraicly closed under operations (a) image and preimage under a linear transformation and (b) inversion.
+The goal is to be able to think about, visualize, and \emph{compute} a linear transformation of an ellipsoid with central matrix
+$\mat{C}$ or its' inverse transformation via an analog of $\mat{C}^{-1}$, which applies equally to unbounded
+and/or degenerate ellipsoids. Geometrical applications can show how points, lines, and hyperplanes 
+in  $\Real{p}$ are all special cases of ellipsoids.
+Statistical applications concern the relationship between a predictor data ellipsoid and the
+corresponding $\vec{\beta}$ confidence ellipsoid (\secref{sec:betaspace}): The $\vec{\beta}$ ellipsoid will be unbounded (some linear combinations
 will have infinite confidence intervals) \emph{iff} the corresponding data ellipsoid is flat, as when $p>n$.
 
 Defining ellipsoids with $\{ \vec{x}: \vec{x}\trans \mat{C} \vec{x} \le 1 \}$ produces proper ellipsoids for $\mat{C}$
 positive definite and unbounded 'fat' ellipsoids for $\mat{C}$ positive semi-definite.
 But it does not produce degenerate (i.e. 'flat') ellipsoids.  On the other hand,
 the representation in \eqref{eq:ellisoidsph},
-$\mathcal{E} := \mat{A} \mathcal{S}$ produces proper ellipsoids when $\mat{C} = \left( \mat{A} \trans \mat{A} \right)^{-1}$
+$\mathcal{E} := \mat{A} \mathcal{S}$, with $\mathcal{S}$ the unit sphere,
+ produces proper ellipsoids when $\mat{C} = \left( \mat{A} \trans \mat{A} \right)^{-1}$
 where $\mat{A}$ is a non-singular $p \times p$ matrix and degenerate ellipsoids when $\mat{A}$ is a singular.
 
 One representation that works for all of fat or flat \emph{and} bounded or unbounded ellipsoids can be based on an SVD representation

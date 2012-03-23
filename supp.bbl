@@ -1,0 +1,46 @@
+\providecommand{\Loc}[1]{\textsf{#1}} \providecommand{\de}[1]{d'#1}
+  \providecommand{\Loc}[1]{\textsf{#1}}\providecommand{\SortNoop}[1]{}
+\begin{thebibliography}{6}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Adler and Murdoch(2011)}]{rgl}
+Adler, D. and Murdoch, D. (2011).
+\newblock \emph{rgl: {3D} visualization device system (OpenGL)}.
+\newblock \urlprefix\url{http://CRAN.R-project.org/package=rgl}.
+\newblock R package version 0.92.798.
+
+\bibitem[{Dempster(1969)}]{Dempster:69}
+Dempster, A.~P. (1969).
+\newblock \emph{Elements of Continuous Multivariate Analysis}.
+\newblock Reading, MA: Addison-Wesley.
+
+\bibitem[{Friendly(2011)}]{genridge}
+Friendly, M. (2011).
+\newblock \emph{genridge: Generalized ridge trace plots for ridge regression}.
+\newblock \urlprefix\url{http://CRAN.R-project.org/package=genridge}.
+\newblock R package version 0.6-0.
+
+\bibitem[{Friendly(2012)}]{Friendly:genridge:2012}
+Friendly, M. (2012).
+\newblock The generalized ridge trace plot: Visualizing bias and precision.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 21.
+\newblock \urlprefix\url{http://datavis.ca/papers/genridge.pdf}.
+\newblock In press; Accepted, 2/1/2012.
+
+\bibitem[{Monette(2011)}]{spida}
+Monette, G. (2011).
+\newblock \emph{spida: Collection of miscellaneous functions for mixed models
+  etc. prepared for SPIDA 2009}.
+\newblock \urlprefix\url{http://R-Forge.R-project.org/projects/spida/}.
+\newblock R package version 0.1-1/r28.
+
+\bibitem[{Monette \emph{et~al.}(2011)Monette, Friendly, and Fox}]{p3d}
+Monette, G., Friendly, M., and Fox, J. (2011).
+\newblock \emph{p3d: Plot 3d data and fitted surfaces}.
+\newblock \urlprefix\url{http://R-Forge.R-project.org/projects/p3d/}.
+\newblock R package version 0.02-4/r31.
+
+\end{thebibliography}

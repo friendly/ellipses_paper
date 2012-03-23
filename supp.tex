@@ -1,0 +1,239 @@
+\documentclass[11pt]{article}%\RequirePackage{snapshot}    %% to generate the .dep file
+\usepackage{times}
+\usepackage[comma]{natbib}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{mdwlist}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}        %% LaTeX symbols: \Box, etc.th}
+\usepackage{color}
+\usepackage{xr}
+\usepackage{longtable}
+\externaldocument{ellipses}
+%\usepackage[update]{epstopdf} %% convert EPS to PDF
+
+\bibliographystyle{styles/abbrvnat-apa}
+
+
+%  Abbreviations for cross-references
+\newcommand*{\figref}[1]{Figure~\ref{#1}}
+\newcommand*{\tabref}[1]{Table~\ref{#1}}
+\newcommand*{\secref}[1]{Section~\ref{#1}}
+\renewcommand*{\eqref}[1]{Eqn.~(\ref{#1})}
+\newcommand*{\appref}[1]{Appendix~\ref{#1}}
+
+%  Page dimensions
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2.2cm}
+\addtolength{\textheight}{4.4cm}
+
+% Math stuff
+%   vector and matrix expressions
+\renewcommand*{\vec}[1]{\ensuremath{\bm{#1}}}     % \vec{} is already used
+\newcommand*{\mat}[1]{\ensuremath{\bm{#1}}}
+\newcommand{\trans}{\ensuremath{^\mathsf{T}}}
+\newcommand*{\diag}[1]{\ensuremath{\mathrm{diag}\, #1}}
+\renewcommand*{\det}[1]{\ensuremath{\mathrm{det} (#1)}}
+\newcommand*{\detbracket}[1]{\ensuremath{\mathrm{det} [#1]}}
+\newcommand*{\rank}[1]{\ensuremath{\mathrm{rank} (\mat{#1})}}
+\newcommand*{\trace}[1]{\ensuremath{\mathrm{tr} (\mat{#1})}}
+\newcommand*{\dev}[1]{(#1 - \bar{#1})}
+\newcommand*{\inv}[1]{\ensuremath{\mat{#1}^{-1}}}
+\newcommand*{\half}[1]{\ensuremath{\mat{#1}^{1/2}}}
+\newcommand*{\invhalf}[1]{\ensuremath{\mat{#1}^{-1/2}}}
+\newcommand*{\nvec}[2]{\ensuremath{{#1}_{1}, {#1}_{2},\ldots,{#1}_{#2}}}
+\newcommand*{\given}{\ensuremath{\, | \,}}
+\newcommand*{\Beta}{B}
+\newcommand*{\Epsilon}{E}
+\newcommand*{\XTX}{\mat{X}\trans \mat{X}}
+\newcommand*{\XTXinv}{\inv{\mat{X}\trans \mat{X}}}
+
+%    punctuation in display equations
+\newcommand*{\period}{\:\: .}
+\newcommand*{\comma}{\:\: ,}
+
+\newcommand*{\Real}[1]{\mathbb{R}^{#1}}     % nicer looking than \Re
+\newcommand*{\degree}[1]{\ensuremath{{#1}^{\circ}}}
+\newcommand{\sizedmat}[2]{%
+  \mathord{\mathop{\mat{#1}}\limits_{(#2)}}%
+}
+\newcommand{\Var}{\ensuremath{\mathrm{Var}}}
+\newcommand{\Cov}{\ensuremath{\mathrm{Cov}}}
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+
+\newcommand*{\pkg}[1]{\textbf{#1}}     % R packages
+\newcommand*{\file}[1]{\texttt{#1}}     % files
+
+% abbreviations
+\newcommand{\MLM}{MvLM}
+
+\begin{document}
+\begin{titlepage}
+\title{Supplementary Materials for \emph{Elliptical Insights: Understanding Statistical Methods through Elliptical Geometry}}
+\author{Michael Friendly%
+%\thanks{Michael Friendly is Professor, Psychology Department,
+%York University, Toronto, ON, M3J 1P3 Canada, E-mail: friendly@yorku.ca.}
+ \\ York University
+\and
+Georges Monette \\ York University
+\and
+John Fox \\ McMaster University
+}
+\end{titlepage}
+\maketitle
+
+\section*{Suppplementary materials: Overview}
+
+This document describes the supplementary materials included for this paper.  One significant component
+is the material in the \appref{sec:Appendix} of this document describing the properties of geometrical and statistical
+ellipsoids in greater detail than was allowed in the printed version of the paper.
+
+As mentioned in our Discussion
+(paper: \secref{sec:discussion}), one goal of the paper is to make the links between statistical methods, matrix algebra
+and geometry explicit. Another goal is make our illustrations all statistically and geometrically 
+as nearly exact as possible, and reproducible in standard software (SAS and R).  The supplementary materials
+for these goals are described in \appref{sec:SASandR}.  We also provide some animated movies of 3D
+graphs, as described in \appref{sec:movies}
+
+We understand that all of the materials mentioned below will be provided in some form on the publisher's
+web site.  The same materials, in a form that we can update and possibly extend, will be provided
+at the first author's web site, \url{http://datavis.ca/papers/ellipses}. 
+
+\appendix
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\section{Geometrical and statistical ellipsoids}\label{sec:Appendix}
+This appendix outlines useful results and properties concerning the representation of geometric and statistical ellipsoids.
+A number of these can be traced to or have more general descriptions within the abstract formulation of \citet{Dempster:69},
+%(henceforth, $\mathcal{D}$)
+but casting them in terms of ellipsoids provides a simpler and more easily visualized framework. 
+%Where appropriate such references are marked as $\mathcal{D}$\S.
+\input{taxonomy}
+\input{properties}
+\input{conjugate}
+\input{geneig}
+
+\section{SAS and R code for figures}\label{sec:SASandR}
+
+We provide the source code used to generate all of the figures with this supplement in the file
+\newline
+\file{ellipses-suppfiles.zip}.
+It should
+be noted that these illustrations were developed over a considerable period of time, using a collection
+of general SAS macro programs and R packages by the authors and others (listed below). It often happened
+that these software tools were not sufficiently general or capable for our purposes.  In many cases the
+SAS macros and R packages were extended (or a new package was written, e.g., 
+the \pkg{genridge} package \citep{genridge,Friendly:genridge:2012} for the material on ridge trace plots in
+\secref{sec:ridge2})
+to make these analyses and figures easier to do in the future. However, once we enhanced the SAS macros
+or R packages, we did not often go back and re-do the figures using the revised tools.  
+
+\subsection{Macros and R packages}
+The SAS programs use a collection of SAS macros, available from the website \url{http://datavis.ca/sasmac/}.
+See  \url{http://datavis.ca/books/sssg/usage.html} for installation and usage notes.
+
+The following R packages beyond those standardly installed with R itself are available from any
+CRAN mirror site, e.g., \url{http://cran.us.r-project.org}:
+\pkg{candisc}, \pkg{car}, \pkg{ellipse}, \pkg{heplots}, \pkg{mvmeta}, \pkg{sfsmisc}.
+Two other package, still under development by the authors are available from the R-Forge server,
+\url{http://r-forge.r-project.org}: \pkg{p3d} \citep{p3d} and \pkg{spida} \citep{spida}.
+
+\subsection{Visual directory for figures}
+SAS and R source files are containted in the directories \file{SAS/} and \file{R/} respectively.
+The table below shows thumbnails of the figures together with the name of the SAS or R source file.
+\newcommand{\Figure}[3]{%
+  \begin{tabular}[b]{c}
+    Fig. #1 \\\textbf{#3} \\ \includegraphics[width=.2\textwidth,clip]{#2} 
+\end{tabular} 
+}
+
+\begin{longtable}{cccc}
+\hline
+\multicolumn{4}{c}{\textbf{\large Paper}} \\ \hline
+\Figure{ 2}{fig/galton-reg3}{SAS/galton-reg3.sas}       &
+\Figure{ 3}{fig/scatirisd1}{SAS/scatirisd.sas}          &
+\Figure{ 4}{fig/ellipses-demo}{R/ellipses-demo.R}       &
+\Figure{ 5}{fig/vis-reg-prestige1}{R/vis-reg-prestige.R} \\ \hline
+\Figure{ 6}{fig/contiris3}{SAS/contiris.sas}            &
+\Figure{ 7}{fig/between-within1}{R/between-within.R}    &
+\Figure{ 8}{fig/between-HE1}{R/between-within.R}        &
+\Figure{ 9}{fig/levdemo21}{SAS/levdemo2.sas}             \\  \hline       
+\Figure{11}{fig/vis-reg-coffee11}{R/vis-reg-coffee1.R}  &
+\Figure{12}{fig/vis-reg-coffee12a}{R/vis-reg-coffee1.R} &
+\Figure{13}{fig/vis-reg-coffee13}{R/vis-reg-coffee1.R}  &
+\Figure{14}{fig/coffee-stress1}{R/coffee-stress.R}        \\ \hline
+\Figure{15}{fig/coffee-measerr}{R/coffee-measerr.R}     &
+\Figure{16}{fig/coffee-avplot1}{R/coffee-avPlots.R}     &
+\Figure{17}{fig/coffee-av3D-1}{R/coffee-av3D.R}         &
+\Figure{18}{fig/coffee-avplot3}{R/coffee-avPlots.R}       \\ \hline
+\Figure{19}{fig/mtests}{R/mtests.R}                     &
+\Figure{20}{fig/heplot3a}{SAS/heplot3a.sas}             &
+\Figure{21}{fig/HE-contrasts-iris}{R/HE-contrasts-iris.R} &
+\Figure{22}{fig/HE-can-iris}{R/HE-can-iris.R}             \\ \hline
+\Figure{23}{fig/kiss-demo}{R/kiss-demo.R}               &
+\Figure{24}{fig/kiss-demo2a}{R/kiss-demo2.R}            &
+\Figure{25}{fig/ridge-demo}{R/ridge-demo.R}             &
+\Figure{26}{fig/ridge2}{R/ridge2.R}                        \\ \hline   
+\Figure{27}{fig/hsbmix41}{SAS/hsbmix4.sas}              &
+\Figure{28}{fig/hsbmix43}{SAS/hsbmix4.sas}              &
+\Figure{29}{fig/mvmeta2a}{R/mvmeta2.R}                  &  \\ \hline
+% 
+\hline
+\multicolumn{4}{c}{\textbf{\large Appendix}} \\ \hline
+\Figure{A.1}{fig/gell3d-1}{R/gell3d.R}                  &
+\Figure{A.2}{fig/inverse}{R/inverse.R}                  &
+\Figure{A.3}{fig/conjugate1}{R/conjugate.R}             &
+\Figure{A.4}{fig/ellipse-geneig1}{R/ellipse-geneig.R}      \\
+\hline
+%\end{tabular}
+\end{longtable}
+
+\section{Movies}\label{sec:movies}
+Several 3D figures in the paper or this supplementary Apppendix are rendered as static images from different views
+in the print version.  These include \figref{fig:coffee-av3D} and \figref{fig:gell3d}, reproduced below.
+
+\begin{figure}[htb]
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/coffee-av3D-1}
+%  \caption{}%
+%  \label{fig:}
+ \end{minipage}%
+ \hfill
+ \begin{minipage}[b]{.49\linewidth}
+  \centering
+  \includegraphics[width=1\linewidth]{fig/gell3d-4}
+ \end{minipage}
+  \caption{Left: 3D view of the relationship between Heart, Coffee and Stress, from paper:\figref{fig:coffee-av3D}; source: \file{R/coffee-av3D.R}.
+  Right: 3D view of an example of generalized ellipsoids, from \figref{fig:gell3d}: source: \file{R/gell3d.R}.  
+  }
+  \label{fig:supp3D}
+\end{figure}
+
+These were generated using the \pkg{rgl} package in R \citep{rgl}, 
+which allows such 3D views to be rotated, zoomed
+and otherwise manipulated in 3D space manually, and also supports making animated movies. The movies we created
+are contained in the \file{movies/} directory.
+
+% \appendix
+% \numberwithin{equation}{section}
+% \numberwithin{figure}{section}
+% \section{Geometrical and statistical ellipsoids}\label{sec:Appendix}
+% This appendix outlines useful results and properties concerning the representation of geometric and statistical ellipsoids.
+% A number of these can be traced to or have more general descriptions within the abstract formulation of \citet{Dempster:69},
+% (henceforth, $\mathcal{D}$)
+% but casting them in terms of ellipsoids provides a simpler and more easily visualized framework. 
+% Where appropriate such references are marked as $\mathcal{D}$\S.
+% \input{taxonomy}
+% \input{properties}
+% \input{conjugate}
+% \input{geneig}
+
+\bibliography{timeref,graphics,Rpackages,statistics}
+%\bibliography{supp}        % processed by bibtool -- quiet=on -r ~/texmf/bibtex/bib/aux2bib.rsc -x supp.aux -o supp.bib
+
+\end{document}
+

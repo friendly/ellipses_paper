@@ -1,49 +1,54 @@
 # texdepend, v0.96 (Michael Friendly (friendly@yorku.ca))
 # commandline: texdepend -format=1 -print=f ellipses
 # FIGS =
+#            Figure files                 Source files
+# 
 Figure 01:  fig/galton-corr.eps
-Figure 02:  fig/inverse.eps
-Figure 03a: fig/conjugate1.eps
-Figure 03b: fig/conjugate2.eps
-Figure 04a: fig/ellipse-geneig1.eps
-Figure 04b: fig/ellipse-geneig2.eps
-Figure 05:  fig/galton-reg3.eps
-Figure 06a: fig/scatirisd1.eps
-Figure 06b: fig/scatirisd3.eps
-Figure 07:  fig/ellipses-demo.eps
-Figure 08a: fig/vis-reg-prestige1.eps
-Figure 08b: fig/vis-reg-prestige2.eps
-Figure 09:  fig/contiris3.eps
-Figure 10a: fig/between-within1.eps
-Figure 10b: fig/between-within2.eps
-Figure 11a: fig/between-HE1.eps
-Figure 11b: fig/between-HE2.eps
-Figure 12:  fig/levdemo21.eps
-Figure 13:  fig/levdemo22.eps
-Figure 14:  fig/vis-reg-coffee11.eps
-Figure 15a: fig/vis-reg-coffee12a.eps
-Figure 15b: fig/vis-reg-coffee12b.eps
-Figure 16:  fig/vis-reg-coffee13.eps
-Figure 17a: fig/coffee-stress1.eps
-Figure 17b: fig/coffee-stress2.eps
-Figure 18:  fig/coffee-measerr.eps
-Figure 19a: fig/coffee-avplot1.eps
-Figure 19b: fig/coffee-avplot2.eps
-Figure 20a: fig/coffee-av3D-1.eps
-Figure 20b: fig/coffee-av3D-2.eps
-Figure 21a: fig/coffee-avplot3.eps
-Figure 21b: fig/coffee-avplot4.eps
-Figure 22:  fig/mtests.eps
-Figure 23:  fig/heplot3a.eps
-Figure 24:  fig/HE-contrasts-iris.eps
-Figure 25:  fig/HE-can-iris.eps
-Figure 26:  fig/kiss-demo.eps
-Figure 27a:  fig/kiss-demo2a.eps
-Figure 27b:  fig/kiss-demo2b.eps
-Figure 28:  fig/ridge-demo.eps
-Figure 29:  fig/ridge2.eps
-Figure 30a:  fig/hsbmix41.eps
-Figure 30b:  fig/hsbmix42.eps
-Figure 31:  fig/hsbmix43.eps
-Figure 32a:  fig/mvmeta2a.eps
-Figure 32b:  fig/mvmeta2b.eps
+Figure 02:  fig/galton-reg3.eps          SAS/galton-reg3.sas
+Figure 03a: fig/scatirisd1.eps           SAS/scatirisd.sas
+Figure 03b: fig/scatirisd3.eps           SAS/scatirisd.sas
+Figure 04:  fig/ellipses-demo.eps        R/ellipses-demo.R
+Figure 05a: fig/vis-reg-prestige1.eps    R/vis-reg-prestige.R
+Figure 05b: fig/vis-reg-prestige2.eps    R/vis-reg-prestige.R
+Figure 06:  fig/contiris3.eps            SAS/contiris.sas
+Figure 07a: fig/between-within1.eps      R/between-within.R
+Figure 07b: fig/between-within2.eps      R/between-within.R
+Figure 08a: fig/between-HE1.eps          R/between-within.R
+Figure 08b: fig/between-HE2.eps          R/between-within.R
+Figure 09:  fig/levdemo21.eps            SAS/levdemo2.sas
+Figure 10:  fig/levdemo22.eps            SAS/levdemo2.sas
+Figure 11:  fig/vis-reg-coffee11.eps     R/vis-reg-coffee1.R
+Figure 12a: fig/vis-reg-coffee12a.eps    R/vis-reg-coffee1.R
+Figure 12b: fig/vis-reg-coffee12b.eps    R/vis-reg-coffee1.R
+Figure 13:  fig/vis-reg-coffee13.eps     R/vis-reg-coffee1.R
+Figure 14a: fig/coffee-stress1.eps       R/coffee-stress.R
+Figure 14b: fig/coffee-stress2.eps       R/coffee-stress.R
+Figure 15:  fig/coffee-measerr.eps       R/coffee-measerr.R
+Figure 16a: fig/coffee-avplot1.eps       R/coffee-avPlots.R
+Figure 16b: fig/coffee-avplot2.eps       R/coffee-avPlots.R
+Figure 17a: fig/coffee-av3D-1.eps        R/coffee-av3D.R
+Figure 17b: fig/coffee-av3D-2.eps        R/coffee-av3D.R
+Figure 18a: fig/coffee-avplot3.eps       R/coffee-avPlots.R
+Figure 18b: fig/coffee-avplot4.eps       R/coffee-avPlots.R
+Figure 19:  fig/mtests.eps               R/mtests.R
+Figure 20:  fig/heplot3a.eps             SAS/heplot3a.sas
+Figure 21:  fig/HE-contrasts-iris.eps    R/HE-contrasts-iris.R
+Figure 22:  fig/HE-can-iris.eps          R/HE-can-iris.R
+Figure 23:  fig/kiss-demo.eps            R/kiss-demo.R
+Figure 24a: fig/kiss-demo2a.eps          R/kiss-demo2.R
+Figure 24b: fig/kiss-demo2b.eps          R/kiss-demo2.R
+Figure 25:  fig/ridge-demo.eps           R/ridge-demo.R
+Figure 26:  fig/ridge2.eps               R/ridge2.R
+Figure 27a: fig/hsbmix41.eps             SAS/hsbmix4.sas
+Figure 27b: fig/hsbmix42.eps             SAS/hsbmix4.sas
+Figure 28:  fig/hsbmix43.eps             SAS/hsbmix4.sas
+Figure 29a: fig/mvmeta2a.eps             R/mvmeta2.R
+Figure 29b: fig/mvmeta2b.eps             R/mvmeta2.R
+
+Figure A.1a: fig/gell3d-1.eps            R/gell3d.R
+Figure A.1b: fig/gell3d-4.eps            R/gell3d.R
+Figure A.2:  fig/inverse.eps             R/inverse.R
+Figure A.3a: fig/conjugate1.eps          R/conjugate.R
+Figure A.3a: fig/conjugate2.eps          R/conjugate.R
+Figure A.4a: fig/ellipse-geneig1.eps     R/ellipse-geneig.R
+Figure A.4b: fig/ellipse-geneig2.eps     R/ellipse-geneig.R
