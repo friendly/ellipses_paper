@@ -6,11 +6,11 @@ $\mat{A}=\left[
    \vec{a}_{1}, \vec{a}_{2}, \cdots, \vec{a}_{p}  \\
 \right]
 $
-form a set of ``conjugate axes'' of the ellipse. (Two diameters are conjugate \emph{iff}
+form a set of ``conjugate axes'' of the ellipsoid. (Two diameters are conjugate \emph{iff}
 the tangent line at the endpoint of one diameter is parallel to the other diameter.)
 Each vector
 $\vec{a}_{i}$
-lies on the ellipse, and the tangent hyperplane at that point is parallel to the span of all the other column vectors of
+lies on the ellipsoid, and the tangent hyperplane at that point is parallel to the span of all the other column vectors of
 $\vec{A}$.
 \begin{figure}[htb]
  \begin{minipage}[b]{.49\linewidth}
@@ -22,9 +22,9 @@ $\vec{A}$.
   \centering
   \includegraphics[width=1\linewidth]{fig/conjugate2}
  \end{minipage}
-\caption{Conjugate axes of an ellipsoid with various factorizations of $\mat{W}$ and corresponding
+\caption{Conjugate axes of an ellipse with various factorizations of $\mat{W}$ and corresponding
 basis vectors.
-The conjugate vectors lie on the ellipsoid, and their tangents can be extended to form a parallelogram framing it.
+The conjugate vectors lie on the ellipse, and their tangents can be extended to form a parallelogram framing it.
 Left: for an arbitrary factorization, given in \eqref{eq:fac1}.
 Right: for the Choleski factorization (solid, green, $b_1, b_2$) and the principal component factorization (dashed, brown, $c_1, c_2$).
 }
@@ -53,12 +53,15 @@ in which
 \end{equation}
 
 Consider the inner-product space with inner product matrix 	
-$\mat{W}^{-1}=\left[ \begin{matrix}	
+\begin{equation*}
+\mat{W}^{-1}=\left[ \begin{matrix}	
 1.25 & -0.875 \\	
 -0.875 & 0.8125 \\	
 \end{matrix} \right]
-$ and inner product	
-\begin{equation*}
+\quad\quad\mbox{and inner product}\quad\quad
+%\end{equation*} 	
+%and inner product	
+%\begin{equation*}
 \left\langle \vec{x},\vec{y} \right\rangle =\vec{{x}'W}^{-1}\vec{y} \period
 \end{equation*} 	
 Because	
@@ -97,7 +100,7 @@ The Choleski factorization is unique in this respect, subject to a
 permutation of the rows and columns of \mat{W}. 
 The subspace $\{ c_1 \vec{b}_1 + ... + c_{p-1} \vec{b}_{p-1}  , c_i \in \mathbb{R}\}$, is the plane of the regression of the last variable on the others, a fact that generalizes naturally to ellipsoids that are not necessarily centerered at the origin.  %% added fact /GM  
 
-In the principal-component (PC) factorization (shown dashed in brown) $\mat{W}=\mat{C} \mat{C}\trans$, where
+In the principal-component (PC) factorization (shown dashed in brown in \figref{fig:conjugate}, right) $\mat{W}=\mat{C} \mat{C}\trans$, where
 $\mat{C}=\mat{\Gamma \Lambda }^{1/2}$
 and hence
 $\mat{W}=\mat{\Gamma \Lambda {\Gamma }'}$

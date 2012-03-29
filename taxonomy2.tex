@@ -3,14 +3,14 @@
 $\mathcal{E} := \{ \vec{x}: \vec{x}\trans \mat{C} \vec{x} \le 1 \}$ that is bounded with non-empty interior (call these ``fat'' ellipsoids).
 For more general purposes, particularly for statistical applications,
 it is useful to give ellipsoids a wider definition.
-To give a complete taxonomy, this wider definition should also include ellipsoids that may be unbounded in some directions in $\Real{p}$
+To provide a complete taxonomy, this wider definition should also include ellipsoids that may be unbounded in some directions in $\Real{p}$
 (an infinite cylinder of ellipsoidal cross-section) and
 degenerate (singular) ellipsoids that are ``flat'' in  $\Real{p}$ with empty interior, such as when a 3D ellipsoid has no extent in
 one dimension (collapsing to an ellipse), or in two dimensions (collapsing to a line).  These ideas are made precise below
 with a definition of the \emph{signature}, $\mathcal{G}(\mat{C})$, of a generalized ellipsoid.
 
-The motivation for this more general representation is to allow a notation for a set of general ellipsoids to be
-algebraicly closed under operations (a) image and preimage under a linear transformation and (b) inversion.
+The motivation for this more general representation is to allow a notation for a class of generalized ellipsoids to be
+algebraicly closed under operations (a) image and preimage under a linear transformation, and (b) inversion.
 The goal is to be able to think about, visualize, and \emph{compute} a linear transformation of an ellipsoid with central matrix
 $\mat{C}$ or its inverse transformation via an analog of $\mat{C}^{-1}$, which applies equally to unbounded
 and/or degenerate ellipsoids. 
@@ -22,15 +22,16 @@ corresponding $\vec{\beta}$ confidence ellipsoid (\secref{sec:betaspace}): The $
 will have infinite confidence intervals) \emph{iff} the corresponding data ellipsoid is flat, as when $p>n$ or some predictors are collinear.
 
 Defining ellipsoids with $\{ \vec{x}: \vec{x}\trans \mat{C} \vec{x} \le 1 \}$ produces proper ellipsoids for $\mat{C}$
-positive definite and unbounded 'fat' ellipsoids for $\mat{C}$ positive semi-definite.
-But it does not produce degenerate (i.e. 'flat') ellipsoids.  On the other hand,
+positive definite and unbounded, fat ellipsoids for $\mat{C}$ positive semi-definite.
+But it does not produce degenerate (i.e. flat) ellipsoids.  On the other hand,
 the representation in \eqref{eq:ellisoidsph},
 $\mathcal{E} := \mat{A} \mathcal{S}$, with $\mathcal{S}$ the unit sphere,
  produces proper ellipsoids when $\mat{C} = \left( \mat{A} \trans \mat{A} \right)^{-1}$
 where $\mat{A}$ is a non-singular $p \times p$ matrix and degenerate ellipsoids when $\mat{A}$ is a singular, but does not
 produce unbounded ellipsoids.
 
-One representation that works for all of fat or flat \emph{and} bounded or unbounded ellipsoids can be based on an SVD representation
+One representation that works for all ellipsoids---fat or flat \emph{and} bounded or unbounded---can be based on 
+a singular value decomposition (SVD) representation
 $\mat{A}  = \mat{U} \mat{\Delta} \mat{V}\trans$, with
 \begin{equation}
  \mathcal{E} := \mat{U} (\mat{\Delta} \mathcal{S}) \comma
@@ -45,7 +46,7 @@ The `inverse' of an ellipsoid $\mathcal{E}$ is then simply $\mat{U} (\mat{\Delta
 The connection with traditional representations is that,
 if $\mat{\Delta}$ is finite,
 $\mat{A}  = \mat{U} \mat{\Delta} \mat{V}\trans$
-where $\mat{V}$ can be any orthogonal matrix and
+where $\mat{V}$ can be any orthogonal matrix, and
 if $\mat{\Delta}^{-1}$ is finite, $\mat{C} = \mat{U} \mat{\Delta}^{-2} \mat{U}\trans$.
 
 \begin{figure}[htb]
@@ -61,7 +62,9 @@ if $\mat{\Delta}^{-1}$ is finite, $\mat{C} = \mat{U} \mat{\Delta}^{-2} \mat{U}\t
 \caption{Two views of an example of generalized ellipsoids.  $\mat{C}_1$  (blue) determines a proper, fat ellipsoid;
 its inverse $\mat{C}_1^{-1}$ also generates a proper ellipsoid. $\mat{C}_2$  (red) determines an improper, flat ellipsoid,
 whose inverse $\mat{C}_2^{-1}$ is an unbounded cylinder of elliptical cross section.  The scale of these images is defined
-by a unit sphere (gray). The right panel shows a view illustrating the orthogonality of each $\mat{C}$ and its dual,  $\mat{C}^{-1}$.
+by a unit sphere (gray). The left panel shows that $\mat{C}_2$ is a projection of  $\mat{C}_1$ onto the plane where
+$z=0$.
+The right panel shows a view illustrating the orthogonality of each $\mat{C}$ and its dual,  $\mat{C}^{-1}$.
 }
 \label{fig:gell3d}
 \end{figure}
@@ -69,15 +72,15 @@ by a unit sphere (gray). The right panel shows a view illustrating the orthogona
 The $\mat{U} (\mat{\Delta} \mathcal{S})$ representation also allow us to characterize any such
 generalized ellipsoid in $\Real{p}$ by its \emph{signature},
 \begin{equation}
- \mathcal{G}(\mat{C}) = [ \#(\delta_i >0), \#(\delta_i =0), \#(\delta_i =\infty) ] \quad \mbox{with} \quad \sum \mathcal{G}(\mat{C}) = p\comma
+ \mathcal{G}(\mat{C}) = \#[ \delta_i >0, \: \delta_i =0, \: \delta_i =\infty ] \quad \mbox{with} \quad \sum \mathcal{G}(\mat{C}) = p\comma
 \end{equation}
-a 3-vector containing the number of positive, zero and infinite singular values.  For example, in $\Real{3}$, any proper ellipsoid has
-the signature $\mathcal{G}(\mat{C})=(3, 0, 0)$, a flat, 2D ellipsoid has $\mathcal{G}(\mat{C})=(2, 1, 0)$, a flat, 1D ellipsoid (a line)
+a 3-vector containing the number ($\#$) of positive, zero and infinite singular values.  For example, in $\Real{3}$, any proper ellipsoid has
+the signature $\mathcal{G}(\mat{C})=(3, 0, 0)$; a flat, 2D ellipsoid has $\mathcal{G}(\mat{C})=(2, 1, 0)$; a flat, 1D ellipsoid (a line)
 has $\mathcal{G}(\mat{C})=(1, 2, 0)$. Unbounded examples include an infinite flat plane, with $\mathcal{G}(\mat{C})=(0, 1, 2)$,
 and an infinite cylinder of elliptical cross-section, with $\mathcal{G}(\mat{C})=(2, 0, 1)$.
 
 
-\figref{fig:gell3d} illustrates these ideas, using two generating matrices, $\mat{C}_1$ and $\mat{C}_2$ in this more
+\figref{fig:gell3d} illustrates these ideas, using two generating matrices, $\mat{C}_1$ and $\mat{C}_2$, in this more
 general representation,
 \[
 \mat{C}_1 = \left[
@@ -99,6 +102,6 @@ general representation,
 where $\mat{C}_1$ generates a proper ellipsoid and $\mat{C}_2$ generates an improper, flat ellipsoid.
  $\mat{C}_1$ and its dual,  $\mat{C}_1^{-1}$ both have signatures $(3, 0, 0)$.
 $\mat{C}_2$ has the signature $(2, 1, 0)$, while its inverse (dual) has the signature $(2, 0, 1)$.
-These varieties of ellipsoids are more easily seen in the 3D movies included in the online supplements.
+These varieties of ellipsoids are more easily understood in the 3D movies included in the online supplements.
 
 %\TODO{Check this section: it is complete enough? Could it be trimmed?} 

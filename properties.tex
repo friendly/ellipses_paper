@@ -4,7 +4,7 @@
  \item Translation: An ellipsoid centered at $\vec{x}_0$ has the definition $\mathcal{E} := \{ \vec{x}: (\vec{x}-\vec{x}_0)\trans \mat{C} (\vec{x}-\vec{x}_0) =1
  \}$ or $\mathcal{E} := \vec{x}_0 \oplus\mat{A} \mathcal{S}$ in the notation of \secref{sec:statistical}.
 
- \item Orthogonality: If $\mat{C}$ is diagonal, the origin-centered ellipsoid has its axes aligned with the coordinate axes, and
+ \item Orthogonality: If $\mat{C}$ is diagonal, then the origin-centered ellipsoid has its axes aligned with the coordinate axes and
 has the equation
 \begin{equation}\label{eq:ellisoid2}
  \vec{x}\trans \mat{C} \vec{x} = c_{11} x_1^2 + c_{22} x_2^2 + \cdots + c_{pp} x_p^2 =1 \comma
@@ -14,14 +14,15 @@ where $1/\sqrt{c_{ii}} = c_{ii}^{-1/2}$ are the radii (semi-diameter lengths) al
  \item Area and volume: In two dimensions, the area of the axis-aligned ellipse is $\pi (c_{11} c_{22})^{-1/2}$.
  For $p=3$, the volume is $\frac{4}{3}\pi (c_{11} c_{22} c_{33})^{-1/2}$.
  In the general case, the hypervolume of the ellipsoid is proportional to $|\mat{C}|^{-1/2}=||\mat{A}||$
- and is given by $\pi^{p/2} \det{\mat{C}}^{-1/2} / \left[  \Gamma\left(\frac{p}{2}+1\right) \right]$,
+ and is given by $\pi^{p/2} \det{\mat{C}}^{-1/2} / \left[  \Gamma\left(\frac{p}{2}+1\right) \right]$
+ ($\mathcal{D}$ \S 3.5),
  where the first two factors are familiar as the normalizing constant of the multivariate normal 
  density function.
 
 \begin{figure}[tb]
   \centering
   \includegraphics[width=.5\textwidth,clip]{fig/inverse}
-  \caption{Some properties of geometric ellipsoids. Principal axes of an ellipsoid are given by the eigenvectors of
+  \caption{Some properties of geometric ellipsoids, shown in 2D. Principal axes of an ellipsoid are given by the eigenvectors of
   $\mat{C}$, with radii $1/\sqrt{\lambda_i}$.  For an ellipsoid defined by \eqref{eq:ellisoid1},
   the comparable ellipsoid for $2\mat{C}$ has radii multiplied by $1/\sqrt{2}$.
   The ellipsoid for $\mat{C}^{-1}$ has the same principal axes, but with radii $\sqrt{\lambda_i}$, making it
@@ -41,8 +42,9 @@ with the same dimension as $\mat{A}$.
 The column vectors of $\mat{U}$, called the left singular vectors,
 correspond to the eigenvectors of $\mat{C}$ in the case of a proper ellipsoid.
 The positive diagonal elements of $\mat{D}$, $d_1 > d_2 > ... > d_p>0$,
-are the principal radii of the ellipse with $d_i = 1/\sqrt{\lambda_i}$.
-In the singular case, the left singular vectors form a set of principal axes for the flattened ellipsoid.\footnote{Corresponding left singular vectors and eigenvectors are not necessarily equal but sets that belong to the same eigenvalue/singular value span the same space.}
+are the principal radii of the ellipsoid with $d_i = 1/\sqrt{\lambda_i}$.
+In the singular case, the left singular vectors form a set of principal axes for the flattened ellipsoid.%
+\footnote{Corresponding left singular vectors and eigenvectors are not necessarily equal, but sets that belong to the same eigenvalue/singular value span the same space.}
 
  \item Inverse: When $\mat{C}$ is positive definite, the eigenvectors of \mat{C} and $\mat{C}^{-1}$ are identical, while
 the
@@ -88,7 +90,8 @@ the matrices
 \]
 project, respectively, an ellipse onto the line $x_1 = x_2$, and an ellipsoid into the ($x_1, x_2$) plane.  If $\mat{P}$ is symmetric, then $\mat{P}$ is the matrix of an orthogonal projection, and it is easy to visualize  $\mat{P} \mathcal{E}$ as the shadow of  $\mathcal{E}$ cast perpendicularly onto  $\mathrm{span}(\mat{P})$. Generally,  $\mat{P} \mathcal{E}$ is the shadow of $\mathcal{E}$  onto  $\mathrm{span}(\mat{P})$ along the null space of $\mat{P}$.
 
- \item Linear transformations: A linear transformation of an ellipsoid is an ellipsoid, and the pre-image of an ellipsoid under a linear transformation is an ellipsoid.  A non-singular linear transformation maps a proper ellipsoid into a proper ellipsoid.
+ \item Linear transformations: A linear transformation of an ellipsoid is an ellipsoid, and the pre-image of an ellipsoid under a linear transformation is an ellipsoid.  
+A non-singular linear transformation maps a proper ellipsoid into a proper ellipsoid in the form shown in \secref{sec:statistical}, \eqref{eq:Limage}. 
 
  \item Slopes and tangents: The slopes of the ellipsoidal surface in the directions of the coordinate
  axes are given by $\partial / \partial \vec{x} \: (\vec{x}\trans \mat{C} \vec{x}) = 2 \mat{C} \vec{x}$.

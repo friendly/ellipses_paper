@@ -88,12 +88,12 @@ John Fox \\ McMaster University
 \section*{Suppplementary materials: Overview}
 
 This document describes the supplementary materials included for this paper.  One significant component
-is the material in the \appref{sec:Appendix} of this document describing the properties of geometrical and statistical
-ellipsoids in greater detail than was allowed in the printed version of the paper.
+is the material in  \appref{sec:Appendix}  describing the properties of geometrical and statistical
+ellipsoids in greater detail than was possible in the printed version of the paper.
 
 As mentioned in our Discussion
-(paper: \secref{sec:discussion}), one goal of the paper is to make the links between statistical methods, matrix algebra
-and geometry explicit. Another goal is make our illustrations all statistically and geometrically 
+(\secref{sec:discussion} of the paper), one goal of this work is to make the links between statistical methods, matrix algebra
+and geometry explicit. Another goal is make our illustrations statistically and geometrically 
 as nearly exact as possible, and reproducible in standard software (SAS and R).  The supplementary materials
 for these goals are described in \appref{sec:SASandR}.  We also provide some animated movies of 3D
 graphs, as described in \appref{sec:movies}
@@ -128,8 +128,8 @@ that these software tools were not sufficiently general or capable for our purpo
 SAS macros and R packages were extended (or a new package was written, e.g., 
 the \pkg{genridge} package \citep{genridge,Friendly:genridge:2012} for the material on ridge trace plots in
 \secref{sec:ridge2})
-to make these analyses and figures easier to do in the future. However, once we enhanced the SAS macros
-or R packages, we did not often go back and re-do the figures using the revised tools.  
+to make these analyses and figures easier to do in the future. Once we enhanced the SAS macros
+or R packages, however, we did not often go back and re-do the figures using the revised tools.  
 
 \subsection{Macros and R packages}
 The SAS programs use a collection of SAS macros, available from the website \url{http://datavis.ca/sasmac/}.
@@ -138,12 +138,14 @@ See  \url{http://datavis.ca/books/sssg/usage.html} for installation and usage no
 The following R packages beyond those standardly installed with R itself are available from any
 CRAN mirror site, e.g., \url{http://cran.us.r-project.org}:
 \pkg{candisc}, \pkg{car}, \pkg{ellipse}, \pkg{heplots}, \pkg{mvmeta}, \pkg{sfsmisc}.
-Two other package, still under development by the authors are available from the R-Forge server,
-\url{http://r-forge.r-project.org}: \pkg{p3d} \citep{p3d} and \pkg{spida} \citep{spida}.
+Three other packages, still under development by the authors are available from the R-Forge server,
+\url{http://r-forge.r-project.org}: \pkg{p3d} \citep{p3d} and \pkg{spida} \citep{spida};
+\pkg{gellipsoid} implements generalized ellipsoids as described in \appref{sec:Appendix}.
 
 \subsection{Visual directory for figures}
-SAS and R source files are containted in the directories \file{SAS/} and \file{R/} respectively.
-The table below shows thumbnails of the figures together with the name of the SAS or R source file.
+SAS and R source files are contained in the directories \file{SAS/} and \file{R/} respectively.
+The table below shows thumbnails of the figures together with the name of the 
+corresponding SAS or R source file.
 \newcommand{\Figure}[3]{%
   \begin{tabular}[b]{c}
     Fig. #1 \\\textbf{#3} \\ \includegraphics[width=.2\textwidth,clip]{#2} 
@@ -193,7 +195,7 @@ The table below shows thumbnails of the figures together with the name of the SA
 
 \section{Movies}\label{sec:movies}
 Several 3D figures in the paper or this supplementary Apppendix are rendered as static images from different views
-in the print version.  These include \figref{fig:coffee-av3D} and \figref{fig:gell3d}, reproduced below.
+in the print version.  These figures include \figref{fig:coffee-av3D} and \figref{fig:gell3d}, reproduced below.
 
 \begin{figure}[htb]
  \begin{minipage}[b]{.49\linewidth}
@@ -207,7 +209,7 @@ in the print version.  These include \figref{fig:coffee-av3D} and \figref{fig:ge
   \centering
   \includegraphics[width=1\linewidth]{fig/gell3d-4}
  \end{minipage}
-  \caption{Left: 3D view of the relationship between Heart, Coffee and Stress, from paper:\figref{fig:coffee-av3D}; source: \file{R/coffee-av3D.R}.
+  \caption{Left: 3D view of the relationship between Heart, Coffee and Stress, from \figref{fig:coffee-av3D} in the paper; source: \file{R/coffee-av3D.R}.
   Right: 3D view of an example of generalized ellipsoids, from \figref{fig:gell3d}: source: \file{R/gell3d.R}.  
   }
   \label{fig:supp3D}
@@ -232,8 +234,8 @@ are contained in the \file{movies/} directory.
 % \input{conjugate}
 % \input{geneig}
 
-\bibliography{timeref,graphics,Rpackages,statistics}
-%\bibliography{supp}        % processed by bibtool -- quiet=on -r ~/texmf/bibtex/bib/aux2bib.rsc -x supp.aux -o supp.bib
+%\bibliography{timeref,graphics,Rpackages,statistics}
+\bibliography{supp}        % processed by bibtool -- quiet=on -r ~/texmf/bibtex/bib/aux2bib.rsc -x supp.aux -o supp.bib
 
 \end{document}
 

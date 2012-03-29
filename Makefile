@@ -36,8 +36,14 @@ STYLES = /usr/share/texmf-texlive/tex/latex/psnfss/times.sty /usr/share/texmf-te
 ALTFIGS =
 #
 
+SUPPDOC = supp.tex taxonomy2.tex properties.tex conjugate.tex geneig.tex
+SUPPFIGS = fig/gell3d-1.png fig/gell3d-4.png fig/inverse.png fig/conjugate1.pdf fig/conjugate2.pdf fig/ellipse-geneig1.pdf fig/ellipse-geneig2.pdf fig/galton-reg3.pdf fig/scatirisd1.pdf fig/ellipses-demo.pdf fig/vis-reg-prestige1.pdf fig/contiris3.pdf fig/between-within1.png fig/between-HE1.png fig/levdemo21.pdf fig/vis-reg-coffee11.pdf fig/vis-reg-coffee12a.pdf fig/vis-reg-coffee13.pdf fig/coffee-stress1.png fig/coffee-measerr.png fig/coffee-avplot1.png fig/coffee-av3D-1.png fig/coffee-avplot3.png fig/mtests.png fig/heplot3a.pdf fig/HE-contrasts-iris.pdf fig/HE-can-iris.pdf fig/kiss-demo.png fig/kiss-demo2a.pdf fig/ridge-demo.png fig/ridge2.pdf fig/hsbmix41.pdf fig/hsbmix43.pdf fig/mvmeta2a.png
+SUPPBIB = supp.bib
+
 #SUPPFILES = SAS/*.sas R/*.R  movies/*.gif
 SUPPFILES = SAS/*.sas R/*.R 
+SUPPFILES = supp.pdf ${SUPPDOC} ${SUPPFIGS} ${SUPPBIB} SAS/*.sas R/*.R 
+
 
 SHIPSTYLES = styles/*
 
