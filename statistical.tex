@@ -12,7 +12,7 @@ $\mat{\Sigma}$ we use $\mathcal{E}(\vec{\mu},\mat{\Sigma})$ to denote the ellips
  \end{equation}
 
 When $\mat{\Sigma}$ is the covariance matrix of a multivariate vector $\vec{x}$ with eigenvalues
-$\lambda_1 > \lambda_2 > \dots$,
+$\lambda_1 \ge \lambda_2 \ge \dots$,
 the following
 properties represent the ``size'' of the ellipsoid in $\Real{p}$:
 
@@ -21,7 +21,7 @@ properties represent the ``size'' of the ellipsoid in $\Real{p}$:
 \hline
 (a) Generalized variance:  & $\det{\mat{\Sigma}} = \prod_i \lambda_i$ & area, (hyper)volume & geometric mean\\  
 (b) Average variance:        & $\trace{\mat{\Sigma}} = \sum_i \lambda_i $ & linear sum & arithmetic mean\\     %% superscripts turned to subscripts / GM
-(c) Average variance:        & $1/ \trace{\mat{\Sigma}^{-1}} = 1/\sum_i (1/\lambda_i) $ &  & harmonic mean\\
+(c) Average precision:        & $1/ \trace{\mat{\Sigma}^{-1}} = 1/\sum_i (1/\lambda_i) $ &  & harmonic mean\\
 (d) Maximal variance:      & $\lambda_1$ & maximum dimension & supremum
  \end{tabular}
 \medskip

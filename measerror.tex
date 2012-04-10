@@ -43,21 +43,21 @@ In the top row of
 \figref{fig:vis-reg-coffee11}, adding measurement error to the Heart disease variable
 would expand the data ellipses vertically, but 
 (apart from random variation)
-leave the slopes of the regression lines unchanged.
+leaves the slopes of the regression lines unchanged.
 Measurement error in a predictor variable, however, biases the corresponding
 estimated coefficient toward
 zero (sometimes called \emph{regression attenuation}) as well as increasing standard errors.
                                          
 \figref{fig:coffee-stress} demonstrates this effect for the marginal
-relation between Heart disease and stress,
+relation between Heart disease and Stress,
 with data ellipses in data space and the corresponding confidence ellipses in $\beta$ space.
 Each panel starts with the observed data (the darkest ellipse, marked $0$), then adds random normal error,
-$\mathcal{N}(0, \delta \times \mathrm{SD}_{Stress})$, with $\delta = \{0.75, 1.0, 1.5\}$, to the value of Stess,
+$\mathcal{N}(0, \delta \times \mathrm{SD}_{Stress})$, with $\delta = \{0.75, 1.0, 1.5\}$, to the value of Stress,
 while keeping the mean of Stress the same.
 All of the data ellipses have the same vertical shadows ($\mathrm{SD}_{\textrm{Heart}}$), while the horizontal shadows
 increase with $\delta$, driving the slope for Stress toward 0.
 In $\beta$ space, it can be seen that the estimated coefficients, $(\beta_0, \beta_{\textrm{Stress}})$
-vary along a line and would reach $\beta_{\textrm{Stress}}=0$ for $\delta$ sufficiently large.
+vary along a line and approach $\beta_{\textrm{Stress}}=0$ for $\delta$ sufficiently large.
 The vertical shadows of
 ellipses for $(\beta_0, \beta_{\textrm{Stress}})$ along the $\beta_{\textrm{Stress}}$ axis
 also demonstrate the effects of measurement error

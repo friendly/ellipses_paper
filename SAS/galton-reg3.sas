@@ -95,7 +95,7 @@ data arrows;
 	%arrow(lchild2, hy, uchild2, hy, vechead=0.1 0.1);
 	%arrow(uchild2, hy, lchild2, hy, vechead=0.1 0.1);
 	x = mc; y=hy; position='2'; function='label';
-	text = '(0.68) Bivariate: mean ± 1s'; function='label'; output;
+	text = '(0.68) Bivariate: mean ± 1.5s'; function='label'; output;
 
 	*-- show vertical tangents;
 	color='black'; size=1;

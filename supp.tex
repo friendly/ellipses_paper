@@ -16,13 +16,21 @@
 
 \bibliographystyle{styles/abbrvnat-apa}
 
-
 %  Abbreviations for cross-references
 \newcommand*{\figref}[1]{Figure~\ref{#1}}
 \newcommand*{\tabref}[1]{Table~\ref{#1}}
 \newcommand*{\secref}[1]{Section~\ref{#1}}
 \renewcommand*{\eqref}[1]{Eqn.~(\ref{#1})}
 \newcommand*{\appref}[1]{Appendix~\ref{#1}}
+
+% \usepackage{hyperref}
+% \hypersetup{%
+%   pdfauthor={Michael Friendly},
+%   pdftitle={Supplementary Materials for Elliptical Insights: Understanding Statistical Methods through Elliptical Geometry},
+%   pdfsubject={Supplementary materials},
+%   bookmarks=false,
+% }
+
 
 %  Page dimensions
 \addtolength{\hoffset}{-2cm}
@@ -108,9 +116,8 @@ at the first author's web site, \url{http://datavis.ca/papers/ellipses}.
 \section{Geometrical and statistical ellipsoids}\label{sec:Appendix}
 This appendix outlines useful results and properties concerning the representation of geometric and statistical ellipsoids.
 A number of these can be traced to or have more general descriptions within the abstract formulation of \citet{Dempster:69}
-(henceforth, $\mathcal{D}$),
+%(henceforth, $\mathcal{D}$),
 but casting them in terms of ellipsoids provides a simpler and more easily visualized framework. 
-%Where appropriate such references are marked as $\mathcal{D}$\S.
 \input{taxonomy2}
 \input{properties}
 \input{conjugate}

@@ -8,7 +8,7 @@ The data ellipse is typically used to add a visual summary to a scatterplot,
 indicating the means, standard deviations, correlation,
 and slope of the regression line for
 two variables. Under classical (Gaussian) assumptions, the data ellipse
-provides a sufficient visual summary, as we describe below.
+provides a statistically sufficient visual summary, as we describe below.
 
 
 \begin{figure}[htb]
@@ -18,8 +18,10 @@ provides a sufficient visual summary, as we describe below.
   40\%, 68\% and 95\% data ellipses and the regression lines of $y$ on $x$ (black) and
   $x$ on $y$ (grey). The ratio of the vertical to the regression line (labeled `r') to the vertical
   to the top of the ellipse gives a visual estimate of the correlation ($r$=0.46, here).
-  Shadows (projections) on the coordinate axes give standard intervals,
-  $\bar{x} \pm s_x$ and $\bar{y} \pm s_y$, with various coverage properties.
+  Shadows (projections) on the coordinate axes give standard intervals, with $k=1, 1.5, 2.45$,
+  bivariate coverate 40\%, 68\% and 95\%, and univariate coverage 68\%, 87\% and 98.6\% respectively.
+  $\bar{x} \pm k s_x$ and $\bar{y} \pm k s_y$, 
+%with various coverage properties.
   Plotting children's height on the abscissa follows Galton.
   }%
   \label{fig:galton-reg3}
@@ -65,12 +67,12 @@ define the \emph{data ellipsoid} $\mathcal{E}_c$ of size (``radius'') $c$
 as the set of all points $\vec{y}$ with $D^2_M (\vec{y})$ less than or
 equal to $c^2$,
 \begin{equation}\label{eq:dsq}
-\mathcal{E}_c ( \vec{y}; \mat{S},  \bar{\vec{y}} )
+\mathcal{E}_c ( \bar{\vec{y}},  \mat{S} )
 := \{ \vec{y} :
 \dev{\vec{y}}\trans \, \inv{S} \, \dev{\vec{y}} \le c^2 \} \comma
 \end{equation}
 where
-$\mat{S} = ({n-1})^{-1} \sum_{i=1}^n (\vec{y}_i - \bar{\vec{y}})\trans (\vec{y}_i - \bar{\vec{y}})$
+$\mat{S} = ({n-1})^{-1} \sum_{i=1}^n (\vec{y}_i - \bar{\vec{y}}) (\vec{y}_i - \bar{\vec{y}}\trans)$
 is the sample covariance matrix.  In the computational notation of \eqref{eq:ellipsoidW}, the boundary of the
 data ellipsoid of radius $c$ is thus
 \begin{equation}\label{eq:ellipsoidS}

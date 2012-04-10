@@ -38,12 +38,12 @@ the posterior mean can be expressed as
 
 \begin{equation}\label{eq:bayes-posterior}
 \widehat{\vec{\beta}}^{\mathrm{posterior}} =
-(\mat{X}\trans \mat{X}\widehat{\vec{\beta}}^{\mathrm{OLS}} + \mat{A} \vec{\beta}^{\mathrm{prior}})
 (\mat{X}\trans \mat{X}+\mat{A})^{-1}
+(\mat{X}\trans \mat{X}\widehat{\vec{\beta}}^{\mathrm{OLS}} + \mat{A} \vec{\beta}^{\mathrm{prior}})
 \end{equation}
 with covariance matrix $(\mat{X}\trans \mat{X}+\mat{A})^{-1}$. The posterior coefficients are 
 therefore a weighted average of
-the prior coefficients and the OLS estimates, with weights given by the conditional prior precision, $\mat{A}^{-1}$,
+the prior coefficients and the OLS estimates, with weights given by the conditional prior precision, $\mat{A}$,
 and the data precision, $\mat{X}\trans\mat{X}$.  Thus, as we increase the strength of our prior precision (decreasing
 prior variance), we place greater weight on our prior beliefs relative to the data.
 

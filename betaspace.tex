@@ -16,7 +16,8 @@ the proposition that every two lines intersect in a point in the other space.
 Moreover, ellipsoids in these spaces are dual and inversely related to each other.
 In data space, joint confidence intervals for the mean vector or joint prediction
 regions for the data are given by the ellipsoids $(\bar{x}_1, \bar{x}_2)\trans \oplus c \sqrt{\mat{S}}$.
-In the dual $\vec{\beta}$ space, joint confidence regions for the parameters
+In the dual $\vec{\beta}$ space, joint confidence regions for the coefficients of 
+a response variable $y$ on $(x_1, x_2)$
 are given by ellipsoids of the form $\widehat{\vec{\beta}} \oplus c \sqrt{\mat{S}^{-1}}$.
 We illustrate these relationships in the example below.
 
@@ -85,7 +86,7 @@ $\vec{\beta}$ space.  The left panel is the same as the corresponding
 a standard (40\%) data ellipse. The right panel shows the joint 95\% confidence
 region and the individual 95\% confidence intervals in $\vec{\beta}$ space, determined as
 \begin{equation*}
- \widehat{\vec{\beta}} \oplus \sqrt{d F^{.95}_{q, \nu}} \times s_e \times \mat{S}_X^{-1/2}
+ \widehat{\vec{\beta}} \oplus \sqrt{d F^{.95}_{d, \nu}} \times s_e \times \mat{S}_X^{-1/2}
 \end{equation*}
 where $d$ is the number of dimensions for which we want coverage,
 $\nu$ is the residual degrees of freedom for $s_e$, and $\mat{S}_X$
@@ -128,10 +129,10 @@ confidence ellipse.  These have exactly the same shape, but
 %(with equal coordinate scaling of the axes), 
 the confidence ellipse
 is exactly a $90^o$ rotation and rescaling of the data ellipse.  In directions in
-data space where the data ellipse is wide---where we have more information
-about the relationship between Coffee and Stress---the confidence ellipse is
+data space where the slice of the data ellipse is wide---where we have more information
+about the relationship between Coffee and Stress---the projection of the confidence ellipse is
 narrow, reflecting greater precision of the estimates of coefficients.
-Conversely, where the data ellipse is narrow (less information), the
+Conversely, where slice of the the data ellipse is narrow (less information), the projection of the
 confidence ellipse is wide (less precision). See \figref{fig:inverse}
 for the underlying geometry.
 
@@ -158,7 +159,7 @@ $\beta_{\mathrm{Stress}}=0$. The thick blue line in this figure shows the confid
 for the slope for Coffee in the simple regression model. The confidence interval doesn't cover the origin, so
 we reject $H_0:\beta_{\mathrm{Coffee}} = 0$ in the simple regression model.
 The oblique shadow of the red 95\% confidence-interval ellipse onto the horizontal axis
-is slightly smaller.  How much smaller is a function of the size of the coefficient for Stress.
+is slightly smaller.  How much smaller is a function of the $t$-value of the coefficient for Stress.
 
 %\begin{ADDED} %: 10-21-2011 MF
 %\figref{fig:vis-reg-coffee13} has another visual interpretation in the context of \emph{mediation} models

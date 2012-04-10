@@ -62,10 +62,14 @@ where we have found points of osculation by trial and error.
   \label{fig:kiss-demo}
 \end{figure}
 
-An exact general solution can be described as follows:  Let the ellipses be given by
+An exact general solution can be described as follows:  Let the ellipses for $i=1, 2$ be given by
+% \begin{eqnarray*}
+% f_1(\vec{x}) & = & \vec{m}_1 \oplus \sqrt{\mat{A}_1} = (\vec{x}-\vec{m}_1)\trans \mat{A}_1 (\vec{x}-\vec{m}_1) \\
+% f_2(\vec{x}) & = & \vec{m}_2 \oplus \sqrt{\mat{A}_2} = (\vec{x}-\vec{m}_2)\trans \mat{A}_2 (\vec{x}-\vec{m}_2) \comma \\
+% \end{eqnarray*}
 \begin{eqnarray*}
-f_1(\vec{x}) & = & \vec{m}_1 \oplus \sqrt{\mat{A}_1} = (\vec{x}-\vec{m}_1)\trans \mat{A}_1 (\vec{x}-\vec{m}_1) \\
-f_2(\vec{x}) & = & \vec{m}_2 \oplus \sqrt{\mat{A}_2} = (\vec{x}-\vec{m}_2)\trans \mat{A}_2 (\vec{x}-\vec{m}_2) \comma \\
+f_i(\vec{x}) & = & (\vec{x}-\vec{m}_i)\trans \mat{A}_i (\vec{x}-\vec{m}_i) \\
+\left\{ \vec{x}: f_i(\vec{x}) = c^2 \right\} & = &\vec{m}_i \oplus \sqrt{\mat{A}_i}
 \end{eqnarray*}
 and denote their gradient-vector functions as
 \begin{equation}
@@ -93,7 +97,7 @@ which implies
 \begin{equation}
 (\vec{x}-\vec{m}_2)\trans \, \mat{A}_2 \trans \: \mat{C} \: \mat{A}_1 \, (\vec{x}-\vec{m}_1) = 0  \period  \label{eq:locus}
 \end{equation}
-\eqref{eq:locus} is a biquadratic form in \vec{x}, with central matrix $\mat{A}_2 \trans \: \mat{C} \: \mat{A}_1$,
+\eqref{eq:locus} is a bilinear form in \vec{x}, with central matrix $\mat{A}_2 \trans \: \mat{C} \: \mat{A}_1$,
 implying that $\mathcal{O}$ is a conic section in the general case. Note that when $\vec{x}=\vec{m}_1$ or $\vec{x}=\vec{m}_2$,
 \eqref{eq:locus} is necessarily zero, so the locus of osculation always passes through  $\vec{m}_1$ and $\vec{m}_2$.
 
