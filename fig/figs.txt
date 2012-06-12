@@ -1,0 +1,122 @@
+# figs for web
+
+cp fig/galton-reg3.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/scatirisd1.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/ellipses-demo.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/vis-reg-prestige1.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/contiris3.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/between-within1.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/between-HE1.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/levdemo21.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/vis-reg-coffee11.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/vis-reg-coffee12a.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/vis-reg-coffee13.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/coffee-stress1.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/coffee-measerr.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/coffee-avplot1.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/coffee-av3D-1.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/coffee-avplot3.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/mtests.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/heplot3a.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/HE-contrasts-iris.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/HE-can-iris.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/kiss-demo.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/kiss-demo2a.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/ridge-demo.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/ridge2ab.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/hsbmix41.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/hsbmix43.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/mvmeta2a.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/gell3d-1.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/inverse.png /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/conjugate1.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+cp fig/ellipse-geneig1.pdf /home/friendly/datavis.ca/papers/ellipses/fig
+
+galton-reg3.pdf 
+scatirisd1.pdf 
+ellipses-demo.pdf 
+vis-reg-prestige1.pdf 
+contiris3.pdf 
+between-within1.png 
+between-HE1.png 
+levdemo21.pdf 
+vis-reg-coffee11.pdf 
+vis-reg-coffee12a.pdf 
+vis-reg-coffee13.pdf 
+coffee-stress1.png 
+coffee-measerr.png 
+coffee-avplot1.png 
+coffee-av3D-1.png 
+coffee-avplot3.png 
+mtests.png 
+heplot3a.pdf 
+HE-contrasts-iris.pdf 
+HE-can-iris.pdf 
+kiss-demo.png 
+kiss-demo2a.pdf 
+ridge-demo.png 
+ridge2ab.pdf 
+hsbmix41.pdf 
+hsbmix43.pdf 
+mvmeta2a.png 
+gell3d-1.png 
+inverse.png 
+conjugate1.pdf 
+ellipse-geneig1.pdf 
+
+# pdf files
+
+convert galton-reg3.pdf galton-reg3.png
+convert scatirisd1.pdf scatirisd1.png
+convert ellipses-demo.pdf ellipses-demo.png
+convert vis-reg-prestige1.pdf vis-reg-prestige1.png
+convert contiris3.pdf contiris3.png
+convert levdemo21.pdf levdemo21.png
+convert vis-reg-coffee11.pdf vis-reg-coffee11.png
+convert vis-reg-coffee12a.pdf vis-reg-coffee12a.png
+convert vis-reg-coffee13.pdf vis-reg-coffee13.png
+convert heplot3a.pdf heplot3a.png
+convert HE-contrasts-iris.pdf HE-contrasts-iris.png
+convert HE-can-iris.pdf HE-can-iris.png
+convert kiss-demo2a.pdf kiss-demo2a.png
+convert ridge2ab.pdf ridge2ab.png
+convert hsbmix41.pdf hsbmix41.png
+convert hsbmix43.pdf hsbmix43.png
+convert conjugate1.pdf conjugate1.png
+convert ellipse-geneig1.pdf ellipse-geneig1.png
+
+## javascript array
+
+var figlist = [
+  {  fignum: " 2",	src: "/galton-reg3.png",		code: "SAS/galton-reg3.sas" },       
+  {  fignum: " 3",	src: "/scatirisd1.png",			code: "SAS/scatirisd.sas" },          
+  {  fignum: " 4",	src: "/ellipses-demo.png",		code: "R/ellipses-demo.R" },       
+  {  fignum: " 5",	src: "/vis-reg-prestige1.png",	code: "R/vis-reg-prestige.R" }, 
+  {  fignum: " 6",	src: "/contiris3.png",			code: "SAS/contiris.sas" },            
+  {  fignum: " 7",	src: "/between-within1.png",	code: "R/between-within.R" },    
+  {  fignum: " 8",	src: "/between-HE1.png",		code: "R/between-within.R" },        
+  {  fignum: " 9",	src: "/levdemo21.png",			code: "SAS/levdemo2.sas" },                 
+  {  fignum: "11",	src: "/vis-reg-coffee11.png",	code: "R/vis-reg-coffee1.R" },  
+  {  fignum: "12",	src: "/vis-reg-coffee12a.png",	code: "R/vis-reg-coffee1.R" }, 
+  {  fignum: "13",	src: "/vis-reg-coffee13.png",	code: "R/vis-reg-coffee1.R" },  
+  {  fignum: "14",	src: "/coffee-stress1.png",		code: "R/coffee-stress.R" },        
+  {  fignum: "15",	src: "/coffee-measerr.png", 	code: "R/coffee-measerr.R" },     
+  {  fignum: "16",	src: "/coffee-avplot1.png", 	code: "R/coffee-avPlots.R" },     
+  {  fignum: "17",	src: "/coffee-av3D-1.png",		code: "R/coffee-av3D.R" },         
+  {  fignum: "18",	src: "/coffee-avplot3.png",		code: "R/coffee-avPlots.R" },       
+  {  fignum: "19",	src: "/mtests.png",				code: "R/mtests.R" },                     
+  {  fignum: "20",	src: "/heplot3a.png",			code: "SAS/heplot3a.sas" },             
+  {  fignum: "21",	src: "/HE-contrasts-iris.png",	code: "R/HE-contrasts-iris.R" }, 
+  {  fignum: "22",	src: "/HE-can-iris.png",		code: "R/HE-can-iris.R" },             
+  {  fignum: "23",	src: "/kiss-demo.png",			code: "R/kiss-demo.R" },               
+  {  fignum: "24",	src: "/kiss-demo2a.png",		code: "R/kiss-demo2.R" },            
+  {  fignum: "25",	src: "/ridge-demo.png",			code: "R/ridge-demo.R" },             
+  {  fignum: "26",	src: "/ridge2.png",				code: "R/ridge2.R" },                           
+  {  fignum: "27",	src: "/hsbmix41.png",			code: "SAS/hsbmix4.sas" },              
+  {  fignum: "28",	src: "/hsbmix43.png",			code: "SAS/hsbmix4.sas" },              
+  {  fignum: "29",	src: "/mvmeta2a.png",			code: "R/mvmeta2.R" },                    
+  {  fignum: "A.1",	src: "/gell3d-1.png",			code: "R/gell3d.R" },                  
+  {  fignum: "A.2",	src: "/inverse.png",			code: "R/inverse.R" },                  
+  {  fignum: "A.3",	src: "/conjugate1.png",			code: "R/conjugate.R" },             
+  {  fignum: "A.4",	src: "/ellipse-geneig1.png",	code: "R/ellipse-geneig.R" }     
+];

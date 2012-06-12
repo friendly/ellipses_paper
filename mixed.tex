@@ -1,6 +1,4 @@
 \subsection{Mixed models: BLUEs and BLUPs}
-%\TODO{Please check the details here. I'm not sure that everything is correct, or that
-%the notation is the best.}
 
 In this section we make implicit use of the duality between data space and $\beta$
 space, where lines in one map into points in the other and ellipsoids help to
@@ -28,7 +26,7 @@ cluster $i$ can be given as
 % \end{equation}
 \begin{eqnarray}
  \vec{y}_i & = & \mat{X}_i \vec{\beta} + \mat{Z}_i \vec{u}_i + \vec{\epsilon}_i \label{eq:mixed1} \\
- \vec{u}_i & \sim & \mathcal{N}_q (\vec{0}, \mat{G}) \nonumber\\
+ \vec{u}_i & \sim & \mathcal{N}_q (\vec{0}, \mat{G_i}) \nonumber\\
  \vec{\epsilon}_i & \sim & \mathcal{N}_{n_i} (\vec{0}, \mat{R}_i) \nonumber
 \end{eqnarray}
 where
@@ -37,7 +35,7 @@ $\vec{\beta}$ is a $p \times 1$ vector of parameters corresponding to the fixed 
 in the $n_i \times p$ model matrix $\mat{X}_i$;
 $\vec{u}_i$ is a $q \times 1$ vector of coefficients corresponding to the random effects
 in the $n_i \times q$ model matrix $\mat{Z}_i$;
-$\mat{G}$ is the $q \times q$ covariance matrix of the random effects in $\vec{u}_i$;
+$\mat{G_i}$ is the $q \times q$ covariance matrix of the random effects in $\vec{u}_i$;
 and $\mat{R}_i$ is the $n_i \times n_i$ covariance matrix of the errors in $\vec{\epsilon}_i$.
 
 Stacking the $\vec{y}_i$, $\mat{X}_i$, $\mat{Z}_i$, and so forth in the obvious way then gives
@@ -54,12 +52,63 @@ and
       =
       \begin{bmatrix}
       \mat{G} & \mat{0} \\ \mat{0} & \mat{R}
-      \end{bmatrix} \period
+      \end{bmatrix} \comma
 \end{equation}
+where $ \mat{G} = \diag(\mat{G}_1,...,\mat{G}_m)$, $\mat{R} = \diag(\mat{R}_1,...,\mat{R}_m)$ and $m$ is the number of clusters.  
 The variance of $\vec{y}$ is therefore $\mat{V} = \mat{Z} \mat{G} \mat{Z}\trans + \mat{R}$, and when
 $\mat{Z} = \mat{0}$ and $\mat{R} = \sigma^2 \mat{I}$, the mixed model in \eqref{eq:mixed2} reduces to the
 standard linear model.
 
+%%%%%%%%%%%%%%%%
+% changes from Georges
+
+We now consider the case in which 
+$\mat{Z}_i = \mat{X}_i$ and we wish to predict $\vec{\beta}_i = \vec{\beta} + \vec{u}_i$, the vector of parameters for the $i_{th}$ cluster. 
+At one extreme, we could simply ignore clusters and use the common mixed-model generalized-least-square estimate,
+\begin{equation}\label{eq:mixed4}
+ \widehat{\vec{\beta}}^{\textrm{GLS}} = (\mat{X}\trans \mat{V}^{-1} \mat{X})^{-1} \mat{X}\trans \vec{y}
+\end{equation}
+whose sampling variance is $\Var(\widehat{\vec{\beta}}^{\textrm{GLS}}) = \inv{(\mat{X}\trans \mat{V}^{-1} \mat{X})}$. 
+It is an unbiased predictor of $\vec{\beta}_i$ since $E( \widehat{\vec{\beta}}^{\textrm{GLS}} - \vec{\beta}_i) = 0$. 
+With moderately large $m$, the sampling variance may be small relative to $\mat{G}_i$ and 
+$\Var(\widehat{\vec{\beta}}^{\textrm{GLS}} - \vec{\beta}_i) \approx \mat{G}_i$.
+
+At the other extreme, we ignore the fact that clusters come from a common population and we calculate the separate 
+BLUE estimate within each cluster,
+\begin{equation}\label{eq:mixed5}
+ \widehat{\vec{\beta}}^{\textrm{blue}}_i = \inv{(\mat{X}_i\trans \mat{X}_i)} \mat{X}_i\trans \vec{y}_i
+ \quad\quad \textrm{with} \quad\quad
+ \Var(\widehat{\vec{\beta}}^{\textrm{blue}}_i \given \vec{\beta}_i) \equiv \mat{S}_i = 
+ \hat{\sigma}^2 \inv{(\mat{X}_i\trans \mat{X}_i)} \period
+\end{equation}
+
+Both extremes have drawbacks: whereas the pooled overall GLS estimate ignores variation between clusters, 
+the unpooled within-cluster BLUE ignores the common population and makes clusters appear to differ more than they actually do.
+
+
+This dilemma led to the development of BLUPs (best linear unbiased predictor) in models with random effects \citep{Henderson:1975,Robinson:1991,Speed:1991}.
+In the case considered here, the BLUPs are an inverse-variance weighted average of the mixed-model GLS estimates and of the BLUEs. The BLUP is then:
+
+% ::$ \tilde{\beta}_i^{blup} = (S_i^{-1} + G_i^{-1})^{-1} (S_i^{-1}\hat{\beta}_i^{blue} + G_i^{-1}\hat{\beta}^{gls})$       (34)
+
+\begin{equation}\label{eq:mixed6}
+ \widetilde{\vec{\beta}}^{\textrm{blup}}_i =
+ \inv{ \left( \inv{\mat{S}_i} + \inv{\mat{G}_i} \right) } 
+ \left(
+   \inv{\mat{S}}_i \widehat{\vec{\beta}}^{\textrm{blue}}_i + 
+   \inv{\mat{G}}_i \widehat{\vec{\beta}}^{\textrm{GLS}}_i
+ \right)
+\period
+\end{equation}
+This "partial pooling" optimally combines the information from cluster $i$ with the information from all clusters, 
+shrinking $\widehat{\beta}_i^{\textrm{blue}}$ towards $\widehat{\beta}^{\textrm{GLS}}$. 
+Shrinkage for a given parameter $ \beta_{ij} $ is greater when the sample size $n_i$ is small or when the variance of the 
+corresponding random effect, $g_{ijj}$, is small. 
+
+
+
+%%%%%%%%%%%%%%%%%
+\begin{comment}
 Assume that our interest lies primarily in estimating the fixed-effect parameters in $\vec{\beta}$.  At one extreme
 (complete pooling) we could simply ignore clusters and calculate the pooled OLS estimate,
 \begin{equation}\label{eq:mixed4}
@@ -89,15 +138,18 @@ and $\widehat{\vec{u}}_i$ using the precision ($\Var^{-1}$) as weights,
  \right)
  \inv{ \left( \inv{\widehat{\mat{S}}_i} + \inv{\widehat{\mat{G}}} \right) } \period
 \end{equation}
-This ``partial pooling''optimally combines the information from cluster $i$ with the information from all clusters,
+This ``partial pooling'' optimally combines the information from cluster $i$ with the information from all clusters,
 shrinking the $\widehat{\vec{\beta}}_i$ toward $\widehat{\vec{\beta}}^{\textrm{pooled}}$. Shrinkage
 for a given parameter $\beta_{ij}$ is greater
 when the sample size $n_i$ is small or when the estimated variance of the corresponding 
 random effect, $g_{jj}$, is small.
+\end{comment}
+
 
 \eqref{eq:mixed6}
 is of the same form as \eqref{eq:bayes-posterior} and other convex combinations of estimates considered
 earlier in this section. So once again, we can understand these results geometrically as the locus of
-osculation of ellipsoids.
+osculation of ellipsoids. Ellipsoids kiss for a reason: to provide an optimal 
+convex combination of information from two sources, taking precision into account.
 
 

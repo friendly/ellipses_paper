@@ -41,9 +41,9 @@ equal to the mean SES in that school).
 For simplicity, we consider the case of CSES as
 a single quantitative predictor in $\mat{X}$ in the example below.  We fit and compare the following models:
 \begin{eqnarray}
- \vec{y}_{i} & \sim & \mathcal{N} ( \beta_0 + x_{i} \beta_1 + \epsilon_{i}  , \sigma^2 ) \quad\quad \textrm{pooled OLS} \\
- \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} + \epsilon_{i}  , \sigma^2_i ) \quad\quad \textrm{unpooled BLUEs} \\
- \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} + u_{0i} + x_{i} u_{1i} + \epsilon_{i}  , \sigma^2_i ) \quad\quad \textrm{random intercepts and slopes}
+ \vec{y}_{i} & \sim & \mathcal{N} ( \beta_0 + x_{i} \beta_1 , \sigma^2 ) \quad\quad \textrm{pooled OLS} \\
+ \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0i} + x_{i} \beta_{1i} , \sigma^2_i ) \quad\quad \textrm{unpooled BLUEs} \\
+ \vec{y}_{i} & \sim & \mathcal{N} ( \beta_{0} + x_{i} \beta_{1} + u_{0i} + x_{i} u_{1i} , \sigma^2_i ) \quad\quad \textrm{BLUPs: random intercepts and slopes}
 %
 \end{eqnarray}
 and also include a fixed effect of sector, common to all models; for compactness, the sector effect is elided in the notation above.
@@ -53,7 +53,7 @@ as a fitted line under one of the models above (sometimes called ``spaghetti plo
 Our geometric approach leads us to consider the equivalent but simpler plots in the dual $\beta$ space,
 where each school appears as a point.
 
-\figref{fig:hsbmix4} plots the unpooled BLUE estimates against those from the random effects model, with separate panels for intercepts
+\figref{fig:hsbmix4} plots the unpooled BLUE estimates against the BLUPs from the random effects model, with separate panels for intercepts
 and slopes to illustrate the shrinkage of different parameters.  In these data, the variance in intercepts (average math achievement
 for students at $\mathrm{CSES}=0$), $g_{00}$,
 among schools in each sector is large, so the mixed effects estimates have small weight and there is little

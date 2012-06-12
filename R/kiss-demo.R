@@ -13,9 +13,9 @@ A2 <- matrix(c(1.5, -.3, -.3, 1), 2, 2)
 #chol(A2)
 
 cd("c:/sasuser/datavis/manova/ellipses/fig")
-eps(file="kiss-demo.eps", width=7, height=7)
-#png(file="kiss-demo.png", width=7, height=7, res=200, units="in")
-pdf(file="kiss-demo.pdf", width=7, height=7)
+#eps(file="kiss-demo.eps", width=7, height=7)
+png(file="kiss-demo.png", width=7, height=7, res=200, units="in")
+#pdf(file="kiss-demo.pdf", width=7, height=7)
 
 op <- par(mar=c(3, 3, 1, 1) + 0.1)
 
@@ -27,6 +27,11 @@ ellipse(m1, A1, radius=3, col="red", fill=TRUE, fill.alpha=0.1)
 ellipse(m2, A2, radius=1, col="blue", fill=TRUE)
 ellipse(m2, A2, radius=1.74, col="blue", fill=TRUE, fill.alpha=0.2)
 ellipse(m2, A2, radius=3.1, col="blue", fill=TRUE, fill.alpha=0.1)
+
+text(m1[1], m1[2], labels=expression(m[1]), pos=1, cex=1.6)
+text(m2[1], m2[2], labels=expression(m[2]), pos=3, cex=1.6)
+text(-4.1, 4, labels=expression(A[1]), cex=1.75)
+text(4.4, 8.4, labels=expression(A[2]), cex=1.75)
 
 # find points of osculation manually
 #osc <- locator(2)
